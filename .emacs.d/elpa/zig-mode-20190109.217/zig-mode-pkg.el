@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "zig-mode" "20190109.217" "A major mode for the Zig programming language" '((emacs "24")) :commit "c2deea85dd65c3e73c2771c56a998cbdeb9ff717" :keywords '("zig" "languages") :authors '(("Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley" . "superjoe30@gmail.com")) :maintainer '("Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley" . "superjoe30@gmail.com") :url "https://github.com/zig-lang/zig-mode")

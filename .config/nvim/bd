@@ -1,0 +1,433 @@
+set nocompatible  
+set hidden 
+filetype plugin on
+filetype plugin indent on
+syntax on
+
+"   Plugins " {{{
+call plug#begin() " (managed with vim-plug)
+    " #
+    " # Autocompletion
+    " #
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        " Semantic completion for Rust using the RLS (see below)
+    Plug 'autozimu/LanguageClient-neovim', {
+          \ 'branch': 'next',
+          \ 'do': 'bash install.sh',
+          \ }
+        " The RLS client
+    Plug 'lifepillar/vim-mucomplete' 
+        " auto-completion for JavaScript (non-semantic)
+    Plug '1995eaton/vim-better-javascript-completion'
+        " completion for modern js syntax
+
+    " #
+    " # Language-specific/syntax highlighting
+    " #
+    " 
+    Plug 'robertmeta/nofrils'
+    Plug 'https://bitbucket.org/kisom/eink.vim.git'
+        " No syntax highlighting at all (basically)
+    Plug 'mxw/vim-jsx'
+        " Syntax highlighting for jsx
+    Plug 'pangloss/vim-javascript'
+        " Syntax highlighting for javascript
+    Plug 'rust-lang/rust.vim'
+        " Syntax highlighting (and other features) for rust
+    Plug 'dag/vim-fish'
+        " Syntax highlighting for Fish shell
+   
+    " #
+    " # Info/lint Display
+    " #
+    Plug 'itchyny/lightline.vim'
+        " Lightest status line available
+    Plug 'w0rp/ale' 
+        " Async linter-manager.  Requires linters (e.g., eslint)
+    Plug 'bling/vim-bufferline'
+        " Display open buffers in bottom-left
+    Plug 'mhinz/vim-signify'
+        " Display git diff notes in left gutter
+
+    " #
+    " # Navigation/search
+    " #
+    Plug 'codesections/vim-move' 
+        " Allow text 'bubbling' (block move). Must load before tmux-navigator
+    Plug 'christoomey/vim-tmux-navigator'
+        " Navigate vim splits and tmux pains with the same keybindings"
+    Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install --all' }
+    Plug 'lotabout/skim.vim', 
+        " Fuzzy-find in vim using `skim` (fzf replacement)"
+       
+    " #
+    " # Tim Pope plugins
+    " #
+    Plug 'tpope/vim-commentary'
+        " Comment out code
+    Plug 'tpope/vim-fugitive'
+        " Various git commands, mostly used for Gdiff and Gstatus
+    Plug 'tpope/vim-surround'
+        " Change delimiters surround text objects
+
+    " #
+    " # Misc
+    " #
+    Plug 'frankier/neovim-colors-solarized-truecolor-only'
+       " The Solarized colorscheme with truecolor support
+    Plug 'jiangmiao/auto-pairs'
+       " Automatically close (), {}, [], "
+    Plug 'mbbill/undotree'
+       " Navigate full undo history as tree (allowing branching)
+call plug#end() " }}}
+
+" ## Lightline settings  " {{{
+" This customizes the lightline as described in its readme to hide file format
+" and encoding information when the screen is less than 90 characters wide
+" (which it typically is).  This allows for long file names without hiding the
+" mode.
+  set laststatus=2
+  set noshowmode
+  let g:lightline = {
+    \ 'colorscheme': 'powerline',
+    \ 'component_function': {
+    \   'fileformat': 'LightlineFileformat',
+    \   'filetype': 'LightlineFiletype',
+    \  }, 
+    \  }  
+  function! LightlineFileformat()
+    return winwidth(0) > 90 ? &fileformat : ''
+  endfunction
+
+  function! LightlineFiletype()
+    return winwidth(0) > 90 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
+  endfunction
+"    " }}}
+
+"  ## Persistent undo (& mkdir if necessary)   " {{{
+   if !isdirectory($HOME."/.vim")
+     call mkdir($HOME."/.vim", "", 0770)
+   endif
+   if !isdirectory($HOME."/.vim/undo-dir")
+     call mkdir($HOME."/.vim/undo-dir", "", 0770)
+   endif 
+   set undodir=~/.vim/undo-dir
+   set undofile  " }}}
+   
+" ## Tab settings & color scheme   " {{{
+  set autoindent
+  set expandtab
+  set smarttab
+  set shiftwidth=2
+  set softtabstop=2
+" ## Color Scheme 
+  " set termguicolors
+  set background=dark
+  " colorscheme solarized
+  let nofrils_heavycomments = 0
+  let nofrils_strbackgrounds = 1
+  highlight Normal guibg=none
+  highlight Error guifg=#d70000
+  highlight LineNr guibg=none
+  highlight CursorLine guibg=none
+  colorscheme nofrils-dark
+    " }}}
+
+" ## Spelling, Searching, and Autocompletion  " {{{
+" ## Spelling
+  if version >= 700
+    set spl=en spell
+    set spell
+    nnoremap zr 1z=
+    " zr inserts the first auto-suggestion; z= shows full list
+    hi clear SpellBad
+    hi SpellBad gui=underline,bold guifg=#dc322f 
+    "  The same red used by the Solarized theme 
+" Searching
+  endif
+  set ignorecase
+  set smartcase
+  set incsearch
+  set hlsearch
+  nnoremap / :nohlsearch<CR>/
+  nnoremap ? :nohlsearch<CR>?
+  " / and ? keep their default behavior, but also clear search highlighting 
+" ## Autocomplete
+  set completeopt+=noselect
+  set completeopt+=menuone
+  set shortmess+=c
+  set belloff +=ctrlg 
+  let g:mucomplete#enable_auto_at_startup = 1 
+ 
+   let g:ale_fixers = {
+  \   'javascript': ['prettier'],
+  \   'javascript.jsx': ['prettier'],
+  \   'css': ['prettier'],
+  \}
+   let g:ale_fix_on_save = 1
+
+   let g:rustfmt_autosave = 1
+
+
+  let g:LanguageClient_serverCommands = {
+      \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+      \ }
+  let g:LanguageClient_hoverPreview = "always"
+  let g:LanguageClient_useVirtualText = 0
+  let g:LanguageClient_loggingFile = "/home/dsock/LanguageClient.log"
+  "  The options below aren't currently working and JS LSP isn't that great
+      " \ 'javascript': ['javascript-typescript-stdio'],
+      " \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+
+  nnoremap <leader><F5> :call LanguageClient_contextMenu()<CR>
+  " Or map each action separately
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+  let g:deoplete#enable_at_startup = 1
+ 
+  call deoplete#custom#option('on_insert_enter', v:true)
+  set previewheight=12
+      " hight for the definition window above text"
+
+  autocmd FileType rust nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+      " Use non-LSP goto-def when LSP isn't running"
+  " }}}
+
+" ## Display options  " {{{
+  set relativenumber
+  set number
+  set numberwidth=3
+  set showcmd "currently entered letters in command bar
+  set backspace=indent,eol,start "Normal backspace (not limited to line)
+  set cursorline "The line under the current text line
+  set scrolloff=3 " Starts scrolling 3 lines from edge of the page
+  set ttyfast " Better text rendering for fast/last decade terminals }}}
+
+""  ## Leader mappings {{{ 
+  let mapleader = "\<Space>"
+  nnoremap <Space> <NOP>
+  nnoremap <Leader>ev :edit ~/.config/nvim/init.vim<CR>
+  nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR> 
+  nnoremap <Leader>spa :syntax spell toplevel<CR>
+  nnoremap <Leader>spd :syntax spell default<CR>
+  nnoremap <Leader><C-y><C-y> :w !xclip -selection clipboard<CR><CR>
+  vnoremap <Leader>a :sort<CR>
+  " Fuzzy finding using skim
+  nnoremap <Leader><C-t> :SK<CR>
+  nnoremap <Leader><C-r> :History:<CR>
+  nnoremap <Leader><C-b> :Buffers<CR>
+  nnoremap <Leader>b :Lexplore<CR>
+  nnoremap <leader>wc :w !wc
+  vnoremap <leader>wc :w !wc
+  nnoremap <leader>ch :let nofrils_heavycomments = 1
+  nnoremap <leader>co :let nofrils_heavycomments = 0
+"  }}}
+
+" ## Abbreviation, Folding and Navigation " {{{
+" ## Abbreviations 
+  abbreviate cmark ✓ 
+  iabbrev :shrug: ¯\_(ツ)_/¯
+  iabbrev :+1: 👍
+  iabbrev :grin: 😁
+  iabbrev :side-eye: ಠ_ಠ
+  iabbrev :react: import React from 'react';<CR>
+                 \import styled from 'styled-components';<CR>
+                 \<CR>
+                 \const <ESC>"%pbbC = props => {<CR>
+                 \};<CR>
+                 \<CR>
+                 \export default <ESC>"%pbbC;<ESC>3ki  
+  iabbrev :preact: import { h } from 'preact';<CR>
+                 \import styled from 'styled-components';<CR>
+                 \<CR>
+                 \const <ESC>"%pbbC = props => {<CR>
+                 \};<CR>
+                 \<CR>
+                 \export default <ESC>"%pbbC;<ESC>3ki  
+" ## Folding 
+  augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+  augroup END
+  set foldmethod=indent
+" ## Buffer/arg navigation
+  nnoremap ]b :bnext<CR>
+  nnoremap [b :bprev<CR>
+" netrw Sidebar
+  let g:netrw_banner = 0
+  let g:netrw_liststyle = 3
+  let g:netrw_altv = 1
+  let g:netrw_winsize = 17
+  set autochdir
+" }}}
+
+" ## Misc " {{{
+" ## auto-pairs settings 
+  let g:AutoPairsCenterLine=0 
+" vim-move
+  let g:move_key_modifier = 'C'
+" ## Ex commands 
+  set history=500 " history for : ex commands
+" ## FZF setup 
+ "  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings  --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0) 
+" ## Undotree setup  
+  noremap <F5> :UndotreeToggle<cr>
+"  ## ALE settings
+  let g:ale_sign_column_always = 1
+  let g:ale_lint_on_text_changed = 'normal'
+  let g:ale_lint_on_insert_leave = 1
+
+
+  let g:ale_linters = {'javascript': ['eslint']}
+  let g:ale_linters = {'javascript.jsx': ['eslint']}
+"  }}}
+
+"  Autocommands "{{{
+autocmd FileType c set shiftwidth=4
+autocmd FileType c set softtabstop=4
+
+augroup markdown
+  autocmd!
+  autocmd FileType markdown noremap  <buffer> <silent> k gk
+  autocmd FileType markdown noremap  <buffer> <silent> gk k
+  autocmd FileType markdown noremap  <buffer> <silent> j gj
+  autocmd FileType markdown noremap  <buffer> <silent> gj j
+  autocmd FileType markdown noremap  <buffer> <silent> 0 g0
+  autocmd FileType markdown noremap  <buffer> <silent> g0 0
+  autocmd FileType markdown noremap  <buffer> <silent> $ g$
+  autocmd FileType markdown noremap  <buffer> <silent> g$ $
+  set wrap lbr
+augroup END
+
+augroup gutenberg_macros
+  autocmd!
+  autocmd BufNewFile,BufRead *_macros* set filetype=htmldjango
+  autocmd BufNewFile,BufRead *_macros/* set filetype=htmldjango
+  autocmd BufNewFile,BufRead *_macros/* setlocal foldmethod=indent
+  autocmd BufNewFile,BufRead *_macros* setlocal foldmethod=indent
+augroup END
+
+augroup keybase
+  autocmd!
+  autocmd BufNewFile,BufRead *keybase-outbox* let conversation = expand('%:e')
+  autocmd BufNewFile,BufRead *keybase-outbox* inoremap <C-CR> <esc>:w<CR>:!keybase chat send <C-R>=conversation<CR> < %<CR>Gdggi
+  autocmd BufNewFile,BufRead *keybase-outbox* nnoremap <leader><CR> :w<CR>:!keybase chat send <C-R>=conversation<CR> < %<CR>Gdggi
+augroup END
+
+augroup gutenberg_css
+  autocmd!
+  autocmd BufNewFile,BufRead *css.html   set filetype=css
+  autocmd BufNewFile,BufRead *css.html setlocal foldmethod=indent
+augroup END
+
+augroup copy_from_scratch
+  autocmd!
+  autocmd TextChanged,TextChangedI,TextChangedP *scratchpad* silent! :%y+
+augroup END
+
+"}}}
+
+"  Terminal mode "{{{
+   if has('nvim')
+     tnoremap <ESC> <C-\><C-n>
+     tnoremap <C-v><ESC> <ESC>
+     tnoremap <C-h> <C-\><C-n><C-w>h
+     tnoremap <C-j> <C-\><C-n><C-w>j
+     tnoremap <C-k> <C-\><C-n><C-w>k
+     tnoremap <C-l> <C-\><C-n><C-w>l
+   endif
+
+   if has('nvim') && executable('nvr')
+     let $VISUAL="nvr -cc tabedit --remote-wait +'set bufhidden=wipe'"
+   endif
+
+   cnoreabbrev q bd
+
+" }}}
+
+" Signify config (and SignifyOlder) {{{
+let g:target_commit = 0
+command! SignifyOlder call ChangeTargetGitCommit('older')
+command! SignifyNewer call ChangeTargetGitCommit('younger')
+
+function! ChangeTargetGitCommit(older_or_younger)
+  if a:older_or_younger ==# 'older'
+    let g:target_commit += 1
+  elseif g:target_commit==#0
+    echom 'No timetravel! Cannot diff against HEAD~-1'
+    return
+  else
+    let g:target_commit -= 1
+  endif
+  let l:git_command = 'git diff --no-color --no-ext-diff -U0 HEAD~' . g:target_commit . ' -- %f'
+  let g:signify_vcs_cmds = {
+        \ 'git':      l:git_command,
+        \ 'hg':       'hg diff --config extensions.color=! --config defaults.diff= --nodates -U0 -- %f',
+        \ 'svn':      'svn diff --diff-cmd %d -x -U0 -- %f',
+        \ 'bzr':      'bzr diff --using %d --diff-options=-U0 -- %f',
+        \ 'darcs':    'darcs diff --no-pause-for-gui --diff-command="%d -U0 %1 %2" -- %f',
+        \ 'fossil':   'fossil diff --unified -c 0 -- %f',
+        \ 'cvs':      'cvs diff -U0 -- %f',
+        \ 'rcs':      'rcsdiff -U0 %f 2>%n',
+        \ 'accurev':  'accurev diff %f -- -U0',
+        \ 'perforce': 'p4 info '. sy#util#shell_redirect('%n') . (has('win32') ? ' &&' : ' && env P4DIFF= P4COLORS=') .' p4 diff -du0 %f',
+        \ 'tfs':      'tf diff -version:W -noprompt %f',
+        \ }
+  silent call s:silent_write()
+  echom 'Now diffing against HEAD~' . g:target_commit
+
+endfunction
+
+function! s:silent_write() 
+  write
+endfunction
+" }}}
+
+" Custom Commands (TimeStamp){{{
+         
+let g:time_stamp_enabled = 0
+let g:time_stamp_start = 0
+command! TimeStampToggle call TimeStampToggle()
+
+function TimeStampToggle()
+  let g:time_stamp_enabled = !g:time_stamp_enabled
+  let g:time_stamp_start = strftime("%s") " Time in seconds since the Unix epoch
+endfunction
+
+inoremap <expr> <CR> g:time_stamp_enabled ? "\<ESC>:call TimeStamp()\<CR>a" : "\<CR>"
+
+function! TimeStamp()
+     let l:current_sec = printf("%02d", strftime("%s") - g:time_stamp_start)
+     let l:current_min = 0
+     let l:current_hr  = 0
+
+     while l:current_sec >= 60
+       let l:current_sec -= 60
+       let l:current_min += 1
+     endwhile
+
+     while l:current_min >= 60
+       let l:current_min -= 60
+       let l:current_hr  += 1
+     endwhile
+
+     let l:current_sec = printf("%02d", l:current_sec)
+     let l:current_min = printf("%02d", l:current_min)
+     let l:current_hr  = printf("%02d", l:current_hr)
+
+     " Go to the beginning of the line,
+     " print the current zero-padded time,
+     " print `  -  ` as a separator
+     " and move the cursor over for the next line (with separator)
+     execute "normal! 0i\<SPACE>\<ESC>0dwi\
+           \<C-R>=l:current_hr\<CR>:\<C-R>=l:current_min\<CR>:\<C-R>=l:current_sec \<CR>\
+           \<SPACE>\<SPACE>—\<SPACE>\<SPACE>\<ESC>o\<SPACE>\<SPACE>\<SPACE>\<SPACE>\
+           \<SPACE>\<SPACE>\<SPACE>\<SPACE>\<SPACE>\<SPACE>\<SPACE>\<SPACE>\<SPACE>"
+
+ endfunction
+" }}}"
+
+""  ## //TODO "   " {{{
+"  Learn about folding
+" }}}
+"

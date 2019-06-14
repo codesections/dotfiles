@@ -1,0 +1,19 @@
+
+
+import React from 'react';
+import { List } from './List.js';
+
+const reasons = [
+  'Kotlin',
+  'TypeScript',
+  'Bash',
+  'Haskell',
+  'R',
+  'Old standbys: C, C++, Ruby, Java, etc.',
+];
+
+const title = 'How do languages differ?';
+
+const HonorableMentions = ({ a }) => <List a={a} title={title} list={reasons} />;
+
+export { HonorableMentions };

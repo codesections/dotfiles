@@ -1,0 +1,4 @@
+"ab51ef1889148200ed2547c8b28954665f617df2"
+#s(undo-tree [nil ([nil (#1=[nil nil ((#("directories = \"1.0.2\"
+" 0 11 (fontified t face font-lock-variable-name-face) 11 14 (fontified t) 14 21 (fontified t face font-lock-string-face) 21 22 (fontified t)) . 133) (undo-tree-id0 . 22) (undo-tree-id1 . -21) (undo-tree-id2 . 22) (undo-tree-id3 . 22)) nil (23701 42358 590971 443000) 0 nil]) ((#("toml = \"0.5.0\"
+" 0 4 (fontified t face font-lock-variable-name-face) 4 7 (fontified t) 7 14 (fontified t face font-lock-string-face) 14 15 (fontified t)) . 133) (undo-tree-id4 . 15) (t 23701 37585 357329 445000)) nil (23701 42358 590984 961000) 0 nil]) nil nil (23701 42358 590990 134000) 0 nil] #1# 101 2 nil)

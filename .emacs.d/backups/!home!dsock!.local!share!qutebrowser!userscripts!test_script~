@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "message-info 'hi from the userscript to $QUTE_URL'" >> "$QUTE_FIFO"

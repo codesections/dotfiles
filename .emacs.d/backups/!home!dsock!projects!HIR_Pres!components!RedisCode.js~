@@ -1,0 +1,9 @@
+import React from 'react';
+import styled from 'styled-components';
+import CodeSample from './CodeSample.js';
+const code = `C: PING
+S: +PONG`;
+
+const JavaScriptCode = () => <CodeSample lang="javascript" code={code} />;
+
+export default JavaScriptCode;

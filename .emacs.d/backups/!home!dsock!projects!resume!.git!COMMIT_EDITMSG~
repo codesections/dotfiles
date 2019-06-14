@@ -1,0 +1,29 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   LICENSE
+#	new file:   README.md
+#	new file:   hi
+#	new file:   package-lock.json
+#	new file:   package.json
+#	new file:   src/pages/RobotoMono-Regular.ttf
+#	new file:   src/pages/components/EducationSection.js
+#	new file:   src/pages/components/Header.js
+#	new file:   src/pages/components/ProfessionalExpSection.js
+#	new file:   src/pages/components/SideBar.js
+#	new file:   src/pages/components/SoftwareEngSection.js
+#	new file:   src/pages/components/colors.js
+#	new file:   src/pages/components/sharedStyle.js
+#	new file:   src/pages/fonts.css
+#	new file:   src/pages/index.js
+#	new file:   src/static/favicon.ico
+#	new file:   tags
+#	new file:   yarn.lock
+#

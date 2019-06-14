@@ -1,0 +1,14 @@
+import React from 'react';
+import { List } from './List.js';
+
+const reasons = [
+  'High level/low level',
+  'Expressiveness and abstraction',
+  'Compiled or interpreted/JIT',
+];
+
+const title = 'How do languages differ?';
+
+const WaysLaguagesDiffer = ({ a }) => <List a={a} title={title} list={reasons} />;
+
+export { WaysLaguagesDiffer };

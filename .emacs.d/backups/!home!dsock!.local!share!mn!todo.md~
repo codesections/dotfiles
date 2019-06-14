@@ -1,0 +1,9 @@
+ * write a stream that repeatedly yeilds a string
+ * Fix `mn` from using nvim with emacs set as EDITOR/VISUAL
+ * Move all forked GitHub repos to `codesections-forks` (API?)
+
+
+
+ * start using OrgMode TODOs
+ * update stared GitHub repos
+ * change hotkeys for Mastodon/Firefox

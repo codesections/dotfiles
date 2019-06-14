@@ -1,0 +1,20 @@
+(add-to-list 'load-path "~/.emacs.d/elpa/xterm-color-20190315.35")
+(require 'xterm-color)
+
+(require 'eshell)
+
+(add-hook 'eshell-before-prompt-hook
+          (lambda ()
+            (setq xterm-color-preserve-properties t)))
+
+(add-to-list 'eshell-preoutput-filter-functions 'xterm-color-filter)
+(setq eshell-output-filter-functions
+      (remove 'eshell-handle-ansi-color eshell-output-filter-functions))
+
+(require 'em-smart)
+(add-hook 'eshell-mode-hook (lambda () (eshell-smart-initialize)))
+(add-to-list 'default-frame-alist
+            '(font . "DejaVu Sans Mono-12"))
+
+(setenv "PAGER" "")
+(setenv "TERM" "eterm")

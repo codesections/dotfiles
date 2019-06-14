@@ -1,0 +1,6 @@
+
+◊(define (MainParagraph . text)
+   `(p ((style "
+        font-size: 1.15em;
+        line-height: 1.6em;
+        color: #444;")) ,@text))

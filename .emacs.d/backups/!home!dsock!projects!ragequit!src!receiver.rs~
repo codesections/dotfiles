@@ -1,0 +1,89 @@
+#[derive(Debug)]
+pub struct Receiver {
+    redis_write_stream: WriteHalf<TcpStream>,
+    redis_read_stream: ReadHalf<TcpStream>,
+    tl: String,
+    pub user: User,
+    polled_by: Uuid,
+    msg_queue: HashMap<Uuid, VecDeque<Value>>,
+}
+impl Receiver {
+    pub fn new() -> Self {
+        let (tx, mut rx) = tokio::sync::mpsc::channel(5);
+        let socket = pubsub::Socket::new("127.0.0.1:6379", tx);
+
+        tokio::run(futures::future::lazy(move || socket));
+
+        let socket = loop {
+            if let Ok(Async::Ready(Some(msg))) = rx.poll() {
+                break msg;
+            }
+            thread::sleep(time::Duration::from_millis(100));
+        };
+
+        let (redis_read_stream, redis_write_stream) = socket.split();
+
+        Self {
+            redis_write_stream,
+            redis_read_stream,
+            tl: String::new(),
+            user: User::public(),
+            polled_by: Uuid::new_v4(),
+            msg_queue: HashMap::new(),
+        }
+    }
+    pub fn set_polled_by(&mut self, id: Uuid) -> &Self {
+        self.polled_by = id;
+        self
+    }
+    pub fn subscribe(&mut self, tl: &String) {
+        let subscribe_cmd = RedisCmd::from("subscribe", &tl);
+        info!("Subscribing to {}", &tl);
+        self.redis_write_stream
+            .poll_write(&subscribe_cmd)
+            .expect("Can subscribe to Redis");
+    }
+    pub fn unsubscribe(&mut self, tl: &String) {
+        let unsubscribe_cmd = RedisCmd::from("unsubscribe", &tl);
+        info!("Subscribing to {}", &tl);
+        self.redis_write_stream
+            .poll_write(&unsubscribe_cmd)
+            .expect("Can unsubscribe from Redis");
+    }
+}
+impl Stream for Receiver {
+    type Item = Value;
+    type Error = Error;
+
+    fn poll(&mut self) -> Poll<Option<Value>, Self::Error> {
+        let mut buffer = vec![0u8; 3000];
+        let polled_by = self.polled_by;
+        self.msg_queue.entry(polled_by).or_insert(VecDeque::new());
+        info!("Being polled by StreamManager with uuid: {}", polled_by);
+        if let Async::Ready(num_bytes_read) = self.redis_read_stream.poll_read(&mut buffer)? {
+            // capture everything between `{` and `}` as potential JSON
+            // TODO: figure out if `(?x)` is needed
+            let re = Regex::new(r"(?P<json>\{.*\})").expect("Valid hard-coded regex");
+
+            if let Some(cap) = re.captures(&String::from_utf8_lossy(&buffer[..num_bytes_read])) {
+                let json: Value = serde_json::from_str(&cap["json"].to_string().clone())?;
+                for value in self.msg_queue.values_mut() {
+                    value.push_back(json.clone());
+                }
+            }
+        }
+        if let Some(value) = self.msg_queue.entry(polled_by).or_default().pop_front() {
+            Ok(Async::Ready(Some(value)))
+        } else {
+            Ok(Async::NotReady)
+        }
+    }
+}
+impl Drop for Receiver {
+    fn drop(&mut self) {
+        let timeline = self.tl.clone();
+        self.unsubscribe(&timeline);
+        let open_connections = pubsub::OPEN_CONNECTIONS.fetch_sub(1, Ordering::Relaxed) - 1;
+        info!("Receiver dropped.  {} connection(s) open", open_connections);
+    }
+}

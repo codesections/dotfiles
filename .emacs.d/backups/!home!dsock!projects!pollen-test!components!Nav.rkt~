@@ -1,0 +1,16 @@
+#lang racket 
+
+(define (NavBtn text)
+   `(li ((style "
+        position: relative;
+        cursor: pointer;
+        background-color: inherit;
+        height: 1.25em;
+        display: inline-block;")) ,text))
+
+(define (Nav . items)
+   `(nav
+     (ul
+     ,@(map (λ (item) (NavBtn item)) items))))
+
+(provide  Nav)

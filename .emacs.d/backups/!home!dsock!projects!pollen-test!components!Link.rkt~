@@ -1,0 +1,8 @@
+#lang racket 
+
+(define (Link text)
+   (define link (car links))
+   (set! links (cdr links))
+   `(a ((href ,(format "~a" link))) ,(format "~a" text)))
+
+(provide  Link)

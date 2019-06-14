@@ -1,0 +1,3039 @@
+echo keybase >>> problems.txt
+cat problems.txt
+rm problems.txt
+vi a.out
+rm a.out
+cd
+eshell-smart-initialize
+rm log2.txt
+ls go
+eshell-output-filter
+print eshell-output-filter
+print $eshell-output-filter
+eshell-output-filter-functions 
+(eshell-output-filter-functions (quote (eshell-handle-control-codes eshell-watch-for-password-prompt)))
+(setq eshell-output-filter-functions (quote (eshell-handle-control-codes eshell-watch-for-password-prompt)))
+print $eshell-output-filter
+cd
+(setq eshell-scroll-to-bottom-on-output nil)
+(setq eshell-scroll-show-maximum-output nil)
+(setq eshell-scroll-to-bottom-on-input nil)
+print $eshell-output-filter-functions
+cd
+cd 
+setenv PAGER ""
+clear 
+describe-mode
+describe-mode
+describe-mode
+describe-mode
+echo $TERM
+setenv PAGER ""
+setenv TERM eterm
+*bat --color=always init.el
+clear 
+ls 
+clear 
+*bat init.el
+*bat init.el
+cleat
+*bat init.el
+*bat init.el
+bat init.bak
+*bat init.bak
+ls
+clear
+ls
+clear
+*bat --theme=TwoDark init.bak
+echo $default-frame-alist
+(set-frame-font "DejaVu Sans Mono-10")
+*bat --theme=TwoDark init.bak
+(set-frame-font "hack 12")
+(set-frame-font "DejaVu Sans Mono-10")
+(set-frame-font "hack 12")
+(set-frame-font "DejaVu Sans Mono-10")
+(set-frame-font "hack 12")
+*bat --theme=TwoDark init.bak
+clear
+(set-frame-font "Inconsolata")
+(print (font-family-list))
+(set-frame-font "Neo Euler")
+clear
+rm a.ou
+(set-frame-font "DejaVu Sans Mono-10")
+(print (font-family-list))
+(set-frame-font "DejaVu Sans Mono-10")
+(set-frame-font "terminus")
+(set-frame-font "unifont")
+*bat --theme=TwoDark init.bak
+(set-frame-font "unifont-15")
+(set-frame-font "unifont-14")
+(set-frame-font "unifont-20")
+(set-frame-font "DejaVu Sans Mono-10")
+(print (font-family-list))
+(set-frame-font "Terminus")
+(set-frame-font "terminus")
+(set-frame-font "roboto")
+*bat --theme=TwoDark init.bak
+(set-frame-font "roboto mono")
+(print (font-family-list))
+(set-frame-font "ubuntu mono")
+*bat --theme=TwoDark init.bak
+(set-frame-font "ubuntu mono-12")
+(set-frame-font "ubuntu mono-14")
+ls
+*bat --theme=TwoDark init.bak
+ls
+*bat --theme=TwoDark init.el
+(print (font-family-list))
+(set-frame-font "Source Code Pro")
+*bat --theme=TwoDark init.el
+(set-frame-font "Source Code Pro-10")
+*bat --theme=TwoDark init.el
+ls
+(print (font-family-list))
+(set-frame-font "Source Code Pro-12")
+(set-frame-font "ubuntu mono-12")
+(set-frame-font "ubuntu mono-14")
+(set-frame-font "Source Code Pro-12")
+(set-frame-font "Source Code Pro-10")
+(set-frame-font "ubuntu mono-12")
+(set-frame-font "Source Code Pro-10")
+(set-frame-font "Source Code Pro-11")
+(set-frame-font "Source Code Pro-10")
+(set-frame-font "ubuntu mono-12")
+(set-frame-font "ubuntu mono-13")
+(set-frame-font "ubuntu mono-12.5")
+(set-frame-font "ubuntu mono-12.2")
+(set-frame-font "ubuntu mono-12.3")
+(set-frame-font "ubuntu mono-12.25")
+(set-frame-font "ubuntu mono-12.20")
+(set-frame-font "Source Code Pro-10")
+(set-frame-font "Source Code Pro-10.5")
+(set-frame-font "ubuntu mono-12.20")
+(set-frame-font "Source Code Pro-12")
+(set-frame-font "ubuntu mono-15")
+(set-frame-font "ubuntu mono-15")
+(set-frame-font "ubuntu mono-15")
+(set-frame-font "ubuntu mono-15")
+(set-frame-font "Source Code Pro-13")
+ls
+cat test.el > #'myvar
+ls
+top
+clear
+clear nil
+ls
+(eshell/clear nil)
+clear
+cd ~/projects/resume/
+ls
+cat yarn.lock 
+cat yarn.lock | wc -l
+time cat yarn.lock | wc -l
+time *cat yarn.lock | wc -l
+time *cat yarn.lock | wc 
+time *cat yarn.lock | wc
+setq process-connection-type nil
+time *cat yarn.lock | wc
+time cat yarn.lock | wc
+time *cat yarn.lock | wc -l
+time cat yarn.lock | wc -l
+cat src/pages/index.js
+time cat yarn.lock | wc -l
+time cat yarn.lock | wc 
+cd src/pages/
+cat index.js
+bat index.js
+cat index.js
+cat components/SideBar.js
+bat components/SideBar.js
+cat components/EducationSection.js
+z
+up
+z pages
+up res
+ls
+cat hi
+rm hi
+$EDITOR
+echo $EDITOR
+echo $VISUAL
+vmstat
+z mn
+vc-dir
+vc-dir .
+status
+git status
+vc-dir .
+eshell-display-predicate-help
+echo *
+cdr echo *
+car echo *
+car $(echo *)
+car $(eshell/echo *)
+car $(eshell/echo "*")
+(eshell/echo "*")
+(eshell/echo *)
+cat /usr/share/dict/cracklib-small
+cat /usr/share/dict/cracklib-small | wc
+cat /usr/share/dict/cracklib-small | wc -l
+ls /usr/share/dict/cracklib-small
+ls /usr/share/dict/
+aspell -h
+aspell --help
+aspell config
+cd
+fd aspell
+fd aspell*
+fd --help
+fd -h
+fd -H aspell
+fd -H ispell
+cd /
+fd -H aspell
+fd -H ispell
+ls var/lib/snapd/snap/gnome-3-26-1604/74/var/lib/dictionaries-common/aspell/aspell-en
+ls -l var/lib/snapd/snap/gnome-3-26-1604/74/var/lib/dictionaries-common/aspell/aspell-en
+*ls -l var/lib/snapd/snap/gnome-3-26-1604/74/var/lib/dictionaries-common/aspell/aspell-en
+cat var/lib/snapd/snap/gnome-3-26-1604/74/var/lib/dictionaries-common/aspell/aspell-en | wc -l
+dict
+fd dict
+ls /var/lib/dict
+ls /var/lib/
+ls /usr/share/dict/
+ls -a /usr/share/dict/
+ls -a /usr/share
+aspell dump dicts
+fd -H en_GB
+cd usr/lib/aspell-0.60/
+ls
+cat en.multi
+cat en.dat
+aspell -d en dump master | aspell -l en expand > words
+cd ~
+aspell -d en dump master | aspell -l en expand > words
+ls -l words
+*ls -l words
+wc words
+aspell -d en dump master | aspell -l en expand | wc
+time aspell -d en dump master | aspell -l en expand | wc
+ls
+ls 2> /dev/null
+mn
+mn 2> stderr
+mn 1> stderr
+vi stderr
+*cat stderr
+$current-buffer
+current-buffer
+echo "hi" >>> current-buffer
+echo "hi" >>> (current-buffer)
+ff
+alias
+find-file-other-window .tmux.conf
+view-file-other-window .tmux.conf
+find-file-other-window .links/
+alias ff find-file $1alias FF find-file-other-window $1alias v view-file $1alias V view-file-other-window $1
+alias ff find-file $1alias FF find-file-other-window $1alias v view-file $1alias
+FF ~/.emacs.d/eshell/alias
+find-file ~/.emacs.d/eshell/alias
+ls
+FF ~/.emacs.d/eshell/alias
+alias
+ff .tmux.conf
+FF .tmux.conf
+FF exercism/rust/difference-of-squares/src/lib.rs
+(save-excursion (insert "my text"))
+insert "cat"
+insert "echo "
+echo insert "echo "
+FF .stumpwm.d/commands.lisp
+help
+pass
+pass driver
+fjc 1591
+pass add driver_license
+clear
+pass driver_license
+pass edit driver_license
+toggle-mouse
+z mn
+vi src/cli.rs
+toggle-mouse
+esh-help-run-help
+esh-help-run-help ls
+esh-help-run-help toggle-mouse
+bat 
+bat add.rs
+ls -l touch
+info touch 
+ls
+clear
+mn edit notes
+mn notes
+info stumpwm
+restart
+ldfso
+cat stderr
+guix 
+guix --help
+guix pull
+cat /root/.config/
+sudo ls /root/.config/
+sudo ls /root/.config/guix/
+sudo cat /root/.config/guix/current
+sudo ls /root/.config/guix/current/
+sudo ls /root/.config/guix/current/current-guix
+sudo cd /root/.config/guix/current/current-guix
+cd /root/.config/guix/current/current-guix
+cd /root/.config/guix/current/
+cd /root/.config/guix/
+sudo cd /root/.config/guix/
+guix package -i hello
+guix package -i glibc-locales
+guix package -i hello
+setenv PATH "/home/dsock/.guix-profile/bin${PATH:+:}$PATH"
+echo PATH
+echo $PATH
+echo $PATH
+guix package -i hello
+setenv GUIX_LOCPATH "~/.guix-profile/lib/locale"
+guix package -i hello
+guix package -i guile-reader
+guix package -i haunt
+haunt
+cd ~/src/haunt/
+ls
+cd example/
+haunt serve
+../pre-inst-env haunt build
+guix package -i haunt
+/gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt
+/gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt haunt.scm
+/gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt build
+alias haunt /gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt $*
+alias
+alias haunt "/gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt $*"
+alias
+alias haunt '/gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt $*'
+alias
+haunt build
+ls
+vi posts/baz.skr
+haunt serve
+vi posts/baz.skr
+guix package -i skribilo
+(add-to-list 'exec-path "/home/dsock/.guix-profile/bin")
+z projects
+mkdir skribilo-test
+cd skribilo-test/
+skribilo --target=html file.skb -o file.html
+/gnu/store/7spzbv7agsajmnyswks2nxq5clj2s9sx-skribilo-0.9.4/bin/skribilo
+/gnu/store/7spzbv7agsajmnyswks2nxq5clj2s9sx-skribilo-0.9.4/bin/skribilo --target=html file.skb -o file.html
+alias skribilo '/gnu/store/7spzbv7agsajmnyswks2nxq5clj2s9sx-skribilo-0.9.4/bin/skribilo $*'
+skribilo --target=html file.skb -o file.html
+vi file.skb
+skribilo --target=html file.skb -o file.html
+ls
+firefox file.html
+vi file.skb
+cd ../pollen-test/
+ls
+vi hello.html.pm
+pollen serve
+rako pollen serve
+raco pollen serve
+raco pollen start
+cd ../skribilo-test/
+ls
+skr
+skribilo --target=html file.skb -o file.html
+cd projects/
+mkdir racket-pictures
+cd racket-pictures/
+vi hello.rkt
+ls
+mv hello.html.pm hello.html.pmd.pm
+raco pollen start
+mv hello.html.pmd.pm hello.html.pm
+raco pollen start
+raco pollen --help
+raco pollen reset
+raco pollen start
+ls
+mkdir components
+mv MainParagraph.rkt components/
+raco pollen start
+etags
+etags .
+etags * **/*
+ls
+etags components/*
+etags components/Nav.rkt
+cat components/Nav.rkt
+cat TAGS
+etags hello.html components/Nav.rkt
+cat TAGS
+etags hello.html components/Nav.rkt components/MainParagraph.rkt
+cat TAGS
+mn notes
+mn list
+ctags -r
+ctags -R
+FF TAGS
+ctags -h
+ctags --help
+ctags -e -R
+rm \.\#old.html
+ctags -e -R
+FF TAGS
+ls
+cat tags
+rm TAGS
+rm tags
+rm \#old.html\#
+git init
+ff .gitignore
+git status
+FF .gitignore
+git status
+git add .
+z pollen
+ls
+vi template.html.p
+raco pollen start
+ls
+mv template.html.p template.html.pm
+vi template.html.pm
+raco pollen start
+mv template.html.pm template.html.p
+vi template.html.p
+raco pollen start
+to
+top
+raco pollen start
+ls
+mv components/Logo.rkt components/Logo.pm
+raco pollen start
+raco pollen reset
+raco pollen start
+ls
+raco pollen reset
+ls
+rg Logo.rkt
+raco pollen start
+mv components/Logo.pm components/Logo.rkt
+raco pollen start
+ls
+mv hello.html.pm hello.poly.pm
+vi pollen.rkt
+raco pollen start
+jk
+raco pollen start
+raco pollen reset
+raco pollen start
+ls
+mv template.text.p template.txt.p
+raco pollen start
+raco pollen reset
+raco pollen start
+raco pkg update --update-deps pollen
+pollen --version
+raco pollen --version
+raco pollen version
+raco pollen render
+firefox hello.txt
+firefox hello.html
+raco pollen start
+ZZZ
+zsh
+clear
+raco pollen render
+google-chrome-stable hello.html
+git status
+git add .
+git commit
+z po
+ls
+vi hello.rkt
+vi hello.poly.pm
+raco pollen render
+firefox hello.html
+raco pollen render
+raco pollen render
+raco pollen render
+cat --help
+*cat --help
+z pollen
+raco pollen render
+iraco pollen render
+raco pollen render
+raco pollen reset; raco pollen render
+raco pollen reset; raco pollen renderi
+raco pollen reset; raco pollen render
+F
+raco pollen reset; raco pollen render
+rg indent
+raco pollen reset; raco pollen render
+cd ../
+mkdir pollen-play
+cd pollen-play
+vi books.html.pm
+raco pollen start
+pass creditcards/discover_william_sockwell
+pass add creditcards/visa_deborah_j_long
+pass edit creditcards/visa_deborah_j_long
+echo $EDITOR
+setenv EDITOR emacsclient
+pass edit creditcards/visa_deborah_j_long
+pass creditcards/visa_deborah_j_long
+pass edit creditcards/visa_deborah_j_long
+pass creditcards/visa_deborah_j_long
+raco pollen start
+ls
+cd ../pollen-test/
+ls
+vi pollen.rkt
+raco pollen start
+raco pollen reset; raco pollen render
+raco pollen start
+raco pollen reset; raco pollen render
+ls
+bat template.html
+raco pollen reset; raco pollen render
+raco pollen start
+raco pollen reset; raco pollen render
+raco pollen reset; raco pollen render
+scrot -s
+ls
+ls 2019-04-13-070048_586x1648_scrot.png
+xclip 2019-04-13-070048_586x1648_scrot.png -sel clip
+xclip --help
+xclip
+info xclip
+man xclip
+xclip 2019-04-13-070048_586x1648_scrot.png -selection clipboard
+xclip -selection clipboard -t image/png -i 2019-04-13-070048_586x1648_scrot.png
+ls
+xclip -selection clipboard -t image/png -i file.txt
+xclip -selection clipboard -i file.txt
+info eshell
+man xclip
+xclip -selection clipboard -i file.txt
+echo "This is a test" | xclip -selection clipboard
+echo "This is a test" | xclip 
+zsh
+info eshell
+clear
+vi time.org
+cd
+ls
+z pr
+ls
+mkdir texts
+mv actix_tests book-1 demo electron-api-demos electron-quick-start ezpass gatsby-site gutenberg-simple-demo gutenberg-theme-demo gutenberg_themes namePicker pollen-play pollen-test racket-pictures react-calculator simple-rust-site skribilo-test test_blog test_blog_gatsby trailblazers-site typed-html warp warp-sse warp-static webpack-demo -t tests
+mkdir tests
+mv actix_tests book-1 demo electron-api-demos electron-quick-start ezpass gatsby-site gutenberg-simple-demo gutenberg-theme-demo gutenberg_themes namePicker pollen-play pollen-test racket-pictures react-calculator simple-rust-site skribilo-test test_blog test_blog_gatsby trailblazers-site typed-html warp warp-sse warp-static webpack-demo -t tests
+ls
+mkdir AoC_2018
+ls
+ls test
+ls tests
+mv advent-of-code-2018 advent_of_code BurntSushi_AoC -t AoC_2018/
+ls
+mkdir templates
+ls
+mv  basicSetupForReactJestEnzyme basicWebpackBabel jest -t templates/
+mkdir mastodon-mini
+ls
+mv fosstodon get-followers local-timeline localTimelineFosstodon localTimelineV3 localTimelineViewer mastodon-archive mastodon-de-mob MVP -t mastodon-mini/
+ls
+rmdir texts/
+mkdir presentations
+ls
+mv HIR_Pres mdx-deck poly_programming -t presentations
+ls
+bat fork-drawer
+ls
+ls segpanic/
+rmdir segpanic/
+ls statsw/
+ls statsw/src/
+bat statsw/src/main.rs
+rm -rf statsw/
+ls
+mv cdt dlarm gtypist_programming_characters keybase-outbox muon pass-gen t5 -t inactive/
+mvls
+ls
+mv fork-drawer -t inactive/
+mkdir exercises
+ls
+mv AoC_2018 regex rust-koans rustlings the-super-tiny-compiler
+ls
+mv AoC_2018 regex rust-koans rustlings the-super-tiny-compiler -t exercises/
+mv the-super-tiny-compiler/AoC_2018 the-super-tiny-compiler/regex the-super-tiny-compiler/rust-koans the-super-tiny-compiler/rustlings -t exercises/
+ls
+ls exercises/
+ls exercises/the-super-tiny-compiler/
+mv exercises/the-super-tiny-compiler/AoC_2018 exercises/the-super-tiny-compiler/regex exercises/the-super-tiny-compiler/rust-koans exercises/the-super-tiny-compiler/rustlings -t exercises/
+ls
+mv gutenberg/ inactive/
+mkdir qutebrowser
+mv qute_mark/ qute_jump/ -t qutebrowser/
+ls
+mv mastodon-mini/ inactive/
+ls
+cd redis-poc/
+ls
+bat t
+rm t
+ls
+car Cargo.toml
+cat Cargo.toml
+cat src/main.rs
+cd
+ls
+ls | wc -l
+vi time.org
+ls
+cd pr
+cd projects/
+echo keybase >>> problems.txtals
+ls
+rm problems.txtals
+z src
+cd ~src
+cd ~/src
+ls
+cd mastodon/
+ls
+forman start
+mn notes
+ms
+mn
+mn list
+mn mastodev
+zsh
+clear
+zsh
+clear
+mn mastodev
+foreman start
+cd ~/src/mastodon/
+foreman start
+zsh
+source ~/.rvm/scripts/rvm
+z masto
+ls
+zsh
+forman start
+zsh
+foreman start
+zsh
+clear
+redis-cli
+info eshell
+echo $eshell-visual-commands
+add-to-list eshell-visual-commands "redis-cli"
+(add-to-list eshell-visual-commands "redis-cli")
+(add-to-list 'eshell-visual-commands "redis-cli")
+redis-cli
+(add-to-list 'eshell-visual-commands "nc")
+echo -e '*1\r\n$4\r\nINFO\r\n' | nc -p 6379
+tldr nc
+cargo install tldr
+echo $PATH
+echo $eshell-path-env
+ls /home/dsock/.cargo/bin/
+bat .env.nanobox
+(add-to-list 'eshell-path-env "/home/dsock/.cargo/bin")
+ls (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+ls /home/dsock/.cargo/bin/
+(setenv "PATH" (concat "/home/dsock/.cargo/bin/:" (getenv "PATH")))
+tldr nc
+cargo
+echo $PATH
+cargo
+(setenv "PATH" (concat "/home/dsock/.cargo/bin/:" (getenv "PATH")))
+(setq eshell-path-env (concat "/home/dsock/.cargo/bin/:" eshell-path-env))
+cargo
+tldr nc
+echo -e '*1\r\n$4\r\nINFO\r\n' | nc 127.0.0.1 -p 6379
+echo -e '*1\r\n$4\r\nINFO\r\n' | nc 'http://127.0.0.1' -p 6379
+echo -e '*1\r\n$4\r\nINFO\r\n' | nc 127.0.0.1 6379
+pacman -Ss tess
+pacman -Ss tesseract
+sudo pacman -S tesseract
+sudo pacman -Syyu
+sudo pacman -S tesseract
+sudo pacman -S tesseract-data-eng
+tesseract IMG-0191.JPG OCR
+ls OCR.txt
+cat OCR.txt
+feh IMG-0191.JPG
+tesseract -h
+tesseract --help-extra
+convert IMG-0191.JPG -rotate 90
+convert IMG-0191.JPG -rotate 90 "rotatedIMG"
+feh rotatedIMG
+tesseract rotatedIMG OCR
+OCR
+cat OCR.txt
+tesseract -l eng rotatedIMG OCR
+cat OCR.txt
+rm rotatedIMG
+rm IMG-0191.JPG
+rm OCR.txt
+pacman -Ss factor
+z Down
+cd ~/Downloads/
+tldr tar
+(setq eshell-path-env (concat "/home/dsock/.cargo/bin/:" eshell-path-env))
+tldr tar
+tar -xfv factor
+tar -xf factor
+ls factor-linux-x86-32-0.98.tar.gz
+tar -xf factor-linux-x86-32-0.98.tar.gz
+cd factor/
+ls
+cat README.md
+./factor
+pacman -Ss libgtk
+ppacman -Qkk gtk2rint eshelpacman -Qkk gtk2
+pacman -Qkk gtk2
+pacman -Qi gtk2
+./factor
+sudo ./factor
+z pro
+ls
+cargo new pubsub
+cd pubsub/
+ls
+cargo add tokio
+cd src/
+cargo add 
+rstfmt
+cargo install rustfmt
+rustfmt
+vi 
+ff main.rs
+cd projects/pubsub/
+ls
+cd projects/
+ls
+ls inactive/
+ls tests
+ls tests/warp-sse/
+cat tests/warp-sse/src/main.rs
+cat tests/warp/src/main.rs
+ff tests/warp/src/main.rs
+FF ../Cargo.toml
+z warp
+ls
+(setq eshell-path-env (concat "/home/dsock/.cargo/bin/:" eshell-path-env))
+(setenv "PATH" (concat "/home/dsock/.cargo/bin/:" (getenv "PATH")))
+(setenv "PATH" (concat "/home/dsock/.cargo/bin/:" (getenv "PATH")))
+vi src/main.rs
+cargo
+z warp
+vi src/main.rs
+z warp
+z warp
+z mn
+vi src/main.rs
+cd ../ragequit/
+ls
+z warp
+z rage
+ls
+cd src
+vi main.rs
+wifi-on
+sudo pacman -S stack
+cd 
+cd src
+git clone git clone https://github.com/evincarofautumn/kitten.git
+git clone https://github.com/evincarofautumn/kitten.git
+cd kitten/
+stack setup 
+stack build
+stack install
+kitten
+wifi-on
+guix --help
+guix weather
+guix help weather
+guix help 
+guix help describe
+guix package -i glibc-utf8-locales
+export PATH="/home/dsock/.guix-profile/bin${PATH:+:}$PATH"
+guix help describe
+export GUIX_LOCPATH="$HOME/.guix-profile/lib/locale"
+guix help describe
+guix  describe
+guix help 
+info guix
+man guix
+guix help package
+guix package -s  
+guix package -s qute
+qutebrowser -V
+guix package -s qute
+qutebrowser -V
+z rage
+git co master
+git pull 
+git co -b logging
+z rage
+FF src/main.old.rs
+cat Cargo.toml
+cargo add pretty_env_logger
+cargo make
+RUST_LOG=debug cargo run
+RUST_LOG=info cargo run
+clear
+RUST_LOG=info cargo run
+git add --all
+git commit
+git statys
+git rm src/\#pubsub.rs\#
+git reset HEAD src/\#pubsub.rs\#
+git status
+git add --all
+git reset HEAD src/\#pubsub.rs\#
+git commit
+vi Cargo.toml
+git add Cargo.toml
+git commit
+git push
+git push --set-upstream origin logging
+git co master
+git add Cargo.lock
+git commit
+git co master
+git pull
+git merge logging
+git reset HEAD Cargo.lock
+git merge logging
+git status
+git checkout Cargo.lock
+git merge logging
+git push
+cargo add postgres
+cat Cargo.toml
+z rage
+curl http://www.codesections.com
+curl https://www.codesections.com
+curl http://localhost:3030/api/v1/streaming/user
+curl http://localhost:3030/api/v1/streaming/user
+curl http://localhost:3030/api/v1/streaming/luser
+tldr curl
+curl --help
+curl http://localhost:3030/api/v1/streaming/luser -I
+curl http://localhost:3030/api/v1/streaming/user -I
+curl http://localhost:3030/api/v1/streaming/user
+curl http://localhost:3030/api/v1/streaming/user -i
+curl http://localhost:4000/api/v1/streaming/user -i
+curl http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:4000/api/v1/streaming/user -i
+curl http://localhost:4000/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearereda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:4000/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:4000/api/v1/streaming/user -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+gitstatus
+git status
+git add src/pg.rs src/main.rs Cargo.lock Cargo.toml
+git commit
+git branch
+git co -b auth
+git commit
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:4000/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:4000/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:4000/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:4000/api/v1/streaming/user -i
+curl http://localhost:3030/api/v1/streaming/user -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+git status
+git add src/main.rs
+git commit
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab" -i
+curl http://localhost:3030/api/v1/streaming/user -i
+curl http://localhost:3030/api/v1/streaming/user -H "authorization: Bearer eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=foo -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=foo -i
+curl http://localhost:3030/api/v1/streaming/user -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user?access_token=foo -i
+curl http://localhost:3030/api/v1/streaming/user -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -i
+cargo run
+curl http://localhost:3030/api/v1/streaming/user -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=foo -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+git status
+rm src/pg.rs
+git status
+cd src
+git add main.rs pg.rs query.rs auth.rs error.rs
+git commit
+git push
+git push --set-upstream origin auth
+cd
+ls
+cd projects/
+mkdir tangle
+cd tangle
+FF config.org
+ff ~/.config/qutebrowser/config.py
+z pollen
+cd ..
+cd -
+mkdir pollen-dot
+cd pollen-dot/
+ff config.py.pm
+raco pollen reset; raco pollen render
+ls
+ff config.py.pm
+raco pollen reset; raco pollen render
+FF config.py.pm
+raco pollen reset; raco pollen render
+mv config.py.pm config.html.pm
+raco pollen reset; raco pollen render
+FF config.html
+raco pollen reset; raco pollen render
+ls
+mv config.py.pm config.html.pm
+raco pollen reset; raco pollen render
+FF config.html
+mv config.py.pm config.html.pm
+raco pollen reset; raco pollen render
+FF config.html
+z rage
+FF src/main.rs
+car
+env RUST_LOG=INFO cargo run
+RUST_LOG=INFO cargo run
+packman -S zig
+suod pacman -S zig
+sudo pacman -S zig
+zig -h
+zig --help
+zig version
+zig zen
+z pro
+mkdir zig
+cd zig
+FF hello.zig
+run hello.zig
+zig run hello.zig
+z rage
+cur
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87e -i
+curl http://localhost:3030/api/v1/streaming/public
+curl http://localhost:3030/api/v1/streaming/public/foo
+curl http://localhost:4000/api/v1/streaming/public/foo
+curl http://localhost:3030/api/v1/streaming/public/foo
+curl http://localhost:3030/api/v1/streaming/public/foo -i
+curl http://localhost:4000/api/v1/streaming/public/foo -i
+env RUST_LOG=INFO cargo run
+RUST_LOG=INFO cargo run
+ls
+RUST_LOG=INFO cargo run
+RUST_LOG=INFO cargo run
+curl http://localhost:3030/api/v1/streaming/public/foo -i
+curl http://localhost:3030/api/v1/streaming/public -i
+curl http://localhost:3030/api/v1/streaming/public/foo -i
+curl http://localhost:3030/api/v1/streaming/public?media_only=true -i
+curl http://localhost:3030/api/v1/streaming/public?media_only=t -i
+RUST_LOG=INFO cargo run
+curl http://localhost:3030/api/v1/streaming/public?media_only=t -i
+curl http://localhost:3030/api/v1/streaming/public?media_only=true -i
+curl http://localhost:3030/api/v1/streaming/public?only_media=true -i
+curl http://localhost:3030/api/v1/streaming/public?only_media=t -i
+curl http://localhost:4000/api/v1/streaming/public?only_media=t -i
+git status
+git co -b fixup
+cd src
+git add main.rs pubsub.rs utils.rs
+git commit
+git push --set-upstream origin fixup
+git status
+git co master
+git dif
+git diff
+git co pubsub.rs
+git co master
+git pull
+git co filter-notification
+git co -b filter-notification
+cargo check
+curl http://localhost:4000/api/v1/streaming/user/notifications -i
+curl http://localhost:4000/api/v1/streaming/user/notifications?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:4000/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -iQ
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -iQ
+{"acct":"test","avatar":"http://localhost:3000/avatars/original/missing.png","avatar_static":"http://localhost:3000/avatars/original/missing.png","bot":false,"created_at":"2019-04-19T17:40:58.196Z","display_name":"","emojis":[],"fields":[],"followers_count":0,"following_count":1,"header":"http://localhost:3000/headers/original/missing.png","header_static":"http://localhost:3000/headers/original/missing.png","id":"2","locked":false,"note":"<p></p>","statuses_count":3,"url":"http://localhost:3000/@test","username":"test"},"created_at":"2019-04-19T17:43:15.002Z","id":"3","status":{"account":{"acct":"test","avatar":"http://localhost:3000/avatars/original/missing.png","avatar_static":"http://localhost:3000/avatars/original/missing.png","bot":false,"created_at":"2019-04-19T17:40:58.196Z","display_name":"","emojis":[],"fields":[],"followers_count":0,"following_count":1,"header":"http://localhost:3000/headers/original/missing.png","header_static":"http://localhost:3000/headers/original/missing.png","id":"2","locked":false,"note":"<p></p>","statuses_count":3,"url":"http://localhost:3000/@test","username":"test"},"card":null,"content":"<p><span class=\"h-card\"><a href=\"http://localhost:3000/@admin\" class=\"u-url mention\">@<span>admin</span></a></span> test 0011</p>","created_at":"2019-04-19T17:43:14.853Z","emojis":[],"favourited":false,"favourites_count":0,"id":"101954079611040640","in_reply_to_account_id":null,"in_reply_to_id":null,"language":"en","media_attachments":[],"mentions":[{"acct":"admin","id":"1","url":"http://localhost:3000/@admin","username":"admin"}],"muted":false,"reblog":null,"reblogged":false,"reblogs_count":0,"replies_count":0,"sensitive":false,"spoiler_text":"","tags":[],"uri":"http://localhost:3000/users/test/statuses/101954079611040640","url":"http://localhost:3000/@test/101954079611040640","visibility":"public"},"type":"mention"}
+cargo check
+tokie .
+tokei .
+tokei --help
+tokei -f .
+curl http://localhost:4000/api/v1/streaming/direct?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+sieg
+bombardier --help
+bombardier http://localhost:4000/api/v1/streaming/direct?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+bombardier http://localhost:3030/api/v1/streaming/direct?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+bombardier http://localhost:3030/api/v1/streaming/direct?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+bombardier http://localhost:3030/api/v1/streaming/direct?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+cargo check
+curl http://localhost:4000/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:4000/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917 -i
+curl http://localhost:4000/api/v1/streaming/public -i
+cargo check
+mv auth.rs user.rs
+cargo check
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/local -i
+curl http://localhost:4000/api/v1/streaming/local -i
+curl http://localhost:3030/api/v1/streaming/public/local -i
+git status
+git add user.rs
+git add --all
+git status
+git reset HEAD \.\#pubsub.rs
+git reset HEAD \#pubsub.rs
+git status
+git reset HEAD \#pubsub.rs\#
+git status
+git commit
+cargo check
+wifi-on
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47 -i
+curl "http://localhost:3030/api/v1/streaming/user/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+cargo check
+xsetroot -h
+cargo check
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+git status
+git add main.rs pubsub.rs user.rs query.rs
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli
+(add-to-list 'eshell-visual-commands "redis-cli")
+redis-cli
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+cd projects/
+cargo new parser
+cd parser/
+ff src/main.rs
+cargo test
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli
+redis-cli PUBSUB NUMSUB timeline:list:2
+*redis-cli PUBSUB NUMSUB timeline:list:2
+(eshell-visual-commands)
+(echo eshell-visual-commands)
+(eshell/echo eshell-visual-commands)
+(remove "redis-cli" eshell-visual-commands)
+redis-cli PUBSUB NUMSUB timeline:list:2
+(eshell/echo eshell-visual-commands)
+(setq eshell-visual-commands (remove "redis-cli" eshell-visual-commands))
+redis-cli PUBSUB NUMSUB timeline:list:2
+cur
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+bombardier http://localhost:3030/api/v1/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2
+redis-cli PUBSUB NUMSUB timeline:list:2
+bombardier "http://localhost:3030/api/v1/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:list:2
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+redis-cli PUBSUB unsubscribe timeline:list:2
+redis-cli PUBSUB help
+redis-cli unsubscribe timeline:list:2
+redis-cli PUBSUB NUMSUB timeline:list:2
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:list:2
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -t 1
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -t 1s
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -t 1s -d 3s
+packman -Ss gat
+pacman -Ss gat
+ulimit -n
+pacman -Ss seig
+vi load_test
+chmod 777 load_test
+./load_test
+redis-cli PUBSUB NUMSUB timeline:list:2
+./load_test
+top
+./load_test
+vi load_test
+./load_test
+cargo build --release
+cd ..
+./target/release/ragequit
+top
+./load_test
+redis-cli PUBSUB NUMSUB timeline:list:2
+./load_test
+redis-cli PUBSUB NUMSUB timeline:list:2
+./load_test
+pacman -Ss ulimit
+ulimit
+bombardier "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -t 1s -d 3s
+bombardier "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+./target/release/ragequit
+cur
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+./load_test
+./src/load_test
+ff src/load_test
+./src/load_test
+ff src/load_test
+curl "http://localhost:3030/api/v1/streaming/test" -i
+ff src/main.rs
+curl "http://localhost:3030/api/v1/streaming/list" -i
+ff src/load_test
+./src/load_test
+top
+./src/load_test
+ff src/main.rs
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i &
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"  &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"  &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"  &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"  &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"  &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"  &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:list:2
+killall curl
+redis-cli PUBSUB NUMSUB timeline:list:2
+curl "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:list:2
+redis-cli PUBSUB NUMSUB timeline:list:47
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+killall curl
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+links -g
+pacman -Ss links
+pacman -Ss dillo
+sudo pacman -S dillo
+dillo
+cd
+cd .dillo/
+;s
+ls
+dillo -- https://www.codesections.com
+cd .dillo/
+ff dillorc
+dillo -- https://www.codesections.com
+git status
+git log
+git hist
+git diff
+git branch
+git push --set-upstream origin filter-notification
+git commit
+git push --set-upstream origin close-redis-connections
+git push
+git status
+git co master
+git diff
+git status
+git add src/main.rs src/pubsub.rs
+git commit
+git push
+git co master
+git pull
+git co connection-pool
+git co -b connection-pool
+cargo add r2d2
+git status
+cd src
+grep where
+git status
+git diff
+git status
+git diff query.rs
+git status
+git co connection-pool
+git status
+git co ../Cargo.lock ../Cargo.toml main.rs pubsub.rs query.rs
+cargo check
+git stash
+git status
+FF pubsub.rs
+cargo check
+git status
+git co main
+git co main.rs
+git co pubsub.rs
+git stash apply
+FF pubsub.rs
+cargo check
+grep Err
+cargo check
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+cd ..
+cargo new redis-test
+cd redis-test
+FF src/main.rs
+cargo add redis
+cargo add tokio
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+redis-cli monitor
+z rage
+git status
+git stash
+git status
+FF src/main.rs
+cargo check
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+top
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+top
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+ff load_test
+./load_test
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+ff load_test
+./load_test
+jobs
+killall curl
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+killall curl
+bombardier "http://localhost:4000/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+cargo build --release
+./target/release/ragequit
+top
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+vi src/pubsub.rs
+cargo build --release
+./target/release/ragequit
+bombardier "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2"
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+./target/release/ragequit
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+bombardier "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+pacman -Ss apl
+sudo pacman -S gnu-apl
+xmodmap
+cd
+ls -a
+ff /home/dsock/projects/dotfiles/.xinitrc
+ff .xinitrc
+wifi-on
+ff .xinitrc
+setxkbmap -option "compose:lwin, shift:both_capslock, caps:ctrl_modifier"
+ff .xinitrc
+setxkbmap -option "tab:super, shift:both_capslock, caps:ctrl_modifier"
+localectl list-x11-keymap-options
+setxkbmap -option "caps:super, shift:both_capslock, caps:ctrl_modifier"
+setxkbmap -option "caps:super, shift:both_capslock"
+setxkbmap -option "caps:super"
+xmodmap -e 'keycode 23=10'
+FF src/main.rs
+xmodmap -e 'keycode 23=32'
+xmodmap --help
+xmodmap -pk
+xmodmap -e 'keycode 23=51'
+(* 16 5)
+xmodmap -e 'keycode 23=81'
+xmodmap -e 'keycode 23=134'
+xmodmap -e 'keycode 23=65516'
+z pollen
+ls
+showkey --scancodes 
+xmodmap -e "23 = Super_R Tab Super_R"
+xmodmap -e "keycode 23 = Super_R Tab Super_R"
+cd components/
+ls
+cd ..
+ls
+cd ..
+ls
+ls tests
+cd tests/pollen-test/
+ls
+ff hello.txt
+ff hello.poly.pm 
+cd ../pollen-play/
+ls
+ff pollen.rkt 
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+gtypist
+(add-to-list 'eshell-visual-commands "gtypist")
+gtypist
+ls
+FF .xinitrc
+setxkbmap -option "compose:lwin, shift:both_capslock, caps:ctrl_modifier"
+pacman -Ss r
+sudo pacman -S r
+r
+R
+apl
+pacman -S julia
+sudo pacman -S julia
+sudo pacman -Ss julia
+sudo pacman -S julia
+julia
+pacman -Ss erlang
+sudo pacman -S erlang
+erl
+cd
+FF tut.erl
+z pro
+cd tests/simple-rust-site/
+cd
+ff what_i_do.txt
+drracket
+pass-gen -e | pass add -e rosettacode/codesections
+pass-gen -e
+pass add -e rosettacode/codesections
+pass rosettacode/codesections
+pass rosettacode/codesections -c
+keybase --help
+keybase update
+keybase update check
+keybase version
+pacman -Ss keybase
+sudo pacman -S keybase
+keybase version
+keybase --help
+keybase chat
+pacman -Ss keybase
+sudo pacman -S keybase-gui
+keybase-gui
+z src
+cd scripts/
+l
+ls
+ff launch-keybase-with-vim
+ff ~/.config/nvim/init.vim
+z pro
+ls
+cd inactive/
+ls
+cd keybase-outbox
+ls
+keybase chat help api-listen
+keybase chat help api
+keybase chat
+keybase chat send fosstodon "Cool, the new version works much better"
+keybase chat help api
+keybase chat help api-listen
+keybase chat api -m '{"method": "read", "params": {"options": {"channel": {"name": "fosstodon", "members_type": "team", "topic_name": "general"}}}}'
+clear
+mkdir ~/projects/keybase
+z rage
+ls
+cd src/
+ls
+FF pubsub.rs
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+killall curl
+z rage src
+FF pubsub.rs
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+cargo clippy
+z rage src
+ls
+rm mod.rx
+ls
+ls
+mkdir lib
+cp user.rs lib/
+cp error.rs lib
+cp pubsub.rs lib
+cp query.rs lib
+cp utils.rs lib
+ls
+rm -rf lib.rs lib/ temp.rs
+git status
+rm ../.apl.history
+git add main.rs pubsub.rs user.rs query.rs
+git status
+git commit
+git hist
+git commit
+pacman -Ss mumble
+sudo pacman -S mumble
+mumble
+pvu
+pulseaudio-ctl
+pavucontrol
+ls
+git status
+git diff 
+git co pubsub.rs main.rs
+pass-gen -e
+pass-gen -e | pass add -e patreon/daniel@codesections.com
+pass patreon/daniel@codesections.com
+pass patreon/daniel@codesections.com -e
+pass -e patreon/daniel@codesections.com 
+pass patreon/daniel@codesections.com 
+pass edit patreon/daniel@codesections.com 
+pass-gen -e
+pass edit patreon/daniel@codesections.com
+pass patreon/daniel@codesections.com 
+pass patreon/daniel@codesections.com -c
+pass edit capitalone360.com
+pass-gen -e
+xclip --help
+tldr xclip
+pass-gen -e
+(add-to-list 'eshell-needs-pipe "xclip")
+pass-gen -e
+pass-gen -e | xclip -selection primary
+pass-gen -e | xclip -selection clipboard
+Generated passphrase copied to clipboard.  Will clear in 45 seconds.Chill&MOLLUSK&unwritten&Drained&WRECK&treat737
+z pro
+ls
+cd inactive/pass-gen/
+ls
+git st
+git hist
+FF pass-gen
+./pass-gen
+./pass-gen -e 
+make install
+sudo make install
+pass-gen -e | xclip -selection clipboard
+git commit
+git add pass-gen
+git commit
+git push
+git push --all
+git push all
+depends what you mean by fediverse support I guess. Because a federate
+FF ~/.emacs.d/init.el
+xmodmap -e "keycode 23 = Alt_R Alt_R Alt_R"
+FF ~/.stumpwm.d/bindings.lisp
+xmodmap -e "keycode 23 = Alt_R"
+setxkbmap --help
+setxkbmap
+man setxkbmap 
+setxkbmap -query
+car /usr/share/X11/xkb/rules/base
+cat /usr/share/X11/xkb/rules/base
+FF /usr/share/X11/xkb/rules/base
+xmodmap -e "keycode 23 = Alt_R Alt_R Alt_R"
+FF .xinitrc
+xmodmap -e "keycode 3 = Alt_R Alt_R Alt_R"
+xmodmap -e "keycode 33 = Alt_R Alt_R Alt_R"
+xmodmap -e "keycode 33 = Super_R Super_R Super_R"
+xmodmap -e "keycode 33 = p p p"
+xmodmap -e "keycode 64 = Suer_R Super_R Super_R"
+xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "keycode 64 = p p p"
+xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+xmodmap -help
+xmodmap -pm
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "remove Mod1 = Alt_L"
+xmodmap -e "remove Mod2 = Alt_L"
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "remove Mod1 = Alt_L"
+xmodmap -e "remove Mod2 = Alt_L"
+xmodmap -e "remove Mod1 = Super_R"
+xmodmap -e "remove Mod2 = Super_R"
+xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+xmodmap -e "keycode 64 = Super_R Super_R Super_R"
+xmodmap -e "keycode 23 = Super_R Super_R Super_R"
+keycode  64 = Alt_L Meta_L Alt_L Meta_L
+xev
+FF .xinitrc
+xmodmap -e "keycode 23 = Alt_R Alt_R Alt_R" 
+xmodmap -e "keycode 23 = Alt_R Alt_R Alt_R Alt_R" 
+xev
+xmodmap -pke
+xmodmap -e "keycode 23 = ISO_Level3_Shift" 
+xmodmap -e "keycode 23 = ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift ISO_Level3_Shift " 
+xmodmap -e "keycode 23 = Alt_R Alt_R Alt_R Alt_R" 
+xmodmap -e "keycode 23 = Mod1" 
+xmodmap -e "keycode 23 = Alt_L Meta_L Alt_L Meta_L" 
+xmodmap -e "keycode 23 = Alt_L Meta_L Alt_L Meta_L" 
+xmodmap -e "keycode 23 = Alt_L Meta_L Alt_L Meta_L" 
+setxkbmap -layout us
+xmodmap -e "keycode 23 = Alt_L Meta_L Alt_L Meta_L" 
+xmodmap -e "keycode 64 = Super_R Super_R Super_R Super_R"
+xmodmap -e "clear Mod1"
+xmodmap -e "clear mod1"
+FF ~/.Xmodmap
+setxkbmap -layout us
+ff .xinitrc
+setxkbmap -option "compose:lwin, shift:both_capslock, caps:ctrl_modifier"
+setxkbmap -layout us
+setxkbmap -option "compose:lwin, shift:both_capslock, caps:ctrl_modifier"
+setxkbmap -layout us
+FF .xinitrc
+wifi-on
+setxkbmap -print -verbose 10
+FF .Xmodmap
+xev
+setxkbmap -layout us
+xmodmap .Xmodmap
+FF .Xmodmap
+FF .xinitrc
+reboot
+xmodmap .Xmodmap
+FF .Xmodmap
+xmodmap .Xmodmap
+setxkbmap -layout us
+xmodmap .Xmodmap
+setxkbmap -option "compose:lwin, shift:both_capslock, caps:ctrl_modifier"
+xmodmap -e "clear mod1"
+xmodmap -e "keycode 23 = r r r r"
+xmodmap -e "keycode 23 Alt_L Meta_L Alt_L Meta_L"
+xmodmap -e "keycode 23 = Alt_L Meta_L Alt_L Meta_L"
+xmodmap -e "keycode 23 = mod1 w e r"
+xmodmap 
+xmodmap -e "clear mod1"
+wif
+wifi-on
+xmodmap -e "clear mod1"
+xmodmap -pm
+xmodmap -e "clear lock"
+xmodmap -pm
+xmodmap -e "clear mod1"
+xmodmap -e "keycode 23 = Alt_L Meta_L Alt_L Meta_L"
+xmodmap -pm
+xmodmap -pm
+xmodmap ~/.Xmodmap
+ff test.rkt
+pulseaudio-ctl
+pavucontrol
+killall mumble
+sudo rfkill list
+sudo systemctl status bluetooth
+pacman -Ss gnome-blu
+gnome-bluetooth
+bluetooth-applet
+fd bluetooth-applet
+cd /
+bluetooth-applet
+cd /
+fd bluetooth-applet
+blueman-applet
+blueman
+mumble
+cd
+pulseaudio-module-bluetooth
+pacman -Ss pulseaudio-module-bluetooth
+pacman -Ss module-bluetooth
+bluez
+pacman -Ss bluez
+blueberry
+blueberry --help
+pacman -Ss bluez-firmware
+pavucontrol
+blueman-manager
+z rage src
+cargo add crossbeam-channel
+z rage src
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+top
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=b"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=b"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=b"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+clear
+curl "http://localhost:3030/api/v1/streaming/public"
+clear
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:4000/api/v1/streaming/public"
+curl "http://localhost:4000/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:4000/api/v1/streaming/public"
+curl "http://localhost:4000/api/v1/streaming/public" -i
+git stash
+curl "http://localhost:3030/api/v1/streaming/public"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+git stash apply
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+git stash
+ff pubsub.rs
+z rage src
+z r
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+git stash
+FF 
+z r
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+top
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+git diff
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+z r
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+clear
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+z r
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87e -i
+curl http://localhost:4000/api/v1/streaming/user/notifications?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -icurl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87e -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87e -i
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+RUST_BACKTRACE=1 cargo run
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+killall curl
+git diff
+git status
+ls
+./load_test
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+git status
+git add main.rs pubsub.rs user.rs query.rs
+git commit
+git push
+git push --set-upstream origin connection-pool
+cargo check
+cargo clippy
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+killall curl
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+./load_test
+ff load_test
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i 
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+killall curl
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+killall curl
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+killall curl
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+killall curl
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+curl http://localhost:3030/api/v1/streaming/user/notification?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i 
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i 
+ff Car
+ff ../Cargo.toml
+cargo clean
+ff ../Cargo.toml
+cargo clean
+ls
+cd ..
+ls
+rm Cargo.lock
+cd src/
+killall curl
+top
+z r
+ff ../Cargo.toml
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+cargo build --release
+../target/release/ragequit
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+git diff
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl http://localhost:4000/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_tokeee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=e206 -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=e206 -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+z r
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:4000/api/v1/streaming/public/local" -i
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+redis-cli PUBSUB NUMSUB timeline:public:local
+curl "http://localhost:4000/api/v1/streaming/public/local" -i &
+redis-cli PUBSUB NUMSUB timeline:public:local
+curl "http://localhost:3030/api/v1/streaming/public/local" -i &
+redis-cli PUBSUB NUMSUB timeline:public:local
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+clear
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+clear
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+top
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/public/local?test=false" -i
+curl "http://localhost:4000/api/v1/streaming/public/local?test=false" -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+z r
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public/local" -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+top
+zr
+z r
+curl "http://localhost:3030/api/v1/streaming/public" -i
+./load_test
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+killall curl
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+killall curl
+curl "http://localhost:3030/api/v1/streaming/public" -i
+curl "http://localhost:3030/api/v1/streaming/public" -i
+cargo build --release
+../target/release/ragequit
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+clear
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+clear
+killall curl
+killall curl
+FF 
+cargo build --release
+../target/release/ragequit
+git status
+git add stream.rs main.rs pubsub.rs user.rs ../Cargo.lock ../Cargo.toml 
+git commit
+FF ../README.md
+git add ../README.md
+git commit
+git push
+pass system76
+wc -
+cdt 
+cdt --h
+cdt -h
+cdt stats
+git co master
+top
+z r
+git pull
+git co -b shared socket
+git co -b sharedsocket
+FF pubsub.rs
+cargo check
+pass IRC/freenode@codesections
+z r
+cargo check
+RUS
+RUST_BACKTRACE=1 cargo run
+git stash
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a"
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+git stash apply
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+RUST_BACKTRACE=1 cargo run
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+RUST_BACKTRACE=1 cargo run
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+RUST_BACKTRACE=1 cargo run
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+RUST_LOG=INFO cargo run
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+RUST_BACKTRACE=1 cargo run
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+cargo clippy
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+rm pubsub.rs
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i > /dev/null &
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+killall curl
+git status
+git add main.rs pubsub.rs stream.rs
+git add receiver.rs
+rm \#pubsub.rs\#
+rm \.\#pubsub.rs
+cat url
+rm url
+git status
+git commit
+git push
+git push --set-upstream origin shared-socket
+git push --set-upstream origin sharedsocket
+git add ../README.md
+git commit
+git push
+git co master
+git pull
+tokei -f .
+tokei .
+git co -b tests
+cargo test
+curl "http://localhost:3030/api/v1/streaming/public" -i
+cargo test
+cargo test
+mv timelines.rs timeline.rs
+cargo test
+cargo test
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -i
+curl "http://localhost:3030/api/v1/streaming/hashtag?tag=a" -il
+cargo test
+curl http://localhost:3030/api/v1/streaming/user/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1 -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=1" -i
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=2" -i
+cargo test
+cargo test -- --ignored --no-capture
+cargo test -- --ignored --nocapture
+cargo test -- --ignored
+cargo test -- --ignored --nocapture
+cargo test 
+cargo test -- --nocapture
+cargo test
+cargo test -- --ignored --nocapture
+cargo test
+cargo check
+cargo clippy
+cargo check
+cargo clippy
+cargo test -- --nocapture
+curl "http://localhost:3030/api/v1/streaming/public/local?only_media=true" -i
+cargo test -- --nocapture
+curl "http://localhost:3030/api/v1/user" -i
+curl "http://localhost:3030/api/v1/streaming/user" -i
+cargo test -- --nocapture
+cargo test -- --ignored --nocapture
+cargo test -- --nocapture
+cargo docs
+cargo doc
+cargo help doc
+cargo doc --open
+(env)
+env
+rustup
+rustup self update
+cargo doc --open
+cargo doc
+cargo test -- --ignored --nocapture
+cargo doc
+cargo check
+cargo doc
+cargo check
+cargo doc
+cargo check
+cargo doc
+cargo docW
+cargo doc
+cargo docW
+cargo doc
+cargo test
+cargo test -- --ignored
+git status
+rm \#timeline.rs\# \#user.rs\# \.\#timeline.rs \.\#user.rs 
+git add .
+git status
+git reset HEAD load_test
+FF ../README.md
+git add ../README.md
+git status
+git commit
+git push
+git push --set-upstream origin tests
+tokei .
+git co master
+git pull
+git co -b WebSocket
+cargo test -- --ignored
+curl --include \     --no-buffer \     --header "Connection: Upgrade" \     --header "Upgrade: websocket" \     --header "Host: example.com:80" \     --header "Origin: http://example.com:80" \     --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" \     --header "Sec-WebSocket-Version: 13" \     http://example.com:80/
+curl "http://localhost:3030/api/v1/streaming/list?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206&list=47" -i
+curl --include \     --no-buffer \     --header "Connection: Upgrade" \     --header "Upgrade: websocket" \     --header "Host: example.com:80" \     --header "Origin: http://example.com:80" \     --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" \     --header "Sec-WebSocket-Version: 13" \     http://example.com:80/
+curl --include \     --no-buffer \     --header "Connection: Upgrade" \     --header "Upgrade: websocket" \     --header "Host: localhost:4000" \     --header "Origin: http://localhost:4000" \     --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" \     --header "Sec-WebSocket-Version: 13" \     http://localhost:4000/api/vi/streaming?stream=public
+curl --include \     --no-buffer \     --header "Connection: Upgrade" \     --header "Upgrade: websocket" \     --header "Host: example.com:80" \     --header "Origin: http://example.com:80" \     --header "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" \     --header "Sec-WebSocket-Version: 13" \     http://example.com:80/
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:4000" \http://localhost:4000/api/vi/streaming?stream=public
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:4000" \http://localhost:4000/api/vi/streaming
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:4000" \http://localhost:4000/api/vi/streaming?stream=public
+http://localhost:4000/api/vi/streaming?stream=public&access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:4000" \http://localhost:4000/api/vi/streaming?stream=public&access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:4000" \http://localhost:4000/api/vi/streaming?stream=public&access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:3000" \http://localhost:4000/api/vi/streaming?stream=public&access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+-H "Sec-WebSocket-Key: j3y5gdEo1cZRX9Q25e0Hsg=="
+curl -i -N \-H "Connection: Upgrade" \-H "Upgrade: websocket" \-H "Host: localhost:4000" \-H "Origin:http://localhost:3000" \-H "Sec-WebSocket-Key: j3y5gdEo1cZRX9Q25e0Hsg=="http://localhost:4000/api/vi/streaming?stream=public&access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206
+cargo install websocat 
+websocat ws://localhost:4000/api/v1/streaming?stream=public
+websocat "ws://localhost:4000/api/v1/streaming?stream=public"
+websocat ws://echo.websocket.org
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=public
+cargo check
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming
+websocat ws://127.0.0.1:3030/api/v1/streaming
+websocat ws://127.0.0.1:4000/api/v1/streaming
+websocat "ws://127.0.0.1:4000/api/v1/streaming"
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+clear
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=foo
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=foo
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+clear
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+curl http://localhost:3030/api/v1/streaming/public -i
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+cd ~/src/mastodon-archive/
+ls
+cd mastodon_archive/
+ls
+cd ..
+ls
+mastodon-archive 
+mastodon-archive  all
+mastodon-archive test all grep
+mastodon-archive text all grep
+cd ~/projects/
+ls
+ls inactive/
+ls
+ls tests/
+cd inactive/mastodon-mini/
+ls
+cd mastodon-archive/
+mastodon-archive text all grep
+mastodon-archive text all auth 
+mastodon-archive text all javascript
+mastodon-archive 
+mastodon-archive help archive
+mastodon-archive archive --with-context
+mastodon-archive archive --with-mentions
+mastodon-archive archive --with-mentions all
+mastodon-archive text all Gargron
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+pacman -Ss artil
+npm i -g artillery
+artillery -h
+artillery quick ws://127.0.0.1:4000/api/v1/streaming?stream=public
+artillery dino
+artillery quick 400 ws://127.0.0.1:4000/api/v1/streaming?stream=public
+artillery -h
+artillery quick -n 400 ws://127.0.0.1:4000/api/v1/streaming?stream=public
+artillery quick --count 100 -n 400 ws://127.0.0.1:4000/api/v1/streaming?stream=public
+websocat 400 ws://127.0.0.1:4000/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=public
+cd ..
+ff load_test.yml
+artillery -h
+artillery run load_test.yml
+websocat ws://localhost:4000/api/v1/streaming/?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea
+websocat "ws://localhost:4000/api/v1/streaming/?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=public  
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public  
+z r
+ls
+git status
+FF main.rs
+z r
+FF main.rs
+wifi-on
+cargo check
+mn notes
+xrandr --output HDMI2 --auto --above eDP1
+xrandr --help
+xrandr --output --mode
+xrandr --output 
+xrandr --output HDMI2 --auto --same-as eDP1
+xrandr --output HDMI2 --auto --same-as eDP1 --primary
+xrandr --dpi 1
+xrandr --dpi 2
+xrandr --dpi 5
+xrandr --dpi 100
+xrandr --output HDMI2 --auto --same-as eDP1 --scale 100x50
+shutdown now
+xrandr --output HDMI2 --auto --same-as eDP1 --scale 1.66x1.66
+z r 
+FF main.rs
+cargo check
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public&media_only=1
+"websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public&media_only=1"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&media_only=1"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&media_only=1"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&media_only=1"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&media_only=1"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&media_only=1"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public"
+websocat -h
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public"
+websocat -v 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&media_only=true" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&only_media=true" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&only_media=1" -v
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&only_media=false"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&only_media=false"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&foo=bar"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:4000/api/v1/streaming/?stream=public"
+websocat "ws://localhost:3030/api/v1/streaming/?stream=public"
+websocat ws://127.0.0.1:3030/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=public
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=user
+websocat ws://127.0.0.1:4000/api/v1/streaming?stream=user
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public:local"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public:local"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=hashtag&tag=a"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=hashtag&tag=a"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i
+curl http://localhost:4000/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i 
+curl http://localhost:4000/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206 -i 
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+cargo doc --open
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+cur
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+z r
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/local?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+top
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+clear
+FF main.rs
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+pass protonmail/codesections
+libreoffice ~/Downloads/Itinerary.docx
+ff documents/cuba.org
+ls
+cd documents/
+ls
+mupdf cuba.pdf
+ls
+z r
+FF main.rs
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+{"event":"update","payload":"{\"account\":{\"acct\":\"admin\",\"avatar\":\"http://localhost:3000/avatars/original/missing.png\",\"avatar_static\":\"http://localhost:3000/avatars/original/missing.png\",\"bot\":false,\"created_at\":\"2019-04-13T18:27:59.874Z\",\"display_name\":\"\",\"emojis\":[],\"fields\":[],\"followers_count\":1,\"following_count\":1,\"header\":\"http://localhost:3000/headers/original/missing.png\",\"header_static\":\"http://localhost:3000/headers/original/missing.png\",\"id\":\"1\",\"locked\":false,\"note\":\"<p></p>\",\"statuses_count\":269,\"url\":\"http://localhost:3000/@admin\",\"username\":\"admin\"},\"application\":{\"name\":\"Web\",\"website\":null},\"card\":null,\"content\":\"<p>0001<br />0000<br />0100</p>\",\"created_at\":\"2019-05-08T14:29:j59.500Z\",\"emojis\":[],\"favourited\":false,\"favourites_count\":0,\"id\":\"102060903595411911\",\"in_reply_to_account_id\":null,\"in_reply_to_id\":null,\"language\":\"en\",\"media_attachments\":[],\"mentions\":[],\"muted\":false,\"pinned\":false,\"reblog\":null,\"reblogged\":false,\"reblogs_count\":0,\"replies_count\":0,\"sensitive\":false,\"spoiler_text\":\"\",\"tags\":[],\"uri\":\"http://localhost:3000/users/admin/statuses/102060903595411911\",\"url\":\"http://localhost:3000/@admin/102060903595411911\",\"visibility\":\"public\"}"}
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+mupdf ~/documents/cuba.pdf
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+clear
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+grep lock
+rg lock
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:3030/daniel" -i
+curl "http://localhost:3030/daniel" -i
+curl "http://localhost:3030/api/v1/streaming/public?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:3030/daniel" -i
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+z r
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+git
+git status
+git add error.rs main.rs query.rs receiver.rs stream.rs timeline.rs user.rs
+git commit
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea" 
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:4000/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+git diff
+clear
+git status
+git co main.rs
+git status
+ff .apl.history
+rm .apl.history
+git status
+ff pubsub.rs
+rm pubsub.rs
+git status
+cat load_test
+rm load_test
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=bd75b98d2dc40749a4a9dae502eedbb0b8f8cfc8c9a99b427f00566c5a20abea"
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5"
+FF main.rs
+clear
+top
+redis-cli PUBSUB NUMSUB timeline:public
+redis-cli PUBSUB subscribe timeline:public
+redis-cli PUBSUB help
+redis-cli help
+redis-cli subscribe
+redis-cli subscribe help
+redis-cli subscribe timeline:public
+cargo clean
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=user&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5"
+FF main.rs
+z r
+FF main.rs
+cat ../Cargo.toml
+z r
+FF main.rs
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+RUST_BACKTRACE=1 cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+z r
+cargo run
+FF main.rs
+rg unwrap
+rg unwrap()
+rg unwrap\(\)
+rg "unwrap\(\)"
+cargo run
+grep "No send error"
+rg "No send error"
+cargo run
+cargo test
+cargo test -- --ignored
+cargo run
+cargo clippy
+cargo run
+git status
+git add .
+git status
+git commit
+cargo run
+redis-cli PUBSUB NUMSUB timeline:user:1
+redis-cli PUBSUB NUMSUB timeline:user:2
+redis-cli PUBSUB NUMSUB
+redis-cli PUBSUB NUMSUB help
+redis-cli PUBSUB help
+redis-cli PUBSUB NUMPAT *
+redis-cli PUBSUB NUMPAT "*"
+redis-cli PUBSUB NUMPAT '*'
+redis-cli PUBSUB NUMPAT
+redis-cli PUBSUB NUMPAT ""
+redis-cli PUBSUB NUMSUB timeline:user:2
+redis-cli PUBSUB NUMSUB timeline:user:1
+cargo run
+redis-cli PUBSUB NUMSUB timeline:user:1
+redis-cli PUBSUB CHANNELS
+redis-cli SUBSCRIBE timeline:1
+redis-cli PUBSUB NUMSUB timeline:1
+redis-cli PUBSUB NUMSUB timeline:2
+cargo run
+redis-cli PUBSUB NUMSUB timeline:2
+redis-cli PUBSUB NUMSUB timeline:1
+redis-cli PUBSUB NUMSUB timeline:2
+cargo run
+redis-cli PUBSUB NUMSUB timeline:2
+redis-cli PUBSUB NUMSUB timeline:1
+redis-cli PUBSUB SUBSCRIBE timeline:1
+redis-cli SUBSCRIBE timeline:1
+redis-cli PUBSUB SUBSCRIBE timeline:1
+redis-cli PUBSUB NUMSUB timeline:2
+redis-cli PUBSUB NUMSUB timeline:1
+redis-cli SUBSCRIBE timeline:1
+cargo run
+redis-cli publish timeline:1 foo
+redis-cli GET subscribed:timeline:1 
+cargo run
+redis-cli GET subscribed:timeline:1 
+redis-cli SET subscribed:timeline:1 1 EX 30
+redis-cli GET subscribed:timeline:1 
+redis-cli SET subscribed:timeline:1 1
+cargo run
+cargo ch
+cargo check
+cargo run
+ls
+cat utils.rs
+rm utils.rs
+tokei -h
+tokei -f .
+cargo run
+cargo clippy
+cargo test -- --ignored
+cargo test
+cargo doc --open
+cargo doc
+cargo run
+cargo doc
+cargo run
+cargo doc
+cargo run
+ff ../load_test.yml
+artillery run ../load_test.yml
+cd ..
+ff load_test.yml
+artillery run load_test.yml
+redis-cli PUBSUB NUMSUB timeline:1
+redis-cli PUBSUB NUMSUB timeline:public
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public:local&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5"
+cargo run
+cargo build --release
+../target/release/ragequit
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public:local&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5" &
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public:local&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5"
+clear
+killall curl
+killall websocat
+clear
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public:local&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5" > /dev/null & 
+killall websocat
+.killall websocat
+killall websocat
+pacman -Ss seig
+pacman -Ss sieg
+pacman -S siege
+sudo pacman -S siege
+siege -h
+siege -b -t 30S -c 45 
+siege -b -t 30S -c 45 "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+websocat "ws://127.0.0.1:3030/api/v1/streaming?stream=public:local&access_token=6e296eeec94faa814668b90fc3159de34da09be592537bdb9b47a603fdd12bd5"
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+git status
+clear
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+clear
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+clear
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+clear
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+clear
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/user?access_token=eda860d1da196efcce02c20f8c687f200ee061e91c26c4917d87ee1d1ab2e206" -i
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+clear
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+z r
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+redis-cli SUBSCRIBE timeline:hashtag:a
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+redis-cli PUBSUB NUMSUB timeline:hashtag:a
+redis-cli GET subscribed:timeline:1
+redis-cli GET subscribed:timeline:hashtag:a
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+redis-cli SUBSCRIBE timeline:hashtag:a
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+clear
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+G
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+cargo run
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+git status
+rm \#receiver.rs\#
+rm \#ws.rs\#
+rm \.\#ws.rs
+git status
+git add redis_cmd.rs
+git add .
+git status
+git commit
+git push
+git push --set-upstream origin WebSocket
+git co master
+git pull
+echo $USER
+cargo add dotenv
+ff main.rs
+ls
+vi ws.rs
+FF main.rs
+cargo run
+git status
+git add .env
+ls
+rm main.old.rs
+cat env.rs
+rm env.rs
+ls
+cat common.rs
+rm common.rs
+ls api/
+rm -rf api
+rm -rf middleware/
+ls
+ff ../Cargo.toml
+rm ../Cargo.lock
+cargo run
+git status
+git help status
+git status -v
+git add .
+git add ../Cargo.lock ../Cargo.toml
+git status -v
+git status
+git status -v
+FF ../Cargo.toml
+cargo run
+git status
+curl "http://localhost:4000/api/v1/streaming/hashtag?tag=a"
+git status
+git reset HEAD   ../Cargo.toml
+git reset HEAD   ../Cargo.lock
+deleted:    api/http/direct.rs
+git reset HEAD    api/http/direct.rs     api/http/hashtag.rs     api/http/list.rs     api/http/mod.rs     api/http/public.rs     api/http/user.rs api/mod.rs api/ws.rs common.rs env.rs main.old.rs middleware/auth.rs middleware/mod.rs
+git status
+git commit
+git status
+git add ../Cargo.lock ../Cargo.toml
+git add .
+git status
+git commit
+vi ../README.md
+pacman -Ss markdown
+z r
+ff ../README.md
+ls
+ls ..
+ls
+git status
+git add ../R
+git add ../README.md
+git commit
+git status
+ff ../README.md
+git status
+git add ../README.md
+git commit
+git push
+git hist
+git branch dotenv
+git reset --hard 1e93
+git co dotenv
+git push
+git push --set-upstream origin dotenv
+cargo run
+cargo test
+cargo test -- --ignored
+pass creditcards/discover_william_sockwell
+source ~/.xinitrc
+xmodmap ~/.Xmodmap
+cd ~/src
+ls
+clear
+git clone https://aur.archlinux.org/samsung-unified-driver.git
+cd samsung-unified-driver/
+makepkg
+makepkg -si
+pacman -S splix
+sudo pacman -S splix
+splix
+sudo ps_mem
+sudo pacman -Syyu
+wifi-on
+sudo pacman -Syyu
+flatpak run com.valvesoftware.Steam
+sudo pacman -S steam
+steam
+pass steampowered.com
+ls -a
+cd .steam/
+ls
+cd ..
+ls
+ls -a
+cd .local
+ls
+ls -a
+.steampath -> /home/dsock/.steam/sdk32/steam
+cd /home/dsock/.steam/sdk32/steam
+cd /home/dsock/.steam/sdk32/
+ls
+cd ..
+ls
+cd bin/
+ls
+cd ..
+ls
+cd steam/
+ls
+cd userdata/
+ls
+cd 49820791/
+ls
+cd config/
+ls
+cd ..
+tree
+cd ..
+ls
+cd ..
+ls
+tree
+rg . ini
+clear
+rg
+rg ini
+wifi-on
+pass system76
+mupdf ~/print.pdf
+pass protonmail/codesections
+snap install chezmoi --classic
+sudo snap install chezmoi --classic
+chezmoi h
+chezmoi -h
+chezmoi init
+chezmoi update
+chezmoi --version
+pacman -Ss chez
+quit
+chezmoi upgrade
+cd $(mktemp -d) && go get -u github.com/twpayne/chezmoi
+go get -u github.com/twpayne/chezmoi
+cd $(mktemp -d) && go get -u github.com/twpayne/chezmoi
+pacman -Ss yadm
+cd src/
+git clone https://aur.archlinux.org/yadm-git.git
+cd yadm-git/
+makepkg -si
+yadm
+cd
+yadm init
+yadm add ~/.emacs.d/init.el
+yadm status
+yadm commit
+exit
+yadm commit
+yadm status
+yadm clone
+yadm list
+ff .emacs.d/init.el
+yadm list
+yadm status
+git checkout .emacs.d/init.el
+git checkout -- .emacs.d/init.el
+yadm checkout -- .emacs.d/init.el
+ff .emacs.d/init.el
+tree .config/
+c│   │   ├── ffdd4a1a877645ac_0
+clear
+ls .config/
+Git-it
+ls
+cc ..
+cc /..
+cd ..
+ls
+cd ..
+ls
+ls media/
+ls media/usb/
+ls data/
+ls data/www/
+ls dev/
+ls dev/usb/
+ls dev/usb/hiddev0
+ls
+lsblk
+sudo mount /dev/sdb1 /media/usb
+sudo mount /dev/sda1 /media/usb
+ls media/usb/
+mupdf media/usb/BDAE38BB-5056-BFC9-C5EB8A9A4760E29B.pdf
+mupdf media/usb/4530335811_1.pdf
+sudo umount /dev/sda1 /media/usb
+sudo umount /dev/sda1
+ls media/usb/
+cd ~/Downloads/
+ls
+void-live-x86_64-20181111.iso
+dd bs=4M if=void-live-x86_64-20181111.iso of=/dev/sda1
+sudo dd bs=4M if=void-live-x86_64-20181111.iso of=/dev/sda1
+ reboot

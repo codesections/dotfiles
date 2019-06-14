@@ -1,0 +1,88 @@
+* DONE [#C] write a stream that repeatedly yeilds a string
+* TODO Fix `mn` from using nvim with emacs set as EDITOR/VISUAL
+* DONE Move all forked GitHub repos to `codesections-forks` (API?)
+* DONE start using OrgMode TODOs
+* DONE update pinned GitHub repos
+* DONE change hotkeys for Mastodon/Firefox
+* Tasks
+** DONE [#A] test the orgmode todo 
+** DONE test of revised todo 
+** DONE strip out irrelevant Qutebrowser keybindings 
+** TODO figure out what setting is still generating #files# 
+** DONE fix spellcheck 
+** TODO Reply to Zola issue re: generating completions (how I did it in `man`)
+** DONE fix indentation in JS code (tabs???) 
+** DONE fix eslint in jsx/preact code 
+** DONE fix prettier on save in JS 
+** TODO set up basic boilerplate for Preact  
+** DONE fix destop background 
+** DONE fix `:q` behavior in emacs to close buffer
+** DONE fix stumpwm boarders to avoid gaps 
+** DONE try ripcord 
+** DONE Add global shortcut for capture template todo 
+** DONE tweak qutebrowser nord theme 
+** DONE fix terminal shortcut to only display terminal 
+** TODO post Muon to protonMail subreddit, hacker news, tilde, lobst.rs
+** DONE test todo app
+** DONE figure out if I can/how to stay logged in on ProtonMail
+** DONE set $PWD for file opening in eshell
+** TODO fix long-term undo history 
+** TODO figure out how to set up rls check without keypress 
+** TODO Clean up init file (comments, organization, Org mode?)
+** DONE fix global org capture
+** DONE install eshell up
+** DONE figure out if colors for bat/exa/etc 
+** DONE fix `top` etc to auto-close buffer 
+** DONE add multi-eshell
+** DONE get eshell to be focused buffer after top closes 
+** DONE investigate color support in eshell 
+** DONE set up keybindings for history search and paging 
+** DONE set up keybindings for enter
+** DONE learn about/learn dired (writable dirs?)
+** TODO figure out best practices for `package refresh contents`
+** TODO figure out way to stop `custom set variables`
+** TODO learn about General and convert keybindings over
+** DONE Add longer command history
+** DONE add text move/bubling
+** TODO Investigate Emacs' folding support
+** DONE add cdt --stats to visual commands for eshell
+** TODO figure out emacs (not evil) selection
+** DONE rebind way to have <C-Space> in emacs
+** DONE add evil-surround
+** TODO Learn more about Orgmode TODOs; how to subtask? 
+** TODO come up with `undo-close-buffer` binding for qutebrowser
+** DONE add way to track how long I've gone without rat
+** DONE learn emacs info browser
+** TODO figure out slurp bindings
+** DONE consider binding C-w in evil-insert state
+** TODO write qutebrowser userscript for copying text
+** DONE rebind `I` in eshell to exclude prompt
+** DONE turn off keyboard shortcuts in DDG (though they're appreciated!)
+** DONE file bug report re box-drawing characters in xterm-color
+** DONE add eshell wrapper for `dd`, `cc`, `^`, etc.
+** TODO add init script to turn off mouse
+** TODO Fix init.el so that it's using right packages?
+** find way to bind `dd` and similar evil cmds using General
+** TODO Find way to insert selected text at point without going through clipbord
+** TODO figure out best way to start Emacs --daemon (non systemd?)
+** DONE add ripcord shortcut
+** DONE bind send key <ESC> in qutebrowser
+** TODO decide between `C-x ]` and `] b` as buffer nav commands
+** TODO learn how to bind commands in evil operator-pending state and use that to bind `cc` and `dd` in eshell
+** TODO Learn Pollen static site generator
+** TODO take Systematic Program Design - Part 2 on edEx (and maybe pt 1?)
+** TODO set up C-w to work regardless of window
+** TODO Write plugin to output markdown from Pollen
+** TODO blog about Pollen (including similarities to React)
+** TODO read this [[ r][guide to smartparens]]
+** TODO set up tooting through emacs (either with a mode or emacsclient)
+** TODO add tags to Pollen project
+** DONE disable ^ in stumpWM as finger drill
+** TODO add comment-or-uncomment-region binding
+** DONE Reply to thread re: Rocket
+** DONE Add logging
+** DONE Connect to Postgres
+** TODO Write emacs package for using Keybase chat 
+** TODO Start Racket podcast
+** TODO Write APL in Racket, implementing at least https://docs.racket-lang.org/racket-cheat/index.html
+** TODO Write dotfile manager/language for racket

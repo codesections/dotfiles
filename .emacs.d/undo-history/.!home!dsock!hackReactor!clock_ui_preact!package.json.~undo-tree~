@@ -1,0 +1,5 @@
+"9ab652af6ef97c9ae661a2234f86efd6ff53ed68"
+#s(undo-tree [nil (#1=[nil nil ((#("  \"eslintConfig\": {
+    \"extends\": \"eslint-config-synacor\"
+  },
+" 0 2 (fontified t) 2 16 (fontified t face font-lock-string-face) 16 24 (fontified t) 24 33 (fontified t face font-lock-string-face) 33 35 (fontified t) 35 58 (fontified t face font-lock-string-face) 58 64 (fontified t)) . 320) (undo-tree-id0 . -59) (undo-tree-id1 . 64) (undo-tree-id2 . 44) (undo-tree-id3 . -59) (undo-tree-id4 . -59) (undo-tree-id5 . -64) (undo-tree-id6 . 64) (undo-tree-id7 . 64) (undo-tree-id8 . -59) (undo-tree-id9 . 44) (undo-tree-id10 . 64) (undo-tree-id11 . 61) (undo-tree-id12 . -15) (undo-tree-id13 . 5) (undo-tree-id14 . 44) 379 (t 23706 31375 406873 260000)) nil (23706 32154 363176 51000) 0 nil]) nil nil (23706 32154 363180 901000) 0 nil] #1# 208 1 nil)

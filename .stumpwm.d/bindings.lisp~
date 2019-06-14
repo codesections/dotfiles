@@ -1,0 +1,118 @@
+(stumpwm:set-prefix-key (stumpwm:kbd "C-SPC"))
+
+;; Remove all default mappings
+(setf stumpwm:*root-map*              (stumpwm:make-sparse-keymap))
+(setf stumpwm::*float-group-root-map* (stumpwm:make-sparse-keymap))
+(setf stumpwm::*tile-group-root-map*  (stumpwm:make-sparse-keymap))
+(setf stumpwm::*group-root-map*       (stumpwm:make-sparse-keymap))
+(setf stumpwm::*groups-map*           (stumpwm:make-sparse-keymap))
+
+;; Root map
+(define-key *root-map* (kbd "M-x")     "run-stumpwm-command")
+(define-key *root-map* (kbd ":")     "evaluate-lisp-expression")
+(define-key *root-map* (kbd "b")     "banish-mouse-cursor")
+(define-key *root-map* (kbd "i")     "show-window-properties")
+(define-key *root-map* (kbd "o")     "alarm-off")
+(define-key *root-map* (kbd "p")     "pass-copy")
+(define-key *root-map* (kbd "t")     "dropdown-terminal")
+(define-key *root-map* (kbd "C-6")   "other-window")
+(define-key *root-map* (kbd "C-x")     'buffers)
+(define-key *root-map* (kbd "C-g")     "abort-stumpwm-command")
+(define-key *root-map* (kbd "C-w")     'wincmd)
+(define-key *root-map* (kbd "C-d")     '*groups-map*)
+(define-key *root-map* (kbd "C-r")     '*run-map*)
+(define-key *root-map* (kbd "C-h")     '*help-map*)
+
+
+;; Group map
+(define-key *groups-map* (kbd "w")   "global-windowlist")
+(define-key *groups-map* (kbd "j")   "next-group")
+(define-key *groups-map* (kbd "C-j") "move-window-to-next-group")
+(define-key *groups-map* (kbd "k")   "prev-group")
+(define-key *groups-map* (kbd "C-k") "move-window-to-prev-group")
+(define-key *groups-map* (kbd "x")   "close-group")
+(define-key *groups-map* (kbd "m")   "gmove-and-follow")
+(define-key *groups-map* (kbd "M")   "gmove")
+(define-key *groups-map* (kbd "r")   "rename-group")
+(define-key *groups-map* (kbd "1")   "gnew 1")
+(define-key *groups-map* (kbd "2")   "gnew 2")
+(define-key *groups-map* (kbd "3")   "gnew 3")
+(define-key *groups-map* (kbd "4")   "gnew 4")
+(define-key *groups-map* (kbd "5")   "gnew 5")
+(define-key *groups-map* (kbd "6")   "gnew 6")
+(define-key *groups-map* (kbd "7")   "gnew 7")
+(define-key *groups-map* (kbd "8")   "gnew 8")
+(define-key *groups-map* (kbd "9")   "gnew 9")
+(define-key *groups-map* (kbd "RET") "new-group")
+
+;; buffers map
+(defvar buffers
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "b")   "global-pull-windowlist")
+    (define-key new-keymap (kbd "0")   "remove-split")
+    (define-key new-keymap (kbd "5")   'frames)
+    (define-key new-keymap (kbd "C-f") "run-shell-command")
+    (define-key new-keymap (kbd "]")     'next)
+    (define-key new-keymap (kbd "[")     'prev)
+    new-keymap))
+
+;; frames map
+(defvar frames
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "b") "global-windowlist")
+    new-keymap))
+;; next map
+(defvar next
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "b") "next-window-in-frame")
+    (define-key new-keymap (kbd "g") "next-group")
+    new-keymap))
+
+;; prev map
+(defvar prev
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "b") "prev-window-in-frame")
+    (define-key new-keymap (kbd "g") "prev-group")
+    new-keymap))
+;; Leap map
+(defvar *leap-map*
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "a") "webmacs")
+    (define-key new-keymap (kbd "s") "firefox")
+    (define-key new-keymap (kbd "d") "chrome")
+    (define-key new-keymap (kbd "f") "fosstodon")
+    (define-key new-keymap (kbd "g") "terminal")
+    (define-key new-keymap (kbd "z") "zoom")
+    new-keymap))
+
+;; Run map
+(defvar *run-map*
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "a") "run-webmacs")
+    (define-key new-keymap (kbd "s") "run-firefox")
+    (define-key new-keymap (kbd "d") "run-chrome")
+    (define-key new-keymap (kbd "f") "run-fosstodon")
+    (define-key new-keymap (kbd "g") "run-terminal")
+    new-keymap))
+
+;; wincmd
+(defvar wincmd
+  (let ((new-keymap (make-sparse-keymap)))
+    (define-key new-keymap (kbd "t")   "tiled")
+    (define-key new-keymap (kbd "p")   "place")
+    (define-key new-keymap (kbd "m")   "monocle")
+    (define-key new-keymap (kbd "s")   "horizontal-split")
+    (define-key new-keymap (kbd "v")   "vertical-split")
+    (define-key new-keymap (kbd "r")   "resize-current-frame")
+    (define-key new-keymap (kbd "w")   "windows")
+    (define-key new-keymap (kbd "x")   "remove")
+    (define-key new-keymap (kbd "H")   "swap-window left")
+    (define-key new-keymap (kbd "J")   "swap-window down")
+    (define-key new-keymap (kbd "K")   "swap-window up")
+    (define-key new-keymap (kbd "L")   "swap-window right")
+    (define-key new-keymap (kbd "h")   "move-focus left")
+    (define-key new-keymap (kbd "j")   "move-focus down")
+    (define-key new-keymap (kbd "k")   "move-focus up")
+    (define-key new-keymap (kbd "l")   "move-focus right")
+    new-keymap))
+

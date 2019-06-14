@@ -1,0 +1,20 @@
+#S(GDUMP
+   :NUMBER 5
+   :NAME "fosstodon"
+   :TREE ((#S(FDUMP
+              :NUMBER 0
+              :X 0
+              :Y 0
+              :WIDTH 490
+              :HEIGHT 1800
+              :WINDOWS NIL
+              :CURRENT NIL)
+           #S(FDUMP
+              :NUMBER 1
+              :X 490
+              :Y 0
+              :WIDTH 2710
+              :HEIGHT 1800
+              :WINDOWS (10486169)
+              :CURRENT 10486169)))
+   :CURRENT 1)

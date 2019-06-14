@@ -1,0 +1,1 @@
+/home/dsock/src/pure-fish/functions/_pure_prompt_ssh_separator.fish

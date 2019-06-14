@@ -1,0 +1,44 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Mar 23 13:17:42 2019
+;; Desktop file format version 208
+;; Emacs version 26.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23702 27190 263372 47000) (desktop . "208") "dsock@2017" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-SRC-Hack-normal-normal-normal-*-30-*-*-*-m-0-iso10646-1") (font-parameter . "hack-12") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#D8DEE9") (background-color . "#2E3440") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 16) (right-fringe . 16) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "white") (sticky) (environment) (frameset--id . "CA46-0AC5-9D5C-4A3E") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0.0") (explicit-name) (height . 48) (width . 148) (left . 497) (top . 61)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 144) (min-pixel-width . 180) (min-pixel-height-ignore . 72) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 36) (min-pixel-width-safe . 36)) leaf (pixel-width . 2696) (pixel-height . 1692) (total-width . 149) (total-height . 47) (normal-height . 1.0) (normal-width . 1.0) (buffer "init.el" (selected . t) (hscroll . 0) (fringes 16 16 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 5594) (start . 5041))))])
+(setq evil-markers-alist '((40 . evil-backward-sentence) (41 . evil-forward-sentence) (123 . evil-backward-paragraph) (125 . evil-forward-paragraph) (39 . evil-jump-backward-swap) (96 . evil-jump-backward-swap) (60 . evil-visual-beginning) (62 . evil-visual-goto-end) (46 lambda nil (let (last-command) (goto-last-change nil)))))
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("global"))
+(setq regexp-search-ring '("\\<desktop\\>"))
+(setq register-alist '((107) (48 . "add-to-list 'desktop-globals-to-save 'evil-markers-alist")))
+(setq file-name-history '("/home/dsock/.emacs.d/" "/home/dsock" "/home/dsock/.emacs.d/init.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/dsock/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode override-global-mode company-mode flycheck-mode flyspell-mode undo-tree-mode ivy-mode which-key-mode)
+  5594
+  '(5519 nil)
+  nil
+  nil
+  '((buffer-display-time 23702 27114 653028 91000) (buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode))
+  '((mark-ring (5519 5519 5519 5519 5519 5519 1 1 1 1 5519 1 5519 5519 5519 5519))))
+
+(desktop-create-buffer 208
+  "/home/dsock/.emacs.d/elpa/evil-20190222.1212/evil-vars.el"
+  "evil-vars.el"
+  'emacs-lisp-mode
+  '(eldoc-mode override-global-mode company-mode flycheck-mode flyspell-mode undo-tree-mode ivy-mode which-key-mode)
+  27541
+  '(27541 nil)
+  nil
+  nil
+  '((buffer-display-time 23702 27095 720099 537000) (buffer-file-coding-system . utf-8-unix) (overwrite-mode))
+  '((mark-ring (28283 28283 28283 45578 45275))))
+

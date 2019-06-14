@@ -1,0 +1,20 @@
+#lang racket
+
+(define (style component css-list [css-string ""])
+  (cond
+    ((null? css-list) (string-append
+                       "."
+                       (symbol->string component)
+                       "{ "
+                       css-string "}"))
+    (else (style
+           component
+           (cdr css-list)
+           (string-append
+            css-string
+            (symbol->string (caar css-list))
+            ": "
+            (cdar css-list)
+            "; ")))))
+
+(provide style)

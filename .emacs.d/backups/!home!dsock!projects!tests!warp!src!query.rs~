@@ -1,0 +1,14 @@
+use serde_derive::Deserialize;
+
+#[derive(Deserialize)]
+struct Media {
+    only_media: String,
+}
+#[derive(Deserialize)]
+struct Hashtag {
+    tag: String,
+}
+#[derive(Deserialize)]
+struct List {
+    list: String,
+}

@@ -1,0 +1,14 @@
+"dfe18f5a05ea2e79d0a9c6b0b29a65912c5ef9ff"
+#s(undo-tree [nil ([nil ([nil ([nil ([nil ([nil (#1=[nil nil ((nil rear-nonsticky nil 10883 . 10884) (#("
+" 0 1 (fontified nil)) . -10961) (10881 . 10962) 10875) nil (23745 47392 750585 458000) 0 nil] [nil nil ((nil rear-nonsticky nil 10876 . 10877) (#("
+" 0 1 (fontified nil)) . -10954) (10874 . 10955) 10817) ((#("
+  clear_passphrase
+  ( sleep 45 ; echo -n \"\" | xclip -selection \"clipboard\" ) &
+" 0 1 (fontified t) 1 2 (fontified nil) 2 3 (fontified nil rear-nonsticky nil) 3 20 (fontified nil) 20 22 (fontified nil) 22 35 (fontified nil) 35 39 (fontified nil face font-lock-builtin-face) 39 43 (fontified nil) 43 45 (fontified nil face font-lock-string-face) 45 65 (fontified nil) 65 76 (fontified nil face font-lock-string-face) 76 80 (fontified nil) 80 81 (fontified nil)) . 10874) (undo-tree-id7 . -3) (undo-tree-id8 . -80) (undo-tree-id9 . -1) (undo-tree-id10 . -80) (undo-tree-id11 . -3) (10954 . 10955) (nil rear-nonsticky t 10876 . 10877)) (23745 47386 132977 234000) 0 nil]) ((#("
+" 0 1 (fontified t rear-nonsticky t)) . 10887) (undo-tree-id0 . -1)) nil (23745 47386 133838 668000) 0 nil]) ((11067 . 11069) (11048 . 11050) (10966 . 10968) (10910 . 10912) (10888 . 10890) (#("    " 0 4 (fontified t)) . -10887) 11063) nil (23745 47386 133031 614000) 0 nil]) ((nil rear-nonsticky nil 10891 . 10892) (#("
+" 0 1 (fontified nil)) . -11121) (10891 . 11122) 10890) nil (23745 47386 133040 930000) 0 nil]) ((10887 . 10891) (#(" " 0 1 (fontified nil)) . 10886) (undo-tree-id1 . -1) (10887 . 10888) (10882 . 10887) (#(" " 0 1 (fontified t)) . -10882) (undo-tree-id2 . -1) (#(" " 0 1 (fontified t)) . -10883) (undo-tree-id3 . -1) 10884 (10882 . 10884) (10882 . 10883)) nil (23745 47386 133067 73000) 0 nil]) ((#("generate_passphrase
+echo -n \"$RANDOM_PASS\" | xclip -selection \"clipboard\"
+>&2 echo \"Generated passphrase copied to clipboard.  Will clear in 45 seconds.\"
+clear_passphrase
+( sleep 45 ; echo -n \"\" | xclip -selection \"clipboard\" ) &
+" 0 20 (fontified t) 20 24 (fontified t face font-lock-builtin-face) 24 28 (fontified t) 28 42 (fontified t face font-lock-string-face) 42 62 (fontified t) 62 73 (fontified t face font-lock-string-face) 73 83 (fontified t) 83 153 (fontified t face font-lock-string-face) 153 184 (fontified t) 184 188 (fontified t face font-lock-builtin-face) 188 192 (fontified t) 192 194 (fontified t face font-lock-string-face) 194 214 (fontified t) 214 225 (fontified t face font-lock-string-face) 225 230 (fontified t)) . 10666) (undo-tree-id4 . -171) (undo-tree-id5 . -171) (undo-tree-id6 . -171) (t 23433 64422 560241 666000)) nil (23745 47386 133097 209000) 0 nil]) nil nil (23745 47386 133101 855000) 0 nil] #1# 690 7 nil)

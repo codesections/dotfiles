@@ -1,0 +1,15 @@
+"15ae36b7f23d3325ca8e6e71fc19ed804ae4044b"
+#s(undo-tree [nil (#1=[nil nil ((1 . 575) ("alias skribilo /gnu/store/7spzbv7agsajmnyswks2nxq5clj2s9sx-skribilo-0.9.4/bin/skribilo $*
+alias haunt /gnu/store/5ml93aqc2q37d3fn7kyix2838cj9z1nc-haunt-0.2.4/bin/haunt $*
+alias hyperfine hyperfine -s basic $*
+alias wifi-on /home/dsock/src/scripts/wifi-on
+alias clear clear t
+alias up eshell-up $1
+alias vi find-file $1
+alias ls exa --colour=always --git --group-directories-first -1 $*
+alias mouse-off xinput --disable \"SynPS/2 Synaptics TouchPad\"
+alias V view-file-other-window $1
+alias ff find-file $1
+alias FF find-file-other-window $1
+alias v view-file $1
+" . 1) (t 23721 43544 736748 925000)) nil (23752 56604 634462 527000) 0 nil]) nil nil (23752 56604 634469 261000) 0 nil] #1# 584 1 nil)

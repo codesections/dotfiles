@@ -1,0 +1,46 @@
+#lang pollen 
+◊(require racket/function)
+◊(require "components/MainParagraph.rkt")
+◊(require "components/Nav.rkt")
+◊(require "components/Footer.rkt")
+◊(require "components/Link.rkt")
+◊(require "components/Logo.rkt")
+
+<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+◊(define-meta h2-css "color: red")
+
+◊(@
+  (Nav #:buttons `("Home" "About" ,(Logo) "Projects" "Blog"))
+  (section
+   (h2 
+    "I am Daniel Sockwell a software developer who started coding in an odd way:
+     I was a lawyer in New York when my firm needed a coding lawyer." )
+   ◊MainParagraph{
+        Since then, I've built projects ◊Link{in JavaScript[1]},
+        ◊Link{in Rust[2]}, and in ◊Link{whatever other[3]} languages seemed
+        ◊Link{best for the job[4]}.  I´m a firm believer in the power of free
+        and open-source software and have contributed to ◊Link{dozens of
+        open-source projects[5]}.  I´ve been particularly involved in the Rust
+        ecosystem, and serve on the Rust ◊Link{Command Line Application working
+        group[6]}.}
+   ◊MainParagraph{
+        My longer writings are here at ◊Link{codesections.com/blog[7]} and my
+        microbloging is hosted at ◊Link[#:rel "me"]{fosstodon.org/@codesections
+        [10]} (part of ◊Link{Mastodon[8]}, the distributed, open-source social
+        network).  If you have any questions or just want to say "hi", feel
+        free to shoot me an email at ◊code{daniel@codesections.com}, or reach
+        out through ◊Link{any other contact method[9]}.})
+  (Footer))
+
+◊(define (links)
+  '((1 "https://github.com/codesections/mastodon-de-mob")
+    (2 "https://github.com/codesections/mnemonic")
+    (3 "https://github.com/codesections/pass-gen")
+    (4 "https://github.com/codesections/gtypist_programming_characters")
+    (5 "https://github.com/codesections-forks")
+    (6 "https://internals.rust-lang.org/t/announcing-the-cli-working-group/6872")
+    (7 "https://www.codesections.com/blog/")
+    (8 "https://joinmastodon.org/")
+    (9 "https://codesections.com/about/#contact")
+    (10 "https://fosstodon.org/@codesections")))
+◊(define Link (curry Links #:list-of-links links))

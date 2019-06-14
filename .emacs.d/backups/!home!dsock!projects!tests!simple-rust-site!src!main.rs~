@@ -1,0 +1,18 @@
+#[macro_use]
+extern crate tera;
+use tera::Tera;
+use tera::Context;
+use std::fs::File;
+use std::io::prelude::*;
+
+fn main() -> std::io::Result<()> {
+    // Use globbing
+    let tera = compile_templates!("templates/**/*");
+    let mut context = Context::new();
+    let product = "Daniel's product";
+    context.insert("product", &product);
+    let mut file = File::create("./index.html")?;
+    file.write_all(tera.render("index.html", &context).unwrap().as_bytes())?;
+    Ok(())
+
+}

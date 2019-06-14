@@ -1,0 +1,3 @@
+import {h, render} from 'preact';
+/** @jsx preact.h */
+

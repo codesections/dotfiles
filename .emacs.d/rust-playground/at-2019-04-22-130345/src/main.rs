@@ -1,0 +1,13 @@
+// snippet of code @ 2019-04-22 13:03:50
+
+// === Rust Playground ===
+// This snippet is in: ~/.emacs.d/rust-playground/at-2019-04-22-130345/
+
+// Execute the snippet: C-c C-c
+// Delete the snippet completely: C-c k
+// Toggle between main.rs and Cargo.toml: C-c b
+
+fn main() {
+    let _🙂 = "hello, world";
+    println!("{}", _🙂);
+}

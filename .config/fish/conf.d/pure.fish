@@ -1,0 +1,1 @@
+/home/dsock/src/pure-fish/conf.d/pure.fish

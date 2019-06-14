@@ -1,0 +1,16 @@
+#lang racket
+(require txexpr pollen/setup)
+
+(define (PageHeader . children)
+  (case (current-poly-target)
+    [(html)
+     `(h2 ((style 
+                 "text-align: left;
+font-size: 1.618em;
+font-weight: 400;
+line-height: .85;
+color: #000;
+margin-top: .25em")) ,@children)]
+    [else `(section ,@children)]))
+
+(provide PageHeader)

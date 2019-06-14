@@ -1,0 +1,364 @@
+13:25:53 DEBUG    init       earlyinit:init_log:267 Log initialized.
+13:25:53 DEBUG    init       app:run:96 Initializing directories...
+13:25:53 DEBUG    init       standarddir:init:312 Base directory: None
+13:25:53 DEBUG    misc       standarddir:_writable_location:234 writable location for ConfigLocation: /home/dsock/.config
+13:25:53 DEBUG    misc       standarddir:_writable_location:234 writable location for AppLocalDataLocation: /home/dsock/.local/share
+13:25:53 DEBUG    misc       standarddir:_writable_location:234 writable location for CacheLocation: /home/dsock/.cache
+13:25:53 DEBUG    misc       standarddir:_writable_location:234 writable location for DownloadLocation: /home/dsock/Downloads
+13:25:53 DEBUG    misc       standarddir:_writable_location:234 writable location for RuntimeLocation: /run/user/1000
+13:25:53 DEBUG    init       app:run:100 Initializing config...
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: aliases = {'q': 'close', 'qa': 'quit', 'qall': 'quit', 'w': 'session-save', 'wq': 'quit --save'}
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: qt.highdpi = True
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: content.javascript.enabled = True
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: content.javascript.enabled = True
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: content.javascript.enabled = True
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: editor.command = ['vi-split', '{file}']
+13:25:53 DEBUG    url        urlutils:get_path_if_valid:380 Checking if 'https://www.codesections.com' is a path
+13:25:53 DEBUG    url        urlutils:fuzzy_url:213 URL is a fuzzy address
+13:25:53 DEBUG    url        urlutils:fuzzy_url:216 Converting fuzzy term 'https://www.codesections.com' to URL -> https://www.codesections.com
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: url.start_pages = ['https://www.codesections.com']
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: bindings.commands = {'passthrough': {'<Ctrl-e>': 'open-editor', '<Ctrl-f>': 'scroll right', '<Ctrl-b>': 'scroll left', '<Ctrl-p>': 'scroll up', '<Ctrl-n>': 'scroll down'}, 'normal': {'<Ctrl-1>': 'tab-focus 1', '<Ctrl-2>': 'tab-focus 2', '<Ctrl-3>': 'tab-focus 3', '<Ctrl-4>': 'tab-focus 4', '<Ctrl-5>': 'tab-focus 5', '<Ctrl-6>': 'tab-focus 6', '<Ctrl-7>': 'tab-focus 7', '<Ctrl-8>': 'tab-focus 8', '<Ctrl-h>': 'tab-prev', '<Ctrl-l>': 'tab-next', '<Ctrl-k>': 'back', '<Ctrl-j>': 'forward', '<Ctrl-o>': 'set-cmd-text -s :open -t', '<Ctrl-shift-o>': 'set-cmd-text -s :open', '<Ctrl-p>': 'scroll up', '<Ctrl-n>': 'scroll down', '<tab>': 'nop'}}
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: zoom.default = 100%
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.completion.entry = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.completion.category = bold 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.debug_console = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.downloads = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.hints = bold 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.keyhint = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.messages.error = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.messages.info = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.messages.warning = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.prompts = 11pt sans-serif
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.statusbar = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: fonts.tabs = 11pt Hack
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: spellcheck.languages = ['en-US']
+13:25:53 DEBUG    init       app:__init__:822 Qt arguments: ['/usr/bin/qutebrowser', '--reduced-referrer-granularity'], based on Namespace(backend=None, basedir=None, color=True, command=[], debug=True, debug_flags=[], enable_webengine_inspector=False, force_color=False, json_args=None, json_logging=False, logfilter=None, loglevel='info', loglines=2000, no_err_windows=False, nowindow=False, override_restore=False, qt_arg=None, qt_flag=None, session=None, target=None, temp_basedir=False, temp_basedir_restarted=None, temp_settings=[], url=[], version=False)
+13:25:53 DEBUG    init       app:__init__:825 Initializing application...
+13:25:53 DEBUG    ipc        ipc:send_to_running_instance:435 Connecting to /run/user/1000/qutebrowser/ipc-2d866b2de516741f6d9b8819b86e8030
+13:25:53 DEBUG    ipc        ipc:send_to_running_instance:468 No existing instance present (error 2)
+13:25:53 DEBUG    init       ipc:send_or_listen:497 Starting IPC server...
+13:25:53 DEBUG    ipc        ipc:__init__:193 Not calling setSocketOptions
+13:25:53 DEBUG    ipc        ipc:listen:204 Listening as /run/user/1000/qutebrowser/ipc-2d866b2de516741f6d9b8819b86e8030
+13:25:53 DEBUG    init       app:init:163 Starting init...
+13:25:53 DEBUG    init       app:_init_modules:424 Initializing save manager...
+13:25:53 DEBUG    init       app:_init_modules:429 Checking backend requirements...
+13:25:53 DEBUG    init       app:_init_modules:432 Initializing prompts...
+13:25:53 DEBUG    init       app:_init_modules:435 Initializing network...
+13:25:53 DEBUG    init       networkmanager:init:101 Default Qt ciphers: TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_GCM_SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-RSA-AES256-GCM-SHA384, DHE-RSA-AES256-GCM-SHA384, ECDHE-ECDSA-CHACHA20-POLY1305, ECDHE-RSA-CHACHA20-POLY1305, DHE-RSA-CHACHA20-POLY1305, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-RSA-AES128-GCM-SHA256, DHE-RSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES256-SHA384, DHE-RSA-AES256-SHA256, ECDHE-ECDSA-AES128-SHA256, ECDHE-RSA-AES128-SHA256, DHE-RSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES256-SHA, DHE-RSA-AES256-SHA, ECDHE-ECDSA-AES128-SHA, ECDHE-RSA-AES128-SHA, DHE-RSA-AES128-SHA, RSA-PSK-AES256-GCM-SHA384, DHE-PSK-AES256-GCM-SHA384, RSA-PSK-CHACHA20-POLY1305, DHE-PSK-CHACHA20-POLY1305, ECDHE-PSK-CHACHA20-POLY1305, AES256-GCM-SHA384, PSK-AES256-GCM-SHA384, PSK-CHACHA20-POLY1305, RSA-PSK-AES128-GCM-SHA256, DHE-PSK-AES128-GCM-SHA256, AES128-GCM-SHA256, PSK-AES128-GCM-SHA256, AES256-SHA256, AES128-SHA256, ECDHE-PSK-AES256-CBC-SHA384, ECDHE-PSK-AES256-CBC-SHA, SRP-RSA-AES-256-CBC-SHA, SRP-AES-256-CBC-SHA, RSA-PSK-AES256-CBC-SHA384, DHE-PSK-AES256-CBC-SHA384, RSA-PSK-AES256-CBC-SHA, DHE-PSK-AES256-CBC-SHA, AES256-SHA, PSK-AES256-CBC-SHA384, PSK-AES256-CBC-SHA, ECDHE-PSK-AES128-CBC-SHA256, ECDHE-PSK-AES128-CBC-SHA, SRP-RSA-AES-128-CBC-SHA, SRP-AES-128-CBC-SHA, RSA-PSK-AES128-CBC-SHA256, DHE-PSK-AES128-CBC-SHA256, RSA-PSK-AES128-CBC-SHA, DHE-PSK-AES128-CBC-SHA, AES128-SHA, PSK-AES128-CBC-SHA256, PSK-AES128-CBC-SHA
+13:25:53 DEBUG    init       networkmanager:init:112 Disabling bad ciphers: 
+13:25:53 DEBUG    init       app:_init_modules:438 Initializing proxy...
+13:25:53 DEBUG    init       app:_init_modules:441 Initializing readline-bridge...
+13:25:53 DEBUG    init       app:_init_modules:446 Initializing sql...
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "PRAGMA journal_mode=WAL"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "PRAGMA journal_mode=WAL"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "PRAGMA synchronous=NORMAL"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "PRAGMA synchronous=NORMAL"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    init       app:_init_modules:449 Initializing web history...
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "CREATE TABLE IF NOT EXISTS History (url NOT NULL, title NOT NULL, atime NOT NULL, redirect NOT NULL)"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "CREATE TABLE IF NOT EXISTS History (url NOT NULL, title NOT NULL, atime NOT NULL, redirect NOT NULL)"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "CREATE TABLE IF NOT EXISTS CompletionHistory (url PRIMARY KEY, title NOT NULL, last_atime NOT NULL)"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "CREATE TABLE IF NOT EXISTS CompletionHistory (url PRIMARY KEY, title NOT NULL, last_atime NOT NULL)"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "CREATE INDEX IF NOT EXISTS CompletionHistoryAtimeIndex ON CompletionHistory (last_atime)"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "CREATE INDEX IF NOT EXISTS CompletionHistoryAtimeIndex ON CompletionHistory (last_atime)"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "CREATE TABLE IF NOT EXISTS CompletionMetaInfo (key PRIMARY KEY, value )"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "CREATE TABLE IF NOT EXISTS CompletionMetaInfo (key PRIMARY KEY, value )"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "SELECT EXISTS(SELECT * FROM CompletionMetaInfo WHERE key = :val)"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "SELECT EXISTS(SELECT * FROM CompletionMetaInfo WHERE key = :val)"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {':val': 'force_rebuild'}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "pragma user_version"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "pragma user_version"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "SELECT value FROM CompletionMetaInfo WHERE key = :key"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "SELECT value FROM CompletionMetaInfo WHERE key = :key"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {':key': 'force_rebuild'}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "SELECT count(*) FROM CompletionHistory"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "SELECT count(*) FROM CompletionHistory"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "CREATE INDEX IF NOT EXISTS HistoryIndex ON History (url)"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "CREATE INDEX IF NOT EXISTS HistoryIndex ON History (url)"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "CREATE INDEX IF NOT EXISTS HistoryAtimeIndex ON History (atime)"
+13:25:53 DEBUG    sql        sql:run:207 Running SQL query: "CREATE INDEX IF NOT EXISTS HistoryAtimeIndex ON History (atime)"
+13:25:53 DEBUG    sql        sql:run:210 query bindings: {}
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "SELECT EXISTS(SELECT * FROM History WHERE url = :val)"
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "SELECT * FROM History where not redirect and not url like "qute://%" and atime > :earliest and atime <= :latest ORDER BY atime desc"
+13:25:53 DEBUG    sql        sql:__init__:174 Preparing SQL query: "SELECT * FROM History where not redirect and not url like "qute://%" and atime <= :latest ORDER BY atime desc limit :limit offset :offset"
+13:25:53 DEBUG    init       app:_init_modules:456 Initializing completion...
+13:25:53 DEBUG    init       app:_init_modules:459 Initializing command history...
+13:25:53 DEBUG    init       lineparser:__init__:154 Reading /home/dsock/.local/share/qutebrowser/cmd-history
+13:25:53 DEBUG    init       app:_init_modules:462 Initializing crashlog...
+13:25:53 DEBUG    init       app:_init_modules:466 Initializing sessions...
+13:25:53 DEBUG    init       app:_init_modules:469 Initializing websettings...
+13:25:53 DEBUG    config     spell:local_files:67 Found file for dict en-US: en-US-8-0.bdic
+13:25:53 DEBUG    config     webenginesettings:set_dictionary_language:250 Found dicts: ['en-US-8-0']
+13:25:53 DEBUG    config     spell:local_files:67 Found file for dict en-US: en-US-8-0.bdic
+13:25:53 DEBUG    config     webenginesettings:set_dictionary_language:250 Found dicts: ['en-US-8-0']
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: content.javascript.enabled = True
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: content.javascript.enabled = True
+13:25:53 DEBUG    config     config:_set_value:289 Config option changed: content.javascript.enabled = True
+13:25:53 DEBUG    init       app:_init_modules:472 Initializing adblock...
+13:25:53 DEBUG    init       app:_init_modules:477 Initializing quickmarks...
+13:25:53 DEBUG    init       lineparser:__init__:154 Reading /home/dsock/.config/qutebrowser/quickmarks
+13:25:53 DEBUG    init       app:_init_modules:481 Initializing bookmarks...
+13:25:53 DEBUG    init       lineparser:__init__:154 Reading /home/dsock/.config/qutebrowser/bookmarks/urls
+13:25:53 DEBUG    init       app:_init_modules:485 Initializing cookies...
+13:25:53 DEBUG    init       lineparser:__init__:154 Reading /home/dsock/.local/share/qutebrowser/cookies
+13:25:53 DEBUG    init       app:_init_modules:491 Initializing cache...
+13:25:53 DEBUG    init       app:_init_modules:495 Initializing downloads...
+13:25:53 DEBUG    init       networkmanager:__init__:144 Initializing NetworkManager
+13:25:53 DEBUG    init       networkmanager:__init__:149 NetworkManager init done
+13:25:53 DEBUG    init       app:_init_modules:499 Initializing Greasemonkey...
+13:25:53 DEBUG    greasemonkey greasemonkey:load_scripts:232 Reading scripts from: /home/dsock/.local/share/qutebrowser/greasemonkey
+13:25:53 DEBUG    init       app:_init_modules:502 Misc initialization...
+13:25:53 DEBUG    init       webenginetab:init:57 Initializing qute://* handler...
+13:25:53 WARNING  qt         Unknown module:none:0 Please register the custom scheme 'qute' via QWebEngineUrlScheme::registerScheme() before installing the custom scheme handler.
+  File "/usr/bin/qutebrowser", line 11, in <module>
+    load_entry_point('qutebrowser==1.5.2', 'gui_scripts', 'qutebrowser')()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/qutebrowser.py", line 194, in main
+    return app.run(args)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 142, in run
+    init(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 168, in init
+    _init_modules(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 505, in _init_modules
+    browsertab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/browsertab.py", line 72, in init
+    webenginetab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginetab.py", line 59, in init
+    _qute_scheme_handler.install(webenginesettings.default_profile)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginequtescheme.py", line 36, in install
+    profile.installUrlSchemeHandler(b'qute', self)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/utils/log.py", line 467, in qt_message_handler
+    stack = ''.join(traceback.format_stack())
+
+13:25:53 WARNING  qt         Unknown module:none:0 Please register the custom scheme 'chrome-error' via QWebEngineUrlScheme::registerScheme() before installing the custom scheme handler.
+  File "/usr/bin/qutebrowser", line 11, in <module>
+    load_entry_point('qutebrowser==1.5.2', 'gui_scripts', 'qutebrowser')()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/qutebrowser.py", line 194, in main
+    return app.run(args)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 142, in run
+    init(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 168, in init
+    _init_modules(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 505, in _init_modules
+    browsertab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/browsertab.py", line 72, in init
+    webenginetab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginetab.py", line 59, in init
+    _qute_scheme_handler.install(webenginesettings.default_profile)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginequtescheme.py", line 39, in install
+    profile.installUrlSchemeHandler(b'chrome-error', self)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/utils/log.py", line 467, in qt_message_handler
+    stack = ''.join(traceback.format_stack())
+
+13:25:53 WARNING  qt         Unknown module:none:0 Please register the custom scheme 'chrome-extension' via QWebEngineUrlScheme::registerScheme() before installing the custom scheme handler.
+  File "/usr/bin/qutebrowser", line 11, in <module>
+    load_entry_point('qutebrowser==1.5.2', 'gui_scripts', 'qutebrowser')()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/qutebrowser.py", line 194, in main
+    return app.run(args)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 142, in run
+    init(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 168, in init
+    _init_modules(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 505, in _init_modules
+    browsertab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/browsertab.py", line 72, in init
+    webenginetab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginetab.py", line 59, in init
+    _qute_scheme_handler.install(webenginesettings.default_profile)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginequtescheme.py", line 40, in install
+    profile.installUrlSchemeHandler(b'chrome-extension', self)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/utils/log.py", line 467, in qt_message_handler
+    stack = ''.join(traceback.format_stack())
+
+13:25:53 WARNING  qt         Unknown module:none:0 Please register the custom scheme 'qute' via QWebEngineUrlScheme::registerScheme() before installing the custom scheme handler.
+  File "/usr/bin/qutebrowser", line 11, in <module>
+    load_entry_point('qutebrowser==1.5.2', 'gui_scripts', 'qutebrowser')()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/qutebrowser.py", line 194, in main
+    return app.run(args)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 142, in run
+    init(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 168, in init
+    _init_modules(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 505, in _init_modules
+    browsertab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/browsertab.py", line 72, in init
+    webenginetab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginetab.py", line 60, in init
+    _qute_scheme_handler.install(webenginesettings.private_profile)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginequtescheme.py", line 36, in install
+    profile.installUrlSchemeHandler(b'qute', self)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/utils/log.py", line 467, in qt_message_handler
+    stack = ''.join(traceback.format_stack())
+
+13:25:53 WARNING  qt         Unknown module:none:0 Please register the custom scheme 'chrome-error' via QWebEngineUrlScheme::registerScheme() before installing the custom scheme handler.
+  File "/usr/bin/qutebrowser", line 11, in <module>
+    load_entry_point('qutebrowser==1.5.2', 'gui_scripts', 'qutebrowser')()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/qutebrowser.py", line 194, in main
+    return app.run(args)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 142, in run
+    init(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 168, in init
+    _init_modules(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 505, in _init_modules
+    browsertab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/browsertab.py", line 72, in init
+    webenginetab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginetab.py", line 60, in init
+    _qute_scheme_handler.install(webenginesettings.private_profile)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginequtescheme.py", line 39, in install
+    profile.installUrlSchemeHandler(b'chrome-error', self)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/utils/log.py", line 467, in qt_message_handler
+    stack = ''.join(traceback.format_stack())
+
+13:25:53 WARNING  qt         Unknown module:none:0 Please register the custom scheme 'chrome-extension' via QWebEngineUrlScheme::registerScheme() before installing the custom scheme handler.
+  File "/usr/bin/qutebrowser", line 11, in <module>
+    load_entry_point('qutebrowser==1.5.2', 'gui_scripts', 'qutebrowser')()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/qutebrowser.py", line 194, in main
+    return app.run(args)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 142, in run
+    init(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 168, in init
+    _init_modules(args, crash_handler)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/app.py", line 505, in _init_modules
+    browsertab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/browsertab.py", line 72, in init
+    webenginetab.init()
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginetab.py", line 60, in init
+    _qute_scheme_handler.install(webenginesettings.private_profile)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/browser/webengine/webenginequtescheme.py", line 40, in install
+    profile.installUrlSchemeHandler(b'chrome-extension', self)
+  File "/usr/lib/python3.7/site-packages/qutebrowser/utils/log.py", line 467, in qt_message_handler
+    stack = ''.join(traceback.format_stack())
+
+13:25:53 DEBUG    init       webenginetab:init:62 Initializing request interceptor...
+13:25:53 DEBUG    init       webenginetab:init:70 Initializing QtWebEngine downloads...
+13:25:53 DEBUG    init       webenginetab:init:76 Initializing cookie filter...
+13:25:53 DEBUG    init       app:init:174 Initializing eventfilter...
+13:25:53 DEBUG    init       app:init:179 Connecting signals...
+13:25:53 DEBUG    init       app:_process_args:216 Initializing main window...
+13:25:53 DEBUG    init       mainwindow:_init_downloadmanager:306 Initializing downloads...
+13:25:53 DEBUG    statusbar  bar:_hide_cmd_widget:320 Hiding cmd widget
+13:25:53 DEBUG    init       mainwindow:__init__:208 Initializing modes...
+13:25:53 DEBUG    init       mainwindow:_load_geometry:407 Loading mainwindow from b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xf5\x00\x00\x00\x1a\x00\x00\x06?\x00\x00\x03\x84\x00\x00\x00\xf5\x00\x00\x00\x1a\x00\x00\x06?\x00\x00\x03\x84\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x00\xf5\x00\x00\x00\x1a\x00\x00\x06?\x00\x00\x03\x84'
+13:25:53 DEBUG    init       mainwindow:_init_geometry:249 Initial main window geometry: PyQt5.QtCore.QRect(245, 26, 1355, 875)
+13:25:53 DEBUG    init       app:_open_startpage:346 Opening start pages
+13:25:53 DEBUG    url        urlutils:get_path_if_valid:380 Checking if 'https://www.codesections.com' is a path
+13:25:53 DEBUG    url        urlutils:fuzzy_url:213 URL is a fuzzy address
+13:25:53 DEBUG    url        urlutils:fuzzy_url:216 Converting fuzzy term 'https://www.codesections.com' to URL -> https://www.codesections.com
+13:25:53 DEBUG    webview    tabbedbrowser:tabopen:463 Creating new tab with URL PyQt5.QtCore.QUrl('https://www.codesections.com'), background None, related True, idx None
+13:25:53 DEBUG    webview    tabbedbrowser:_get_new_tab_idx:548 tabs.new_position next -> opening new tab at -1, next left: 0 / right: 0
+13:25:53 DEBUG    webview    webview:render_widget:79 Found possibly lost focusProxy: []
+13:25:53 DEBUG    modes      tabbedbrowser:on_current_changed:683 Current tab changed, focusing <qutebrowser.browser.webengine.webenginetab.WebEngineTab tab_id=0 url=''>
+13:25:53 DEBUG    modes      tabbedbrowser:on_current_changed:691 Mode before tab change: normal (mode_on_change = normal)
+13:25:53 DEBUG    modes      modeman:leave:307 Ignoring leave request for KeyMode.hint (reason tab changed) as we're in mode KeyMode.normal
+13:25:53 DEBUG    modes      modeman:leave:307 Ignoring leave request for KeyMode.caret (reason tab changed) as we're in mode KeyMode.normal
+13:25:53 DEBUG    modes      modeman:leave:307 Ignoring leave request for KeyMode.insert (reason tab changed) as we're in mode KeyMode.normal
+13:25:53 DEBUG    modes      modeman:leave:307 Ignoring leave request for KeyMode.passthrough (reason tab changed) as we're in mode KeyMode.normal
+13:25:53 DEBUG    modes      tabbedbrowser:on_current_changed:703 Mode after tab change: normal (mode_on_change = normal)
+13:25:53 DEBUG    webview    webview:render_widget:79 Found possibly lost focusProxy: []
+13:25:53 DEBUG    webview    browsertab:_on_predicted_navigation:848 Predicted navigation: https://www.codesections.com
+13:25:53 DEBUG    webview    tabbedbrowser:on_title_changed:605 Changing title for idx 0 to 'https://www.codesections.com'
+13:25:53 DEBUG    webview    browsertab:_on_predicted_navigation:848 Predicted navigation: https://www.codesections.com
+13:25:53 DEBUG    webview    tabbedbrowser:on_title_changed:605 Changing title for idx 0 to 'https://www.codesections.com'
+13:25:53 DEBUG    mouse      mouse:eventFilter:55 <qutebrowser.browser.webengine.webview.WebEngineView object at 0x7efc34c63a68> got new child <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>, installing filter
+13:25:53 DEBUG    webview    tabbedbrowser:on_title_changed:605 Changing title for idx 0 to 'https://www.codesections.com/'
+13:25:53 DEBUG    signals    signalfilter:_filter_signals:86 emitting: cur_url_changed(PyQt5.QtCore.QUrl('https://www.codesections.com/')) (tab 0)
+13:25:53 DEBUG    init       app:_process_args:227 Init finished after 0.808461s
+13:25:53 DEBUG    init       app:init:188 Init done!
+13:25:53 DEBUG    misc       mainwindow:_update_overlay_geometry:301 new geometry for <qutebrowser.mainwindow.messageview.MessageView object at 0x7efc34c63678>: PyQt5.QtCore.QRect(0, 856, 1356, 1)
+13:25:53 DEBUG    misc       mainwindow:_update_overlay_geometry:301 new geometry for <qutebrowser.mainwindow.messageview.MessageView object at 0x7efc34c63678>: PyQt5.QtCore.QRect(0, 855, 1355, 1)
+13:25:53 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>
+13:25:53 DEBUG    misc       mainwindow:_update_overlay_geometry:301 new geometry for <qutebrowser.mainwindow.messageview.MessageView object at 0x7efc34c63678>: PyQt5.QtCore.QRect(0, 856, 1356, 1)
+13:25:54 DEBUG    webview    browsertab:_set_load_status:814 load status for <qutebrowser.browser.webengine.webenginetab.WebEngineTab tab_id=0 url='https://www.codesections.com/'>: LoadStatus.loading
+13:25:54 DEBUG    signals    signalfilter:_filter_signals:86 emitting: cur_load_status_changed('loading') (tab 0)
+13:25:54 DEBUG    signals    signalfilter:_filter_signals:86 emitting: cur_load_started() (tab 0)
+13:25:54 DEBUG    modes      modeman:leave:307 Ignoring leave request for KeyMode.insert (reason load started) as we're in mode KeyMode.normal
+13:25:54 DEBUG    modes      modeman:leave:307 Ignoring leave request for KeyMode.hint (reason load started) as we're in mode KeyMode.normal
+13:25:54 DEBUG    webview    browsertab:_on_navigation_request:873 navigation request: url https://www.codesections.com/, type Type.typed, is_main_frame True
+13:25:54 DEBUG    webview    tabbedbrowser:on_title_changed:605 Changing title for idx 0 to 'https://www.codesections.com'
+13:25:54 DEBUG    webview    tabbedbrowser:on_title_changed:605 Changing title for idx 0 to 'Home | CodeSections'
+13:25:54 DEBUG    sql        sql:__init__:174 Preparing SQL query: "INSERT INTO History (url, title, atime, redirect) values(:url, :title, :atime, :redirect)"
+13:25:54 DEBUG    sql        sql:run:207 Running SQL query: "INSERT INTO History (url, title, atime, redirect) values(:url, :title, :atime, :redirect)"
+13:25:54 DEBUG    sql        sql:run:210 query bindings: {':atime': 1550859954, ':redirect': False, ':title': 'Home | CodeSections', ':url': 'https://www.codesections.com/'}
+13:25:54 DEBUG    sql        sql:__init__:174 Preparing SQL query: "REPLACE INTO CompletionHistory (url, title, last_atime) values(:url, :title, :last_atime)"
+13:25:54 DEBUG    sql        sql:run:207 Running SQL query: "REPLACE INTO CompletionHistory (url, title, last_atime) values(:url, :title, :last_atime)"
+13:25:54 DEBUG    sql        sql:run:210 query bindings: {':last_atime': 1550859954, ':title': 'Home | CodeSections', ':url': 'https://www.codesections.com/'}
+13:25:54 DEBUG    sessions   sessions:save:289 Saving session _autosave to /home/dsock/.local/share/qutebrowser/sessions/_autosave.yml...
+13:25:54 DEBUG    webview    browsertab:_set_load_status:814 load status for <qutebrowser.browser.webengine.webenginetab.WebEngineTab tab_id=0 url='https://www.codesections.com/'>: LoadStatus.success_https
+13:25:54 DEBUG    signals    signalfilter:_filter_signals:86 emitting: cur_load_status_changed('success_https') (tab 0)
+13:25:54 DEBUG    signals    signalfilter:_filter_signals:86 emitting: cur_load_finished(True) (tab 0)
+13:25:55 DEBUG    modes      modeman:_handle_keypress:172 got keypress in mode KeyMode.normal - delegating to <qutebrowser.keyinput.modeparsers.NormalKeyParser>
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Got key: 0x1000024 / modifiers: 0x0 / text: '<CapsLock>' / dry_run True
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Trying match without modifiers
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Trying match with key_mappings
+13:25:55 DEBUG    modes      modeman:_handle_keypress:199 match: 0, forward_unbound_keys: auto, passthrough: False, is_non_alnum: True, dry_run: True --> filter: False (focused: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>)
+13:25:55 DEBUG    modes      modeman:_handle_keypress:172 got keypress in mode KeyMode.normal - delegating to <qutebrowser.keyinput.modeparsers.NormalKeyParser>
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Got key: 0x1000024 / modifiers: 0x0 / text: '<CapsLock>' / dry_run True
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Trying match without modifiers
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Trying match with key_mappings
+13:25:55 DEBUG    modes      modeman:_handle_keypress:199 match: 0, forward_unbound_keys: auto, passthrough: False, is_non_alnum: True, dry_run: True --> filter: False (focused: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>)
+13:25:55 DEBUG    modes      modeman:_handle_keypress:172 got keypress in mode KeyMode.normal - delegating to <qutebrowser.keyinput.modeparsers.NormalKeyParser>
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Got key: 0x1000024 / modifiers: 0x0 / text: '<CapsLock>' / dry_run False
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Trying match without modifiers
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Trying match with key_mappings
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Giving up with '<CapsLock>', no matches
+13:25:55 DEBUG    keyboard   basekeyparser:_debug_log:91 Clearing keystring (was: <CapsLock>).
+13:25:55 DEBUG    modes      modeman:_handle_keypress:199 match: 0, forward_unbound_keys: auto, passthrough: False, is_non_alnum: True, dry_run: False --> filter: False (focused: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>)
+13:25:56 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: None
+13:25:59 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>
+13:25:59 DEBUG    modes      modeman:_handle_keyrelease:219 filter: True
+13:26:01 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: None
+13:26:02 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>
+13:26:02 DEBUG    modes      modeman:_handle_keypress:172 got keypress in mode KeyMode.normal - delegating to <qutebrowser.keyinput.modeparsers.NormalKeyParser>
+13:26:02 DEBUG    keyboard   basekeyparser:_debug_log:91 Got key: 0x1000001 / modifiers: 0x0 / text: '<Tab>' / dry_run False
+13:26:02 DEBUG    keyboard   basekeyparser:_debug_log:91 Definitive match for '<Tab>'.
+13:26:02 DEBUG    keyboard   basekeyparser:_debug_log:91 Clearing keystring (was: <Tab>).
+13:26:02 DEBUG    commands   command:run:491 command called: nop
+13:26:02 DEBUG    commands   command:run:506 Calling qutebrowser.misc.utilcmds.nop()
+13:26:02 DEBUG    modes      modeman:_handle_keypress:199 match: 2, forward_unbound_keys: auto, passthrough: False, is_non_alnum: True, dry_run: False --> filter: True (focused: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>)
+13:26:02 DEBUG    modes      modeman:_handle_keyrelease:219 filter: True
+13:26:02 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: None
+13:26:05 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>
+13:26:05 DEBUG    modes      modeman:_handle_keyrelease:219 filter: True
+13:26:05 DEBUG    misc       app:on_focus_object_changed:840 Focus object changed: None
+13:26:11 DEBUG    destroy    crashsignal:handle_signal_wakeup:346 Handling signal wakeup!
+13:26:11 INFO     destroy    app:qt_mainloop:153 SIGINT/SIGTERM received, shutting down!
+13:26:11 INFO     destroy    app:qt_mainloop:153 Do the same again to forcefully quit.
+13:26:11 DEBUG    destroy    app:shutdown:714 Shutting down with status 130, session None...
+13:26:11 DEBUG    prompt     prompt:shutdown:135 Shutting down with loops []
+13:26:11 DEBUG    destroy    app:_shutdown:741 Stage 2 of shutting down...
+13:26:11 DEBUG    destroy    app:_shutdown:747 Removing eventfilter...
+13:26:11 DEBUG    destroy    mainwindow:_do_close:564 Closing window 0
+13:26:11 DEBUG    ipc        ipc:shutdown:402 Shutting down IPC (socket 0x7efc76822a10)
+13:26:11 DEBUG    save       savemanager:save:96 Save of yaml-config requested - dirty False, save_on_exit False, is_exit True, force False -> False
+13:26:11 DEBUG    save       savemanager:save:96 Save of state-config requested - dirty False, save_on_exit True, is_exit True, force False -> True
+13:26:11 DEBUG    save       savemanager:save:96 Save of command-history requested - dirty False, save_on_exit False, is_exit True, force False -> False
+13:26:11 DEBUG    save       savemanager:save:96 Save of quickmark-manager requested - dirty False, save_on_exit False, is_exit True, force False -> False
+13:26:11 DEBUG    save       savemanager:save:96 Save of bookmark-manager requested - dirty False, save_on_exit False, is_exit True, force False -> False
+13:26:11 DEBUG    save       savemanager:save:96 Save of cookies requested - dirty False, save_on_exit False, is_exit True, force False -> False
+13:26:11 DEBUG    destroy    app:_shutdown:779 Deactivating crash log...
+13:26:11 DEBUG    destroy    app:_shutdown:789 Deactivating message handler...
+13:26:11 DEBUG    destroy    app:_shutdown:792 Deferring QApplication::exit...
+13:26:11 DEBUG    mouse      mouse:eventFilter:79 <PyQt5.QtWidgets.QWidget object at 0x7efc34c134c8>: removed child <PyQt5.QtCore.QObject object at 0x7efc34c13678>
+13:26:11 DEBUG    mouse      mouse:eventFilter:79 <PyQt5.QtWidgets.QWidget object at 0x7efc34c134c8>: removed child <PyQt5.QtWidgets.QWidget object at 0x7efc34c13288>
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: 0
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: tab
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: hintmanager
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: 0
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: main-window
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: last-focused-main-window
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: message-bridge
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: tabbed-browser
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: statusbar
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: status-command
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: completion
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: mode-manager
+13:26:11 DEBUG    destroy    objreg:on_destroyed:121 schedule removal: prompt-container
+13:26:11 DEBUG    destroy    app:exit:861 Now calling QApplication::exit.

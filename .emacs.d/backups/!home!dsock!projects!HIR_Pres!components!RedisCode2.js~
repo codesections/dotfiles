@@ -1,0 +1,15 @@
+import React from 'react';
+import styled from 'styled-components';
+import CodeSample from './CodeSample.js';
+
+const code = `C: *2\r\n
+C: $3\r\n
+C: GET\r\n
+C: $6\r\n
+C: my_key\r\n
+
+S: +my value\r\n`;
+
+const RedisCode2 = () => <CodeSample lang="txt" code={code} />;
+
+export default RedisCode2;

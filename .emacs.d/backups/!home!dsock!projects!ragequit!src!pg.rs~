@@ -1,0 +1,8 @@
+use postgres;
+
+pub fn conn() {
+    postgres::Connection::connect(
+        "postgres://dsock@localhost/mastodon_development",
+        TlsMode::None,
+    )?
+}

@@ -1,0 +1,128 @@
+% Created 2019-03-20 Wed 12:27
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Daniel Long Sockwell}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Daniel Long Sockwell},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Maxim Rentals - 812.335.1492}
+\label{sec:org71d79fd}
+\begin{itemize}
+\item \href{http://www.maximrealestate.net/rental\_properties.php}{link}
+\end{itemize}
+
+\section{Valerie Fulton - 812.333.9355}
+\label{sec:org387d138}
+\begin{itemize}
+\item 1476 S Weatherstone Ln, ???
+\begin{itemize}
+\item \href{https://www.zillow.com/homes/for\_rent/Bloomington-IN/house,mobile,land,townhouse\_type/2086733970\_zpid/17070\_rid/1-\_beds/0-331468\_price/0-1300\_mp/39.19335,-86.45339,39.114945,-86.570635\_rect/12\_zm/}{Zillow}
+\item \$925
+\item 1 bd/1 bath, ??? sqft
+\item Garage
+\end{itemize}
+\end{itemize}
+
+\section{Signature Realty Services (Mike Avila) - 812.679.6782}
+\label{sec:org114be16}
+\begin{itemize}
+\item 111 N Elm St, Near West Side
+\begin{itemize}
+\item \href{https://www.zillow.com/homes/for\_rent/Bloomington-IN/house,mobile,land,townhouse\_type/102877796\_zpid/17070\_rid/1-\_beds/0-331468\_price/0-1300\_mp/39.175503,-86.529329,39.155905,-86.55864\_rect/14\_zm/}{Zillow}
+\item \href{https://www.apartments.com/111-n-elm-st-bloomington-in/6vzcw9v/}{Apartments.com}
+\item \$1,100
+\item 2 bd/1 bath, 840 sqft
+\item detached garage
+\end{itemize}
+\item 1289 S Cobble Creek Circle, ???
+\begin{itemize}
+\item \$1,150
+\item 2 bd/2.5 bath
+\item Covered porch
+\item pet restrictions
+\end{itemize}
+\end{itemize}
+
+\section{rentals556 - 812.339.2115}
+\label{sec:org43c39b5}
+\begin{itemize}
+\item 9 17 W Kirkwood Ave, Prospect Hill (on boarder w/ Near West Side)
+\begin{itemize}
+\item \href{https://www.zillow.com/homes/for\_rent/Bloomington-IN/house,mobile,land,townhouse\_type/94517532\_zpid/17070\_rid/1-\_beds/0-331468\_price/0-1300\_mp/39.175503,-86.529329,39.155905,-86.55864\_rect/14\_zm/}{Zillow}
+\item \$1,025
+\item 2 bd/2 bath, 916 sqft
+\end{itemize}
+\end{itemize}
+
+\section{Jamar Property Management, LLC - 812.330.8655}
+\label{sec:org83411af}
+\begin{itemize}
+\item 341 S Davisson St, Prospect Hill
+\begin{itemize}
+\item \href{https://www.zillow.com/homes/for\_rent/Bloomington-IN/house,mobile,land,townhouse\_type/2085881846\_zpid/17070\_rid/1-\_beds/0-331468\_price/0-1300\_mp/39.175486,-86.529308,39.155888,-86.558619\_rect/14\_zm/}{Zillow}
+\item \$985
+\item 2 bd/2 bath, 916 sqft
+\item across from cemetary
+\end{itemize}
+\end{itemize}
+
+\section{Brawley Property Management - 844.254.7368}
+\label{sec:orga34bd0e}
+\begin{itemize}
+\item 208 E Grimes Ln, Bryan Park
+\begin{itemize}
+\item \href{https://www.zillow.com/homes/for\_rent/Bloomington-IN/house,mobile,land,townhouse\_type/94521694\_zpid/17070\_rid/1-\_beds/0-331468\_price/0-1300\_mp/39.156845,-86.522537,39.147044,-86.537193\_rect/15\_zm/}{Zillow}
+\item \$980
+\item 2 bd/1 bath, 832 sqft
+\item no pets
+\item detached garage
+\end{itemize}
+\end{itemize}
+
+\section{Choice Realty \& Management (Lori Todd) - 812.331.7353}
+\label{sec:orge620ee4}
+\begin{itemize}
+\item 709 W Chambers Dr, Broadview (south of where we drove)
+\begin{itemize}
+\item \href{https://www.zillow.com/homes/for\_rent/Bloomington-IN/house,mobile,land,townhouse\_type/85583371\_zpid/17070\_rid/1-\_beds/0-331468\_price/0-1300\_mp/39.151071,-86.529683,39.14127,-86.544338\_rect/15\_zm/}{Zillow}
+\item \$1,050
+\item 2 bd/1 bath, 896 sqft
+\item 2 car detached garage
+\end{itemize}
+\end{itemize}
+
+\section{Rob Fritz - 812.727.3299}
+\label{sec:org7db4b97}
+\begin{itemize}
+\item 740 S Morton St, ???
+\begin{itemize}
+\item \href{https://www.apartments.com/740-s-morton-st-bloomington-in/84pq6h3/}{Apartments.com}
+\item \$1,375
+\item 2 bd/1 bath, 1,100 sqft
+\item No pets
+\end{itemize}
+\end{itemize}
+\end{document}

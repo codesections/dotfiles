@@ -1,0 +1,4 @@
+"7b5f9e61c17a8b29751aa8249d6adcb11f0a87a7"
+#s(undo-tree [nil ([nil (#1=[nil nil (("13:25:53 DEBUG    init       app:_init_modules:429 Checking backend requirements...
+" . 5385)) nil (23698 17135 241060 622000) 0 nil]) (("13:25:53 DEBUG    misc       standarddir:_writable_location:234 writable location for AppLocalDataLocation: /home/dsock/.local/share
+" . 331) (t 23664 16067 665939 436000)) nil (23698 17135 241073 834000) 0 nil]) nil nil (23698 17135 241078 711000) 0 nil] #1# 241 2 nil)

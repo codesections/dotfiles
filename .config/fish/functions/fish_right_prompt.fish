@@ -1,0 +1,1 @@
+/home/dsock/src/pure-fish/fish_right_prompt.fish

@@ -1,0 +1,45 @@
+#[allow(dead_code)]
+type TimelineUser = ((String, User),);
+use warp::reject::Rejection;
+
+pub fn public() -> impl WarpFilter<Extract = TimelineUser, Error = Rejection> {
+    path!("api" / "v1" / "streaming" / "public")
+        .and(path::end())
+        .and(user::get_access_token(user::Scope::Public))
+        .and_then(|token| user::get_account(token, Scope::Public))
+        .map(|user: User| ("public".to_owned(), user.with_language_filter()))
+}
+pub fn hashtag() -> impl WarpFilter<Extract = TimelineUser, Error = Rejection> {
+    path!("api" / "v1" / "streaming" / "hashtag")
+        .and(warp::query())
+        .and(path::end())
+        .map(|q: query::Hashtag| (format!("hashtag:{}", q.tag), User::public()))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn public_timeline() {
+        let value = warp::test::request()
+            .path("/api/v1/streaming/public")
+            .filter(&public())
+            .unwrap();
+
+        assert_eq!(value.0, "public".to_string());
+        assert_eq!(value.1, User::public().with_language_filter());
+    }
+
+    #[test]
+    fn hashtag_timeline() {
+        let value = warp::test::request()
+            .path("/api/v1/streaming/hashtag?tag=a")
+            .filter(&hashtag())
+            .unwrap();
+
+        assert_eq!(value.0, "hashtag:a".to_string());
+        assert_eq!(value.1, User::public());
+    }
+
+}

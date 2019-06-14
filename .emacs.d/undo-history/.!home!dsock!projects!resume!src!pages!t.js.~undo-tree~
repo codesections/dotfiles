@@ -1,0 +1,24 @@
+"83ab8133f72f9db83f596bd410a6afa7f5fd8f22"
+#s(undo-tree [nil ([nil (#1=[nil nil ((#("
+const Main = styled.div`
+  margin-left: 1em;
+`;
+" 0 1 (fontified t) 1 6 (fontified t face font-lock-keyword-face) 6 7 (fontified t) 7 11 (fontified t face font-lock-variable-name-face) 11 24 (fontified t) 24 47 (fontified t face font-lock-string-face) 47 49 (fontified t)) . 520) (undo-tree-id3 . -46) (undo-tree-id4 . -46) (undo-tree-id5 . -7) (undo-tree-id6 . -11) (undo-tree-id7 . -48) (undo-tree-id8 . -49) (undo-tree-id9 . -46) (t 23710 61122 144585 36000)) nil (23710 61201 255668 993000) 0 nil]) ((#("const Resume = styled.section`
+  max-width: 1000px;
+  margin: auto;
+`;
+
+export default () => (
+  <Resume>
+    <Header />
+    <Main>
+      <SideBar />
+      <SoftwareEngSection />
+      <OpenSourceActivities />
+      <ProfessionalExpSection />
+      <EducationSection />
+      <Talks />
+    </Main>
+  </Resume>
+);
+" 0 5 (fontified t face font-lock-keyword-face) 5 6 (fontified t) 6 12 (fontified t face font-lock-variable-name-face) 12 29 (fontified t) 29 69 (fontified t face font-lock-string-face) 69 72 (fontified t) 72 78 (fontified t face font-lock-keyword-face) 78 79 (fontified t) 79 86 (fontified t face font-lock-keyword-face) 86 313 (fontified t)) . 570) (undo-tree-id0 . -310) (undo-tree-id1 . -310) (undo-tree-id2 . -310) (t 23710 61101 318025 954000)) nil (23710 61122 132314 826000) 0 nil]) nil nil (23710 61122 132324 488000) 0 nil] #1# 474 2 nil)

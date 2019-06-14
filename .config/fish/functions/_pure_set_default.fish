@@ -1,0 +1,1 @@
+/home/dsock/src/pure-fish/functions/_pure_set_default.fish

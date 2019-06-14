@@ -1,0 +1,2 @@
+"62d2766497983306cea1703202824cd09555a993"
+#s(undo-tree [nil ([nil (#1=[nil nil ((769 . 775) (763 . 769) (#(" " 0 1 (fontified t)) . -763) (undo-tree-id0 . -1) (#("m" 0 1 (fontified t)) . -764) (undo-tree-id1 . -1) (undo-tree-id2 . 1) 765 (764 . 765) (#("/" 0 1 (fontified t)) . -764) (undo-tree-id3 . -1) (undo-tree-id4 . 1) 765 (763 . 765)) nil (23705 10262 821329 190000) 0 nil]) ((#("/usr/bin/nvim" 0 13 (fontified t)) . 763) (t 23702 55808 67208 758000)) nil (23705 10262 821344 624000) 0 nil]) nil nil (23705 10262 821349 212000) 0 nil] #1# 144 2 nil)

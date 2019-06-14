@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="mastodon-streaming-server">Mastodon Streaming Server</h1>
+<p>A WIP blazingly fast drop-in replacement for the Mastodon streaming api server.</p>
+<h2 id="installation">Installation</h2>
+<p>Installing the WIP version requires the Rust toolchain (the released version will be available as a pre-compiled binary). To install, clone this repository and run <code>cargo build</code> (to build the server) <code>cargo run</code> (to both build and run the server), or <code>cargo build --release</code> (to build the server with release optimizations).</p>
+<h2 id="connection-to-mastodon">Connection to Mastodon</h2>
+<p>The streaming server expects to connect to a running development version of Mastodon. Specifically, it needs to connect to both the Postgres database (to authenticate users) and to the Redis database. You should run Mastodon in whatever way you normally do and configure the streaming server to connect to the appropriate databases.</p>
+<h2 id="configuring">Configuring</h2>
+<p>You may edit the (currently limited) configuration variables in the <code>.env</code> file. Note that, by default, this server is configured to run on port 4000. This allows for easy testing with the development version of Mastodon (which, by default, is configured to communicate with a streaming server running on <code>localhost:4000</code>). However, it also conflicts with the current/Node.js version of Mastodon’s streaming server, which runs on the same port. Thus, to test this server, you should disable the other streaming server or move it to a non-conflicting port.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Build documentation with <code>cargo doc --open</code>, which will build the Markdown docs and open them in your browser. Please consult those docs for a description of the code structure/organization.</p>
+<h2 id="running">Running</h2>
+<p>As noted above, you can run the server with <code>cargo run</code>. Alternatively, if you built the sever using <code>cargo build</code> or <code>cargo build --release</code>, you can run the executable produced in the <code>target/build/debug</code> folder or the <code>target/build/release</code> folder.</p>
+<h2 id="unit-and-limited-integration-tests">Unit and (limited) integration tests</h2>
+<p>You can run basic unit test of the public Server Sent Event endpoints with <code>cargo test</code>. You can run integration tests of the authenticated SSE endpoints (which require a Postgres connection) with <code>cargo test -- --ignored</code>.</p>
+
+</body>
+</html>

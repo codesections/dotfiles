@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/dsock/projects/ragequit/src'
+let g:netrw_dirhist_2='/home/dsock/.config/fish/functions'
+let g:netrw_dirhist_3='/home/dsock'
+let g:netrw_dirhist_4='/home/dsock/.local/share'
+let g:netrw_dirhist_5='/home/dsock/.local'
+let g:netrw_dirhist_6='/home/dsock'

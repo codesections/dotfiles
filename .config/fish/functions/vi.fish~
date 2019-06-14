@@ -1,0 +1,8 @@
+function vi
+  if test -n "$NVIM_LISTEN_ADDRESS" 
+    nvr $argv
+  else 
+    nvim $argv
+  end
+end
+

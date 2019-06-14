@@ -1,0 +1,18 @@
+"6f8b4a39ffec3dbd8a84742ff8ac87b46778c3e7"
+#s(undo-tree [nil ([nil ([nil ([nil (#1=[nil nil ((#("nav '((class \"nav-bar\"))  
+" 13 21 (face font-lock-string-face) 21 22 (face font-lock-string-face)) . 99) (undo-tree-id8 . 27) (undo-tree-id9 . 27) (undo-tree-id10 . 27)) nil (23721 56589 623536 518000) 0 nil]) ((184 . 185) (")" . 575) (t 23721 56440 242848 276000)) nil (23721 56589 623551 789000) 0 nil] [nil nil ((#("nav '((class \"nav-bar\"))  
+(ul
+(li \"Home\")
+(li \"About\")
+(li \"Blog\")
+(li \"Projects\")))
+(section '((class \"content-main\"))
+(h2 '((class \"site-header\"))
+\"I'm Daniel Sockwell, a software developer who started coding in an odd way:  I was
+a lawyer in New York when my firm needed a coding lawyer.\")
+(p \"Since then, I've built projects \"
+(a '((href \"www.google.com\")) \"in JavaScript\")
+\", \"
+(a '((href \"https://github.com/codesections/mnemonic\")) \"in Rust\")
+\", or in other things.\"))" 13 21 (face font-lock-string-face) 21 22 (face font-lock-string-face) 35 36 (face font-lock-string-face) 36 37 (face font-lock-string-face) 37 40 (face font-lock-string-face) 40 41 (face font-lock-string-face) 47 48 (face font-lock-string-face) 48 53 (face font-lock-string-face) 53 54 (face font-lock-string-face) 60 66 (face font-lock-string-face) 72 82 (face font-lock-string-face) 104 117 (face font-lock-string-face) 117 118 (face font-lock-string-face) 134 147 (face font-lock-string-face) 150 152 (face font-lock-string-face) 152 178 (face font-lock-string-face) 178 234 (face font-lock-string-face) 234 291 (face font-lock-string-face) 291 292 (face font-lock-string-face) 297 311 (face font-lock-string-face) 311 329 (face font-lock-string-face) 329 330 (face font-lock-string-face) 330 331 (face font-lock-string-face) 343 359 (face font-lock-string-face) 362 377 (face font-lock-string-face) 379 382 (face font-lock-string-face) 382 383 (face font-lock-string-face) 395 396 (face font-lock-string-face) 396 435 (face font-lock-string-face) 435 436 (rear-nonsticky t face font-lock-string-face) 436 437 (face font-lock-string-face) 440 449 (face font-lock-string-face) 451 473 (face font-lock-string-face) 473 474 (face font-lock-string-face)) . 99) (t 23721 56440 242848 276000)) ((99 . 575)) (23721 56534 13345 181000) 0 nil]) (("              " . -550) ("              " . -483) (undo-tree-id0 . -14) ("              " . -478) ("              " . -431) (undo-tree-id1 . -14) ("           " . -393) (undo-tree-id2 . -11) (#("                " 0 16 (face font-lock-string-face)) . -333) ("               " . -249) ("           " . -220) (undo-tree-id3 . -11) ("  " . -185) (undo-tree-id4 . -2) (686 . 687) (")" . -184) (undo-tree-id5 . 1) (undo-tree-id6 . -1) ("    " . -167) ("    " . -155) ("    " . -142) ("    " . -130) ("   " . -126) ("  " . -98) ("   " . -68) (undo-tree-id7 . -3) ("   " . -67) ("   " . -33) (214 . 215) (")" . -106) 77) nil (23721 56534 13763 105000) 0 nil]) (("
+" . -718) (107 . 719) 74 (t 23721 43605 689715 283000)) nil (23721 56440 227486 644000) 0 nil]) nil nil (23721 56440 227492 165000) 0 nil] #1# 1008 5 nil)

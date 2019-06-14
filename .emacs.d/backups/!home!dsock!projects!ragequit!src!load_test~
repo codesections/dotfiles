@@ -1,0 +1,7 @@
+#!/bin/bash
+
+i=0;
+while [ $i -lt 500 ] ;do
+    curl "http://localhost:3030/api/v1/streaming/list" -s -o /dev/null &
+    i=`expr $i + 1`;
+done

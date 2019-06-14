@@ -1,0 +1,30 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	new file:   components/#Logo.pm#
+#	new file:   components/Body.rkt
+#	new file:   components/Colors.rkt
+#	modified:   components/Footer.rkt
+#	modified:   components/Link.rkt
+#	new file:   components/Logo.rkt
+#	new file:   components/MainContent.rkt
+#	modified:   components/MainParagraph.rkt
+#	new file:   components/Meta.rkt
+#	modified:   components/Nav.rkt
+#	new file:   components/PageHeader.rkt
+#	deleted:    hello.html.pm
+#	new file:   hello.poly.pm
+#	new file:   hello.txt
+#	modified:   pollen.rkt
+#	new file:   styles.css
+#	new file:   styles.css.pp
+#	new file:   template.html.p
+#	new file:   template.text
+#	new file:   template.text.p
+#	new file:   template.txt
+#	new file:   template.txt.p
+#	new file:   test.rkt
+#

@@ -1,0 +1,6 @@
+#lang racket
+
+(define (test-function)
+  "Doc string for text function."
+  "Hello, world!"
+  )

@@ -1,0 +1,15 @@
+import React from 'react';
+import { List } from './List.js';
+
+const reasons = [
+  'Netlifly -> Digital Ocean',
+  'Nginx',
+  'dwm -> StumpWM',
+  'Neovim -> Emacs + Evil ([WIP])',
+];
+
+const title = 'Tooling';
+
+const Tooling = ({ a }) => <List a={a} title={title} list={reasons} />;
+
+export { Tooling };

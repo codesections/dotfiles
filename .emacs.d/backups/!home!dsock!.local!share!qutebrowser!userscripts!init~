@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo 'spawn --userscript qute_jump' >> $QUTE_FIFO
+echo 'spawn --userscript create_fifo' >> $QUTE_FIFO

@@ -1,0 +1,14 @@
+(ql:quickload :clx-truetype)
+
+(load-module "ttf-fonts")
+(load-module "pass")         
+(load-module "globalwindows")
+
+
+(load "~/.stumpwm.d/visual.lisp")
+(load "~/.stumpwm.d/startup-greeting.lisp")
+(load "~/.stumpwm.d/mode-line.lisp")
+(load "~/.stumpwm.d/bindings.lisp")
+(load "~/.stumpwm.d/commands.lisp")
+
+(setf *shell-program* "/usr/bin/fish")

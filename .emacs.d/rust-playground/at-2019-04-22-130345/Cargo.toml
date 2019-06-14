@@ -1,0 +1,15 @@
+# snippet of code @ 2019-04-22 13:03:45
+
+# === Rust Playground ===
+# This snippet is in: ~/.emacs.d/rust-playground/at-2019-04-22-130345/
+
+# Execute the snippet: C-c C-c
+# Delete the snippet completely: C-c k
+# Toggle between main.rs and Cargo.toml: C-c b
+
+[package]
+name = "foo"
+version = "0.1.0"
+authors = ["Rust Example <rust-snippet@example.com>"]
+
+[dependencies]

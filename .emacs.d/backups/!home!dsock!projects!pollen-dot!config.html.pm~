@@ -1,0 +1,16 @@
+#lang pollen
+◊; Here are some settings for the fonts
+◊(define base-font "13pt Hack")
+# Fonts
+c.fonts.completion.entry = '◊base-font'
+c.fonts.completion.category = 'bold ◊base-font'
+c.fonts.debug_console = '◊base-font'
+c.fonts.downloads = '◊base-font'
+c.fonts.hints = 'bold ◊base-font'
+c.fonts.keyhint = '◊base-font'
+c.fonts.messages.error = '◊base-font'
+c.fonts.messages.info = '◊base-font'
+c.fonts.messages.warning = '◊base-font'
+c.fonts.prompts = '11pt sans-serif'
+c.fonts.statusbar = '◊base-font'
+c.fonts.tabs = '◊base-font'

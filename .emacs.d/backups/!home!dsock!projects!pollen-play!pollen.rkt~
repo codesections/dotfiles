@@ -1,0 +1,6 @@
+#lang racket
+(require pollen/tag)
+(provide (all-defined-out))
+
+(define (books . elements) `(ul ,@elements))
+(define (book title) `(li ,title))

@@ -1,0 +1,7 @@
+#lang racket
+(require "Body.rkt"
+         "PageHeader.rkt"
+         "Nav.rkt")
+
+(define (Style . children)
+  `(style ,Body_Style ,PageHeader_Style ,Nav_Style ,@children))

@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-03-20 Wed 16:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Daniel Long Sockwell" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2dcf117">1. Action Property [7] - 812.332.8870 (Action Properties)</a></li>
+<li><a href="#orge1af5c2">2. Unknown [3] – 812.272.4550 listed in description, 812.558.0306 noted by Zillow</a></li>
+<li><a href="#org731471a">3. Signature Realty Services [2] (Mike Avila) - 812.679.6782</a></li>
+<li><a href="#org39b6252">4. Brawley Property Management [2] - 844.254.7368</a></li>
+<li><a href="#orgcaef02b">5. Shawn Syre [2] - 812.269.2275</a></li>
+<li><a href="#orgdca6bd9">6. Sarge Property Management [2] - 812.330.1501</a></li>
+<li><a href="#org9b210ff">7. Maxim Rentals - 812.335.1492</a></li>
+<li><a href="#orgcc783e0">8. Valerie Fulton - 812.333.9355</a></li>
+<li><a href="#org12a2a6c">9. rentals556 - 812.339.2115</a></li>
+<li><a href="#org5f4dec9">10. Jamar Property Management - 812.330.8655</a></li>
+<li><a href="#orga600d90">11. Choice Realty &amp; Management (Lori Todd) - 812.331.7353</a></li>
+<li><a href="#orgfc800be">12. Rob Fritz - 812.727.3299</a></li>
+<li><a href="#org4ff522b">13. Bloomington Rentals - 812.660.2288</a></li>
+<li><a href="#orgabcf3a4">14. Jamar Property Management - 812.330.8655</a></li>
+<li><a href="#orgf661ec7">15. Costley &amp; Co. Rental Management - 812.336.6246</a></li>
+<li><a href="#org9d67256">16. Navin Bansal – 317.457.4333</a></li>
+<li><a href="#org56648ba">17. Matt Murphy – 812.327.7357</a></li>
+<li><a href="#org8ceccf4">18. Gallagher Properties, Thomas Gallagher – 812.3335252</a></li>
+<li><a href="#org2fa912a">19. leasing105 – 812.334.8819</a></li>
+<li><a href="#org69a2478">20. Unnamed – 812.345.0749</a></li>
+<li><a href="#org9cde4f3">21. Solstice Properties – 317.430.2900</a></li>
+<li><a href="#orgaa0c572">22. Flying Fish Real Estate, Chris Clark – 812.322.1871</a></li>
+<li><a href="#orgccc0233">23. Not sure – 812.219.9194</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2dcf117" class="outline-2">
+<h2 id="org2dcf117"><span class="section-number-2">1</span> Action Property [7] - 812.332.8870 (<a href="http://actionproperty.com/3br.html">Action Properties)</a></h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>1124 Kirkwood
+<ul class="org-ul">
+<li><a href="https://www.smugmug.com/gallery/n-67Nnst/">SmugMug</a></li>
+<li>$900</li>
+<li>2 bd/ 1 bath</li>
+</ul></li>
+<li>317 East Allen
+<ul class="org-ul">
+<li><a href="https://www.smugmug.com/gallery/n-dbB9Ng/">ActionProperty</a></li>
+<li>$1,200</li>
+<li>3 bd/ 1 bath</li>
+<li>Garage</li>
+</ul></li>
+<li>405 Driscoll 
+<ul class="org-ul">
+<li><a href="https://www.smugmug.com/gallery/n-gFrssh/i-TJswtpS">SmugMug</a></li>
+<li>$1,200</li>
+<li>3 bd/2 bath</li>
+</ul></li>
+<li>718 S Washington
+<ul class="org-ul">
+<li><a href="https://www.smugmug.com/gallery/n-FW7hS6/">SmugMug</a></li>
+<li>$1,300</li>
+<li>3 bd/ 2 bath</li>
+</ul></li>
+<li>907 S. Washington St 
+<ul class="org-ul">
+<li><a href="https://www.smugmug.com/gallery/n-DmDW63/">SmugMug</a></li>
+<li>$1,150</li>
+<li>3 bd/ 2 bath</li>
+</ul></li>
+<li>1315 S. Stull Ave.
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/house,mobile,land,townhouse_type/85587112_zpid/1-_beds/0-331824_price/0-1300_mp/39.190822,-86.466093,39.112414,-86.583338_rect/12_zm/">Zillow</a></li>
+<li>$1200</li>
+<li>3 bed/2 bath</li>
+<li>Fenced-in backyard</li>
+</ul></li>
+<li>1231 S. Fess, Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.smugmug.com/gallery/n-GQ69d3/">SmugMug</a></li>
+<li>$1200</li>
+<li>3 bed/2 bath</li>
+<li>Gas stove, laundry upstairs?</li>
+<li>Off-street parking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge1af5c2" class="outline-2">
+<h2 id="orge1af5c2"><span class="section-number-2">2</span> Unknown [3] – 812.272.4550 listed in description, 812.558.0306 noted by Zillow</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>205 E. Vermilya Ave.
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/205-E-Vermilya-Ave-Bloomington-IN-47401/94521615_zpid/">Zillow</a></li>
+<li>$1100</li>
+<li>2 bed/1 bath, 880 sqft</li>
+<li>Detached 1-car garage</li>
+<li>Gas stove, fenced yard, looks pretty clean</li>
+</ul></li>
+<li>211 E. Vermilya Ave.
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/211-E-Vermilya-Ave-Bloomington-IN-47401/85583571_zpid/">Zillow</a></li>
+<li>$950</li>
+<li>2 bed/1 bath, 785 sqft</li>
+<li>Carport </li>
+</ul></li>
+<li>213 E. Vermilya Ave.
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/213-E-Vermilya-Ave-Bloomington-IN-47401/94522775_zpid/">Zillow</a></li>
+<li>$1200</li>
+<li>3 bed/2 bath, 1152 sqft</li>
+<li>Carport</li>
+<li>Fenced yard with storage shed</li>
+<li>Gas stove, looks clean, recent updates, laundry closet thing</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org731471a" class="outline-2">
+<h2 id="org731471a"><span class="section-number-2">3</span> Signature Realty Services [2] (Mike Avila) - 812.679.6782</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>111 N Elm St, Near West Side
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/Bloomington-IN/house,mobile,land,townhouse_type/102877796_zpid/17070_rid/1-_beds/0-331468_price/0-1300_mp/39.175503,-86.529329,39.155905,-86.55864_rect/14_zm/">Zillow</a></li>
+<li><a href="https://www.apartments.com/111-n-elm-st-bloomington-in/6vzcw9v/">Apartments.com</a></li>
+<li>$1,100</li>
+<li>2 bd/1 bath, 840 sqft</li>
+<li>detached garage</li>
+</ul></li>
+<li>1289 S Cobble Creek Circle, ???
+<ul class="org-ul">
+<li><a href="https://www.sigrealtysvcs.com/-/listing/300880245/1289-S-Cobble-Creek-Circle-Bloomington-IN-47401?content_index=300055452&amp;from=results">Signature Realty</a></li>
+<li>$1,150</li>
+<li>2 bd/2.5 bath</li>
+<li>Covered porch</li>
+<li>pet restrictions</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39b6252" class="outline-2">
+<h2 id="org39b6252"><span class="section-number-2">4</span> Brawley Property Management [2] - 844.254.7368</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>208 E Grimes Ln, Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/Bloomington-IN/house,mobile,land,townhouse_type/94521694_zpid/17070_rid/1-_beds/0-331468_price/0-1300_mp/39.156845,-86.522537,39.147044,-86.537193_rect/15_zm/">Zillow</a></li>
+<li>$980</li>
+<li>2 bd/1 bath, 832 sqft</li>
+<li>no pets</li>
+<li>detached garage</li>
+</ul></li>
+<li>1416 S. Lincoln Street, ???
+<ul class="org-ul">
+<li><a href="https://www.apartments.com/2-br-1-bath-house-1416-s-lincoln-street-bloomington-in/vfj954f/">Apartments.com</a></li>
+<li><a href="https://www.showmetherent.com/1416-S-Lincoln-Street-Bloomington-IN-47401">showmetherent</a></li>
+<li>$900</li>
+<li>2 br/1 bath, 759 sqft</li>
+<li>AVAILABLE 2020</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcaef02b" class="outline-2">
+<h2 id="orgcaef02b"><span class="section-number-2">5</span> Shawn Syre [2] - 812.269.2275</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>221 E Allen St, Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/221-E-Allen-St-Bloomington-IN-47401/94520753_zpid/">Zillow</a></li>
+<li>$1,350</li>
+<li>3 br/1 bath, 1,189 sqft</li>
+</ul></li>
+<li>105 E. Wilson St., Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/house,mobile,land_type/94521896_zpid/1-_beds/0-333851_price/0-1300_mp/39.190689,-86.474333,39.112281,-86.591578_rect/12_zm/">Zillow</a></li>
+<li><a href="https://youtu.be/EZgRuOUzqNc">YouTube</a></li>
+<li>$1350</li>
+<li>3 bed/1 bath, 1100 sqft</li>
+<li>2 bedrooms have private entrances</li>
+<li>Off-street parking</li>
+<li>Gas stove</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdca6bd9" class="outline-2">
+<h2 id="orgdca6bd9"><span class="section-number-2">6</span> Sarge Property Management [2] - 812.330.1501</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>1043 S Mitchell St, ???
+<ul class="org-ul">
+<li><a href="https://sargeproperties.appfolio.com/listings/detail/948b4e88-0775-4691-9f5c-ae1004047488">Sarge Properties</a></li>
+<li>$1,350</li>
+<li>3 bd/2 bath, 1,300 sqft</li>
+</ul></li>
+<li>515 S Mitchell St, ???
+<ul class="org-ul">
+<li><a href="https://sargeproperties.appfolio.com/listings/detail/a64cb0f0-a954-47af-a1a8-57d200fdca0f">Sarge Properties</a></li>
+<li>$1,500</li>
+<li>3 bd/2 bath, 1,000 sqft</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b210ff" class="outline-2">
+<h2 id="org9b210ff"><span class="section-number-2">7</span> Maxim Rentals - 812.335.1492</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>1415 S Grant
+<ul class="org-ul">
+<li><a href="http://www.maximrealestate.net/address.php?property_ID=17">Maxim Rentals</a></li>
+<li>$975</li>
+<li>2 bd/ 1.5 baths</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcc783e0" class="outline-2">
+<h2 id="orgcc783e0"><span class="section-number-2">8</span> Valerie Fulton - 812.333.9355</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>1476 S Weatherstone Ln, ???
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/Bloomington-IN/house,mobile,land,townhouse_type/2086733970_zpid/17070_rid/1-_beds/0-331468_price/0-1300_mp/39.19335,-86.45339,39.114945,-86.570635_rect/12_zm/">Zillow</a></li>
+<li>$925</li>
+<li>1 bd/1 bath, ??? sqft</li>
+<li>Garage</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org12a2a6c" class="outline-2">
+<h2 id="org12a2a6c"><span class="section-number-2">9</span> rentals556 - 812.339.2115</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>9 17 W Kirkwood Ave, Prospect Hill (on boarder w/ Near West Side)
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/Bloomington-IN/house,mobile,land,townhouse_type/94517532_zpid/17070_rid/1-_beds/0-331468_price/0-1300_mp/39.175503,-86.529329,39.155905,-86.55864_rect/14_zm/">Zillow</a></li>
+<li>$1,025</li>
+<li>2 bd/2 bath, 916 sqft</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5f4dec9" class="outline-2">
+<h2 id="org5f4dec9"><span class="section-number-2">10</span> Jamar Property Management - 812.330.8655</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>341 S Davisson St, Prospect Hill
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/Bloomington-IN/house,mobile,land,townhouse_type/2085881846_zpid/17070_rid/1-_beds/0-331468_price/0-1300_mp/39.175486,-86.529308,39.155888,-86.558619_rect/14_zm/">Zillow</a></li>
+<li>$985</li>
+<li>2 bd/2 bath, 916 sqft</li>
+<li>across from cemetary</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga600d90" class="outline-2">
+<h2 id="orga600d90"><span class="section-number-2">11</span> Choice Realty &amp; Management (Lori Todd) - 812.331.7353</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>709 W Chambers Dr, Broadview (south of where we drove)
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/Bloomington-IN/house,mobile,land,townhouse_type/85583371_zpid/17070_rid/1-_beds/0-331468_price/0-1300_mp/39.151071,-86.529683,39.14127,-86.544338_rect/15_zm/">Zillow</a></li>
+<li>$1,050</li>
+<li>2 bd/1 bath, 896 sqft</li>
+<li>2 car detached garage</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfc800be" class="outline-2">
+<h2 id="orgfc800be"><span class="section-number-2">12</span> Rob Fritz - 812.727.3299</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>740 S Morton St, ???
+<ul class="org-ul">
+<li><a href="https://www.apartments.com/740-s-morton-st-bloomington-in/84pq6h3/">Apartments.com</a></li>
+<li>$1,375</li>
+<li>2 bd/1 bath, 1,100 sqft</li>
+<li>No pets</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4ff522b" class="outline-2">
+<h2 id="org4ff522b"><span class="section-number-2">13</span> Bloomington Rentals - 812.660.2288</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>908 West 3rd Street
+<ul class="org-ul">
+<li>$1,300</li>
+<li>2 bd/1 bath, 2,000 sqft</li>
+<li>garage/covered parking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgabcf3a4" class="outline-2">
+<h2 id="orgabcf3a4"><span class="section-number-2">14</span> Jamar Property Management - 812.330.8655</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li>308 S Davisson St, Prospect Hill
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/house,mobile,land_type/94521970_zpid/1-_beds/0-331824_price/0-1300_mp/39.166786,-86.535745,39.156986,-86.550401_rect/15_zm/">Zillow</a></li>
+<li>$980</li>
+<li>2 bd/1 bath, 700 sqft</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf661ec7" class="outline-2">
+<h2 id="orgf661ec7"><span class="section-number-2">15</span> Costley &amp; Co. Rental Management - 812.336.6246</h2>
+<div class="outline-text-2" id="text-15">
+<ul class="org-ul">
+<li>1222 S Fess St.
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/1222-S-Fess-Ave-Bloomington-IN-47401/94519964_zpid/">Zillow</a></li>
+<li>$995</li>
+<li>3 bd/1 bath, 1108 sqft</li>
+<li>garage not for use by tenant but carport is</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9d67256" class="outline-2">
+<h2 id="org9d67256"><span class="section-number-2">16</span> Navin Bansal – 317.457.4333</h2>
+<div class="outline-text-2" id="text-16">
+<ul class="org-ul">
+<li>803 E Hillside Dr., Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/803-E-Hillside-Dr-Bloomington-IN-47401/85587090_zpid/">Zillow</a></li>
+<li>$995</li>
+<li>2 bd/1 bath, 1000 sqft</li>
+<li>Tenant must have minimum 650 credit score</li>
+<li>Tenant must have $39k before tax income or need a co-signer with stated credentials</li>
+<li>Off-street parking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56648ba" class="outline-2">
+<h2 id="org56648ba"><span class="section-number-2">17</span> Matt Murphy – 812.327.7357</h2>
+<div class="outline-text-2" id="text-17">
+<ul class="org-ul">
+<li>1128 S Madison Dr.
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/bloomington-in-47403-1128-s-madison_rb/">Zillow</a></li>
+<li>$1300</li>
+<li>2 bed/1 bath, 1000 sqft</li>
+<li>Off-street parking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8ceccf4" class="outline-2">
+<h2 id="org8ceccf4"><span class="section-number-2">18</span> Gallagher Properties, Thomas Gallagher – 812.3335252</h2>
+<div class="outline-text-2" id="text-18">
+<ul class="org-ul">
+<li>105 N. Maple St., Near West Side
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/105-N-Maple-St-Bloomington-IN-47404/2085744455_zpid/">Zillow</a></li>
+<li>$1200</li>
+<li>2 bed/1 bath, 1800 sqft</li>
+<li>Parking and laundry situation unclear</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2fa912a" class="outline-2">
+<h2 id="org2fa912a"><span class="section-number-2">19</span> leasing105 – 812.334.8819</h2>
+<div class="outline-text-2" id="text-19">
+<ul class="org-ul">
+<li>319 N. Maple St., Near West Side
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/319-N-Maple-St-Bloomington-IN-47404/94516897_zpid/">Zillow</a></li>
+<li>$1100</li>
+<li>2 bed/1 bath, 1800 sqft, 1123 sqft</li>
+<li>Owner provides parking and yard maintenance</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org69a2478" class="outline-2">
+<h2 id="org69a2478"><span class="section-number-2">20</span> Unnamed – 812.345.0749</h2>
+<div class="outline-text-2" id="text-20">
+<ul class="org-ul">
+<li>104 E. Davis St., Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/104-E-Davis-St-Bloomington-IN-47401/94519701_zpid/">Zillow</a></li>
+<li>$900</li>
+<li>3 bed/1 bath, 900 sqft</li>
+<li>Carport</li>
+<li>Up to 5 renters allowed</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9cde4f3" class="outline-2">
+<h2 id="org9cde4f3"><span class="section-number-2">21</span> Solstice Properties – 317.430.2900</h2>
+<div class="outline-text-2" id="text-21">
+<ul class="org-ul">
+<li>1202 S. Washington St., Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homes/for_rent/house,mobile,land_type/102880402_zpid/1-_beds/0-332180_price/0-1300_mp/39.192285,-86.474333,39.113879,-86.591578_rect/12_zm/">Zillow</a></li>
+<li>$1200</li>
+<li>3 bed/2 bath, 1259 sqft</li>
+<li>Off-street parking and lawn service provided by owner</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa0c572" class="outline-2">
+<h2 id="orgaa0c572"><span class="section-number-2">22</span> Flying Fish Real Estate, Chris Clark – 812.322.1871</h2>
+<div class="outline-text-2" id="text-22">
+<ul class="org-ul">
+<li>903 W Kirkwood Ave., Prospect Hill
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/903-W-Kirkwood-Ave-Bloomington-IN-47404/94516724_zpid/">Zillow</a></li>
+<li>$1200</li>
+<li>3 bed/1 bath, 1005 sqft</li>
+<li>Off-street parking</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgccc0233" class="outline-2">
+<h2 id="orgccc0233"><span class="section-number-2">23</span> Not sure – 812.219.9194</h2>
+<div class="outline-text-2" id="text-23">
+<ul class="org-ul">
+<li>805 E. Grimes Lane, Bryan Park
+<ul class="org-ul">
+<li><a href="https://www.zillow.com/homedetails/805-E-Grimes-Ln-Bloomington-IN-47401/85587069_zpid/">Zillow</a></li>
+<li>Not sure of rent or other details</li>
+<li>Looks like it has a carport</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel Long Sockwell</p>
+<p class="date">Created: 2019-03-20 Wed 16:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

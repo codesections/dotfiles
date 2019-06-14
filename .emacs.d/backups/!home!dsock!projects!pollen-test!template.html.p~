@@ -1,0 +1,13 @@
+#lang pollen
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pollen Test</title>
+    <style>
+    h2 {◊(select 'h2-css metas)} 
+    </style>
+  </head>
+  <body>◊(->html doc #:splice? #t)
+  </body>
+</html>

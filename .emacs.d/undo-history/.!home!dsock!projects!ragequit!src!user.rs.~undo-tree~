@@ -1,0 +1,291 @@
+"949964e336c7748f408e2930332ccecab9ec13aa"
+#s(undo-tree [nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil ([nil (#3=[nil nil ((445 . 464) (#("v" 0 1 (fontified t face font-lock-string-face)) . -445) (undo-tree-id355 . -1) (#("n" 0 1 (fontified t face font-lock-string-face)) . -446) (undo-tree-id356 . -1) (#(" " 0 1 (fontified t face font-lock-string-face)) . -447) (undo-tree-id357 . -1) 448 (439 . 448) (438 . 440) (#("\"" 0 1 (fontified nil)) . -438) (438 . 439) (437 . 439) (#("(" 0 1 (fontified nil)) . -437) (431 . 438) (#("u" 0 1 (fontified t)) . -431) (undo-tree-id358 . -1) (#("n" 0 1 (fontified t)) . -432) (undo-tree-id359 . -1) 433 (430 . 433) (t 23765 6397 522791 505000)) nil (23765 6420 868122 750000) 0 nil]) ((1 . 4842) (#("//! Create a User by querying the Postgres database with the user's access_token
+use crate::{any_of, query};
+use log::info;
+use postgres;
+use std::env;
+use warp::Filter as WarpFilter;
+
+/// (currently hardcoded to localhost)
+pub fn connect_to_postgres() -> postgres::Connection {
+    let postgres_addr =
+        env::var(\"POSTGRESS_ADDR\").unwrap_or(format!(\"postgres://{}@localhost/mastodon_development\", env::var(\"USER\")));
+    postgres::Connection::connect(postgres_addr, postgres::TlsMode::None)
+        .expect(\"Can connect to local Postgres\")
+}
+
+/// The filters that can be applied to toots after they come from Redis
+#[derive(Clone, Debug, PartialEq)]
+pub enum Filter {
+    None,
+    Language,
+    Notification,
+}
+
+/// The User (with data read from Postgres)
+#[derive(Clone, Debug, PartialEq)]
+pub struct User {
+    pub id: i64,
+    pub langs: Option<Vec<String>>,
+    pub logged_in: bool,
+    pub filter: Filter,
+}
+impl User {
+    /// Create a user from the access token supplied in the header or query paramaters
+    pub fn from_access_token(token: String, scope: Scope) -> Result<Self, warp::reject::Rejection> {
+        let conn = connect_to_postgres();
+        let result = &conn
+            .query(
+                \"
+SELECT oauth_access_tokens.resource_owner_id, users.account_id, users.chosen_languages
+FROM
+oauth_access_tokens
+INNER JOIN users ON
+oauth_access_tokens.resource_owner_id = users.id
+WHERE oauth_access_tokens.token = $1
+AND oauth_access_tokens.revoked_at IS NULL
+LIMIT 1\",
+                &[&token],
+            )
+            .expect(\"Hard-coded query will return Some([0 or more rows])\");
+        if !result.is_empty() {
+            let only_row = result.get(0);
+            let id: i64 = only_row.get(1);
+            let langs: Option<Vec<String>> = only_row.get(2);
+            info!(\"Granting logged-in access\");
+            Ok(User {
+                id,
+                langs,
+                logged_in: true,
+                filter: Filter::None,
+            })
+        } else if let Scope::Public = scope {
+            info!(\"Granting public access to non-authenticated client\");
+            Ok(User {
+                id: -1,
+                langs: None,
+                logged_in: false,
+                filter: Filter::None,
+            })
+        } else {
+            Err(warp::reject::custom(\"Error: Invalid access token\"))
+        }
+    }
+    /// Add a Notification filter
+    pub fn with_notification_filter(self) -> Self {
+        Self {
+            filter: Filter::Notification,
+            ..self
+        }
+    }
+    /// Add a Language filter
+    pub fn with_language_filter(self) -> Self {
+        Self {
+            filter: Filter::Language,
+            ..self
+        }
+    }
+    /// Remove all filters
+    pub fn with_no_filter(self) -> Self {
+        Self {
+            filter: Filter::None,
+            ..self
+        }
+    }
+    /// Determine whether the User is authorised for a specified list
+    pub fn authorized_for_list(&self, list: i64) -> Result<i64, warp::reject::Rejection> {
+        let conn = connect_to_postgres();
+        // For the Postgres query, `id` = list number; `account_id` = user.id
+        let rows = &conn
+            .query(
+                \" SELECT id, account_id FROM lists WHERE id = $1 LIMIT 1\",
+                &[&list],
+            )
+            .expect(\"Hard-coded query will return Some([0 or more rows])\");
+        if !rows.is_empty() {
+            let id_of_account_that_owns_the_list: i64 = rows.get(0).get(1);
+            if id_of_account_that_owns_the_list == self.id {
+                return Ok(list);
+            }
+        };
+
+        Err(warp::reject::custom(\"Error: Invalid access token\"))
+    }
+    /// A public (non-authenticated) User
+    pub fn public() -> Self {
+        User {
+            id: -1,
+            langs: None,
+            logged_in: false,
+            filter: Filter::None,
+        }
+    }
+}
+
+/// Whether the endpoint requires authentication or not
+pub enum Scope {
+    Public,
+    Private,
+}
+impl Scope {
+    pub fn get_access_token(self) -> warp::filters::BoxedFilter<(String,)> {
+        let token_from_header = warp::header::header::<String>(\"authorization\")
+            .map(|auth: String| auth.split(' ').nth(1).unwrap_or(\"invalid\").to_string());
+        let token_from_query = warp::query().map(|q: query::Auth| q.access_token);
+        let public = warp::any().map(|| \"no access token\".to_string());
+
+        match self {
+            // if they're trying to access a private scope without an access token, reject the request
+            Scope::Private => any_of!(token_from_query, token_from_header).boxed(),
+            // if they're trying to access a public scope without an access token, proceed
+            Scope::Public => any_of!(token_from_query, token_from_header, public).boxed(),
+        }
+    }
+}
+" 0 80 (fontified t face font-lock-doc-face) 80 81 (fontified t face font-lock-doc-face) 81 84 (fontified t face font-lock-keyword-face) 84 85 (fontified t) 85 90 (fontified t face font-lock-keyword-face) 90 109 (fontified t) 109 112 (fontified t face font-lock-keyword-face) 112 113 (fontified t) 113 116 (fontified t face font-lock-constant-face) 116 124 (fontified t) 124 127 (fontified t face font-lock-keyword-face) 127 128 (fontified t) 128 136 (fontified t face font-lock-constant-face) 136 138 (fontified t) 138 141 (fontified t face font-lock-keyword-face) 141 142 (fontified t) 142 145 (fontified t face font-lock-constant-face) 145 152 (fontified t) 152 155 (fontified t face font-lock-keyword-face) 155 156 (fontified t) 156 160 (fontified t face font-lock-constant-face) 160 162 (fontified t) 162 168 (fontified t face font-lock-type-face) 168 169 (fontified t) 169 171 (fontified t face font-lock-keyword-face) 171 172 (fontified t) 172 182 (fontified t face font-lock-type-face) 182 185 (fontified t) 185 224 (fontified t face font-lock-doc-face) 224 227 (fontified t face font-lock-keyword-face) 227 228 (fontified t) 228 230 (fontified t face font-lock-keyword-face) 230 231 (fontified t) 231 250 (fontified t face font-lock-function-name-face) 250 254 (fontified t) 254 255 (fontified t syntax-table #1=(1)) 255 256 (fontified t) 256 264 (fontified t face font-lock-constant-face) 264 266 (fontified t) 266 276 (fontified t face font-lock-type-face) 276 279 (fontified t) 279 283 (fontified t) 283 286 (fontified t face font-lock-keyword-face) 286 287 (fontified t) 287 300 (fontified t face font-lock-variable-name-face) 300 302 (fontified t) 302 303 (fontified t) 303 311 (fontified t) 311 314 (fontified t face font-lock-constant-face) 314 320 (fontified t) 320 334 (fontified t face font-lock-string-face) 334 335 (fontified t face font-lock-string-face) 335 336 (fontified t face font-lock-string-face) 336 348 (fontified t) 348 350 (fontified t face rust-builtin-formatting-macro-face) 350 351 (fontified t face rust-builtin-formatting-macro-face) 351 355 (fontified t face rust-builtin-formatting-macro-face) 355 356 (fontified t) 356 368 (fontified t face font-lock-string-face) 368 370 (fontified t face rust-string-interpolation-face) 370 401 (fontified t face font-lock-string-face) 401 402 (fontified t face font-lock-string-face) 402 404 (fontified t) 404 407 (fontified t face font-lock-constant-face) 407 412 (fontified t) 412 413 (fontified t) 413 418 (fontified t face font-lock-string-face) 418 419 (fontified t face font-lock-string-face) 419 420 (fontified t) 420 421 (fontified t) 421 424 (fontified t) 424 428 (fontified t) 428 436 (fontified t face font-lock-constant-face) 436 438 (fontified t) 438 448 (fontified t face font-lock-type-face) 448 473 (fontified t) 473 481 (fontified t face font-lock-constant-face) 481 483 (fontified t) 483 490 (fontified t face font-lock-type-face) 490 492 (fontified t) 492 496 (fontified t face font-lock-type-face) 496 514 (fontified t) 514 545 (fontified t face font-lock-string-face) 545 550 (fontified t) 550 622 (fontified t face font-lock-doc-face) 622 656 (fontified t face font-lock-preprocessor-face) 656 657 (fontified t) 657 660 (fontified t face font-lock-keyword-face) 660 661 (fontified t) 661 665 (fontified t face font-lock-keyword-face) 665 666 (fontified t) 666 672 (fontified t face font-lock-type-face) 672 679 (fontified t) 679 683 (fontified t face font-lock-type-face) 683 689 (fontified t) 689 697 (fontified t face font-lock-type-face) 697 703 (fontified t) 703 715 (fontified t face font-lock-type-face) 715 720 (fontified t) 720 764 (fontified t face font-lock-doc-face) 764 798 (fontified t face font-lock-preprocessor-face) 798 799 (fontified t) 799 802 (fontified t face font-lock-keyword-face) 802 803 (fontified t) 803 809 (fontified t face font-lock-keyword-face) 809 810 (fontified t) 810 814 (fontified t face font-lock-type-face) 814 817 (fontified t) 817 821 (fontified t) 821 824 (fontified t face font-lock-keyword-face) 824 825 (fontified t) 825 826 (fontified t face font-lock-variable-name-face) 826 827 (fontified t face font-lock-variable-name-face) 827 829 (fontified t) 829 832 (fontified t face font-lock-type-face) 832 834 (fontified t) 834 838 (fontified t) 838 841 (fontified t face font-lock-keyword-face) 841 842 (fontified t) 842 847 (fontified t face font-lock-variable-name-face) 847 849 (fontified t) 849 855 (fontified t face font-lock-type-face) 855 856 (fontified t) 856 859 (fontified t face font-lock-type-face) 859 860 (fontified t) 860 866 (fontified t face font-lock-type-face) 866 867 (fontified t) 867 868 (fontified t) 868 874 (fontified t) 874 877 (fontified t face font-lock-keyword-face) 877 878 (fontified t) 878 887 (fontified t face font-lock-variable-name-face) 887 889 (fontified t) 889 893 (fontified t face font-lock-type-face) 893 899 (fontified t) 899 902 (fontified t face font-lock-keyword-face) 902 903 (fontified t) 903 909 (fontified t face font-lock-variable-name-face) 909 911 (fontified t) 911 917 (fontified t face font-lock-type-face) 917 921 (fontified t) 921 924 (fontified t face font-lock-keyword-face) 924 925 (face font-lock-keyword-face fontified t) 925 926 (fontified t) 926 930 (face font-lock-type-face fontified t) 930 933 (fontified t) 933 937 (fontified t) 937 1020 (fontified t face font-lock-doc-face) 1020 1024 (fontified t) 1024 1027 (fontified t face font-lock-keyword-face) 1027 1028 (fontified t) 1028 1030 (fontified t face font-lock-keyword-face) 1030 1031 (fontified t) 1031 1048 (fontified t face font-lock-function-name-face) 1048 1049 (fontified t) 1049 1054 (fontified t face font-lock-variable-name-face) 1054 1056 (fontified t) 1056 1062 (fontified t face font-lock-type-face) 1062 1064 (fontified t) 1064 1069 (fontified t face font-lock-variable-name-face) 1069 1071 (fontified t) 1071 1076 (fontified t face font-lock-type-face) 1076 1079 (fontified t) 1079 1080 (syntax-table #1# fontified t) 1080 1081 (fontified t) 1081 1087 (fontified t face font-lock-type-face) 1087 1088 (fontified t) 1088 1092 (fontified t face font-lock-type-face) 1092 1094 (fontified t) 1094 1098 (fontified t face font-lock-constant-face) 1098 1100 (fontified t) 1100 1106 (fontified t face font-lock-constant-face) 1106 1108 (fontified t) 1108 1117 (fontified t face font-lock-type-face) 1117 1129 (fontified t) 1129 1132 (fontified t face font-lock-keyword-face) 1132 1133 (fontified t) 1133 1137 (fontified t face font-lock-variable-name-face) 1137 1171 (fontified t) 1171 1174 (fontified t face font-lock-keyword-face) 1174 1175 (fontified t) 1175 1181 (fontified t face font-lock-variable-name-face) 1181 1226 (fontified t) 1226 1317 (fontified t face font-lock-string-face) 1317 1320 (fontified t face font-lock-string-face) 1320 1334 (fontified t face font-lock-string-face) 1334 1340 (fontified t face font-lock-string-face) 1340 1433 (fontified t face font-lock-string-face) 1433 1446 (face font-lock-string-face fontified t) 1446 1497 (fontified t face font-lock-string-face) 1497 1560 (fontified t) 1560 1613 (fontified t face font-lock-string-face) 1613 1624 (fontified t) 1624 1626 (fontified t face font-lock-keyword-face) 1626 1660 (fontified t) 1660 1663 (fontified t face font-lock-keyword-face) 1663 1664 (fontified t) 1664 1672 (fontified t face font-lock-variable-name-face) 1672 1702 (fontified t) 1702 1705 (fontified t face font-lock-keyword-face) 1705 1706 (fontified t) 1706 1708 (fontified t face font-lock-variable-name-face) 1708 1710 (fontified t) 1710 1713 (fontified t face font-lock-type-face) 1713 1745 (fontified t) 1745 1748 (fontified t face font-lock-keyword-face) 1748 1749 (fontified t) 1749 1754 (fontified t face font-lock-variable-name-face) 1754 1756 (fontified t) 1756 1762 (fontified t face font-lock-type-face) 1762 1763 (fontified t) 1763 1766 (fontified t face font-lock-type-face) 1766 1767 (fontified t) 1767 1773 (fontified t face font-lock-type-face) 1773 1807 (fontified t) 1807 1812 (fontified t face font-lock-preprocessor-face) 1812 1813 (fontified t) 1813 1820 (fontified t face font-lock-string-face) 1820 1840 (fontified t face font-lock-string-face) 1840 1843 (fontified t) 1843 1855 (fontified t) 1855 1857 (fontified t face font-lock-type-face) 1857 1858 (fontified t) 1858 1862 (fontified t face font-lock-type-face) 1862 1924 (fontified t) 1924 1933 (fontified t face font-lock-variable-name-face) 1933 1935 (fontified t) 1935 1939 (fontified t face font-lock-keyword-face) 1939 1946 (fontified t) 1946 1957 (fontified t) 1957 1963 (face font-lock-variable-name-face fontified t) 1963 1965 (fontified t) 1965 1971 (face font-lock-type-face fontified t) 1971 1973 (fontified t) 1973 1977 (face font-lock-type-face fontified t) 1977 1979 (fontified t) 2454 2455 (syntax-table #1#)) . 1) (undo-tree-id318 . 4409) (undo-tree-id319 . -368) (undo-tree-id320 . -368) (undo-tree-id321 . -421) (undo-tree-id322 . -421) (undo-tree-id323 . -421) (undo-tree-id324 . -421) (undo-tree-id325 . -421) (undo-tree-id326 . -407) (undo-tree-id327 . -407) (undo-tree-id328 . -408) (undo-tree-id329 . -407) (undo-tree-id330 . -408) (undo-tree-id331 . -408) (undo-tree-id332 . -417) (undo-tree-id333 . -418) (undo-tree-id334 . -417) (undo-tree-id335 . -417) (undo-tree-id336 . -417) (undo-tree-id337 . -404) (undo-tree-id338 . -407) (undo-tree-id339 . -404) (undo-tree-id340 . -420) 418) nil (23765 6397 510773 459000) 0 nil]) ((415 . 419) (414 . 416) (#("\"" 0 1 (fontified nil)) . -414) (414 . 415) (413 . 415) (#("(" 0 1 (fontified nil)) . -413) (403 . 414)) nil (23765 6397 510782 208000) 0 nil]) ((#("," 0 1 (fontified t)) . -404) (undo-tree-id341 . -1) (undo-tree-id342 . -1) (undo-tree-id343 . -1) (undo-tree-id344 . -1) (undo-tree-id345 . -1) (undo-tree-id346 . -1) (#(" " 0 1 (fontified t)) . -405) (undo-tree-id347 . -1) (undo-tree-id348 . -1) 406 (404 . 406)) nil (23765 6397 510793 501000) 0 nil]) ((#("}" 0 1 (fontified nil face rust-string-interpolation-face)) . 371) (undo-tree-id349 . -1) (370 . 371) (369 . 371) (#("{" 0 1 (fontified nil face font-lock-string-face)) . -369) (undo-tree-id350 . -1) (undo-tree-id351 . -1) (369 . 370) (#("dsock" 0 5 (fontified t face font-lock-string-face)) . 369)) nil (23765 6397 510804 168000) 0 nil]) ((406 . 407) (#(")" 0 1 (fontified t)) . -357) (undo-tree-id352 . -1) (undo-tree-id353 . -1) (undo-tree-id354 . -1) (356 . 358) (#("(" 0 1 (fontified nil)) . -356) (349 . 357) (t 23765 6350 402971 427000)) nil (23765 6397 510811 903000) 0 nil]) ((1 . 4804) (#("//! Create a User by querying the Postgres database with the user's access_token
+use crate::{any_of, query};
+use log::info;
+use postgres;
+use warp::Filter as WarpFilter;
+use std::env;
+
+/// (currently hardcoded to localhost)
+pub fn connect_to_postgres() -> postgres::Connection {
+    let postgres_addr = env::var(\"POSTGRESS_ADDR\").unwrap_or(\"postgres://dsock@localhost/mastodon_development\");
+                                                             postgres::Connection::connect(
+        postgres_addr,
+        postgres::TlsMode::None,
+    )
+    .expect(\"Can connect to local Postgres\")
+}
+
+/// The filters that can be applied to toots after they come from Redis
+#[derive(Clone, Debug, PartialEq)]
+pub enum Filter {
+    None,
+    Language,
+    Notification,
+}
+
+/// The User (with data read from Postgres)
+#[derive(Clone, Debug, PartialEq)]
+pub struct User {
+    pub id: i64,
+    pub langs: Option<Vec<String>>,
+    pub logged_in: bool,
+    pub filter: Filter,
+}
+impl User {
+    /// Create a user from the access token supplied in the header or query paramaters
+    pub fn from_access_token(token: String, scope: Scope) -> Result<Self, warp::reject::Rejection> {
+        let conn = connect_to_postgres();
+        let result = &conn
+            .query(
+                \"
+SELECT oauth_access_tokens.resource_owner_id, users.account_id, users.chosen_languages
+FROM
+oauth_access_tokens
+INNER JOIN users ON
+oauth_access_tokens.resource_owner_id = users.id
+WHERE oauth_access_tokens.token = $1
+AND oauth_access_tokens.revoked_at IS NULL
+LIMIT 1\",
+                &[&token],
+            )
+            .expect(\"Hard-coded query will return Some([0 or more rows])\");
+        if !result.is_empty() {
+            let only_row = result.get(0);
+            let id: i64 = only_row.get(1);
+            let langs: Option<Vec<String>> = only_row.get(2);
+            info!(\"Granting logged-in access\");
+            Ok(User {
+                id,
+                langs,
+                logged_in: true,
+                filter: Filter::None,
+            })
+        } else if let Scope::Public = scope {
+            info!(\"Granting public access to non-authenticated client\");
+            Ok(User {
+                id: -1,
+                langs: None,
+                logged_in: false,
+                filter: Filter::None,
+            })
+        } else {
+            Err(warp::reject::custom(\"Error: Invalid access token\"))
+        }
+    }
+    /// Add a Notification filter
+    pub fn with_notification_filter(self) -> Self {
+        Self {
+            filter: Filter::Notification,
+            ..self
+        }
+    }
+    /// Add a Language filter
+    pub fn with_language_filter(self) -> Self {
+        Self {
+            filter: Filter::Language,
+            ..self
+        }
+    }
+    /// Remove all filters
+    pub fn with_no_filter(self) -> Self {
+        Self {
+            filter: Filter::None,
+            ..self
+        }
+    }
+    /// Determine whether the User is authorised for a specified list
+    pub fn authorized_for_list(&self, list: i64) -> Result<i64, warp::reject::Rejection> {
+        let conn = connect_to_postgres();
+        // For the Postgres query, `id` = list number; `account_id` = user.id
+        let rows = &conn
+            .query(
+                \" SELECT id, account_id FROM lists WHERE id = $1 LIMIT 1\",
+                &[&list],
+            )
+            .expect(\"Hard-coded query will return Some([0 or more rows])\");
+        if !rows.is_empty() {
+            let id_of_account_that_owns_the_list: i64 = rows.get(0).get(1);
+            if id_of_account_that_owns_the_list == self.id {
+                return Ok(list);
+            }
+        };
+
+        Err(warp::reject::custom(\"Error: Invalid access token\"))
+    }
+    /// A public (non-authenticated) User
+    pub fn public() -> Self {
+        User {
+            id: -1,
+            langs: None,
+            logged_in: false,
+            filter: Filter::None,
+        }
+    }
+}
+
+/// Whether the endpoint requires authentication or not
+pub enum Scope {
+    Public,
+    Private,
+}
+impl Scope {
+    pub fn get_access_token(self) -> warp::filters::BoxedFilter<(String,)> {
+        let token_from_header = warp::header::header::<String>(\"authorization\")
+            .map(|auth: String| auth.split(' ').nth(1).unwrap_or(\"invalid\").to_string());
+        let token_from_query = warp::query().map(|q: query::Auth| q.access_token);
+        let public = warp::any().map(|| \"no access token\".to_string());
+
+        match self {
+            // if they're trying to access a private scope without an access token, reject the request
+            Scope::Private => any_of!(token_from_query, token_from_header).boxed(),
+            // if they're trying to access a public scope without an access token, proceed
+            Scope::Public => any_of!(token_from_query, token_from_header, public).boxed(),
+        }
+    }
+}
+" 0 81 (fontified t face font-lock-doc-face) 81 84 (fontified t face font-lock-keyword-face) 84 85 (fontified t) 85 90 (fontified t face font-lock-keyword-face) 90 109 (fontified t) 109 112 (fontified t face font-lock-keyword-face) 112 113 (fontified t) 113 116 (fontified t face font-lock-constant-face) 116 124 (fontified t) 124 127 (fontified t face font-lock-keyword-face) 127 128 (fontified t) 128 136 (fontified t face font-lock-constant-face) 136 138 (fontified t) 138 141 (fontified t face font-lock-keyword-face) 141 142 (fontified t) 142 146 (fontified t face font-lock-constant-face) 146 148 (fontified t) 148 154 (fontified t face font-lock-type-face) 154 155 (fontified t) 155 157 (fontified t face font-lock-keyword-face) 157 158 (fontified t) 158 168 (fontified t face font-lock-type-face) 168 169 (fontified t) 169 170 (fontified t) 170 173 (fontified t face font-lock-keyword-face) 173 174 (fontified t) 174 177 (fontified t face font-lock-constant-face) 177 183 (fontified t) 183 184 (fontified t) 184 185 (fontified t) 185 224 (fontified t face font-lock-doc-face) 224 227 (fontified t face font-lock-keyword-face) 227 228 (fontified t) 228 230 (fontified t face font-lock-keyword-face) 230 231 (fontified t) 231 250 (fontified t face font-lock-function-name-face) 250 254 (fontified t) 254 255 (syntax-table #1# fontified t) 255 256 (fontified t) 256 264 (fontified t face font-lock-constant-face) 264 266 (fontified t) 266 276 (fontified t face font-lock-type-face) 276 279 (fontified t) 279 283 (fontified t) 283 286 (fontified t face font-lock-keyword-face) 286 287 (fontified t) 287 292 (fontified t face font-lock-variable-name-face) 292 293 (fontified t face font-lock-variable-name-face) 293 299 (fontified t face font-lock-variable-name-face) 299 300 (fontified t face font-lock-variable-name-face) 300 303 (fontified t) 303 306 (fontified t face font-lock-constant-face) 306 308 (fontified t) 308 310 (fontified t) 310 311 (fontified t) 311 312 (fontified t) 312 313 (fontified t face font-lock-string-face) 313 322 (fontified t face font-lock-string-face) 322 326 (fontified t face font-lock-string-face) 326 327 (fontified t face font-lock-string-face) 327 328 (fontified t face font-lock-string-face) 328 329 (fontified t) 329 330 (fontified t) 330 339 (fontified t) 339 340 (fontified t) 340 341 (fontified t face font-lock-string-face) 341 349 (fontified t face font-lock-string-face) 349 350 (fontified t face font-lock-string-face) 350 352 (fontified t face font-lock-string-face) 352 388 (fontified t face font-lock-string-face) 388 389 (fontified t face font-lock-string-face) 389 391 (fontified t) 391 392 (fontified t) 392 453 (fontified t) 453 461 (fontified t face font-lock-constant-face) 461 463 (fontified t) 463 473 (fontified t face font-lock-type-face) 473 483 (fontified t) 483 484 (fontified t) 484 492 (fontified t) 492 506 (fontified t) 506 507 (fontified t) 507 515 (fontified t) 515 523 (fontified t face font-lock-constant-face) 523 525 (fontified t) 525 532 (fontified t face font-lock-type-face) 532 534 (fontified t) 534 538 (fontified t face font-lock-type-face) 538 540 (fontified t) 540 546 (fontified t) 546 557 (fontified t) 557 558 (fontified t) 558 559 (fontified t face font-lock-string-face) 559 562 (fontified t face font-lock-string-face) 562 580 (fontified t face font-lock-string-face) 580 585 (fontified t face font-lock-string-face) 585 586 (fontified t face font-lock-string-face) 586 588 (fontified t face font-lock-string-face) 588 589 (fontified t face font-lock-string-face) 589 590 (fontified t) 590 591 (fontified t) 591 594 (fontified t) 594 666 (fontified t face font-lock-doc-face) 666 679 (fontified t face font-lock-preprocessor-face) 679 700 (fontified t face font-lock-preprocessor-face) 700 701 (fontified t) 701 704 (fontified t face font-lock-keyword-face) 704 705 (fontified t) 705 709 (fontified t face font-lock-keyword-face) 709 710 (fontified t) 710 716 (fontified t face font-lock-type-face) 716 723 (fontified t) 723 727 (fontified t face font-lock-type-face) 727 733 (fontified t) 733 741 (fontified t face font-lock-type-face) 741 747 (fontified t) 747 759 (fontified t face font-lock-type-face) 759 764 (fontified t) 764 808 (fontified t face font-lock-doc-face) 808 818 (fontified t face font-lock-preprocessor-face) 818 842 (fontified t face font-lock-preprocessor-face) 842 843 (fontified t) 843 846 (fontified t face font-lock-keyword-face) 846 847 (fontified t) 847 853 (fontified t face font-lock-keyword-face) 853 854 (fontified t) 854 858 (fontified t face font-lock-type-face) 858 865 (fontified t) 865 868 (fontified t face font-lock-keyword-face) 868 869 (fontified t) 869 871 (fontified t face font-lock-variable-name-face) 871 873 (fontified t) 873 876 (fontified t face font-lock-type-face) 876 882 (fontified t) 882 885 (fontified t face font-lock-keyword-face) 885 886 (fontified t) 886 891 (fontified t face font-lock-variable-name-face) 891 892 (fontified t) 892 893 (fontified t) 893 899 (face font-lock-type-face fontified t) 899 900 (fontified t) 900 903 (face font-lock-type-face fontified t) 903 904 (fontified t) 904 910 (face font-lock-type-face fontified t) 910 911 (fontified t) 911 912 (fontified t) 912 914 (fontified t) 914 918 (fontified t) 918 921 (fontified t face font-lock-keyword-face) 921 922 (fontified t) 922 931 (fontified t face font-lock-variable-name-face) 931 933 (fontified t) 933 937 (fontified t face font-lock-type-face) 937 943 (fontified t) 943 946 (fontified t face font-lock-keyword-face) 946 947 (fontified t) 947 949 (fontified t face font-lock-variable-name-face) 949 953 (fontified t face font-lock-variable-name-face) 953 955 (fontified t) 955 961 (fontified t face font-lock-type-face) 961 963 (fontified t) 963 965 (fontified t) 965 969 (fontified t face font-lock-keyword-face) 969 970 (fontified t) 970 972 (fontified t face font-lock-type-face) 972 974 (fontified t face font-lock-type-face) 974 977 (fontified t) 977 981 (fontified t) 981 984 (fontified t face font-lock-doc-face) 984 1007 (fontified t face font-lock-doc-face) 1007 1040 (fontified t face font-lock-doc-face) 1040 1064 (fontified t face font-lock-doc-face) 1064 1068 (fontified t) 1068 1071 (fontified t face font-lock-keyword-face) 1071 1072 (fontified t) 1072 1074 (fontified t face font-lock-keyword-face) 1074 1075 (fontified t) 1075 1091 (fontified t face font-lock-function-name-face) 1091 1092 (fontified t face font-lock-function-name-face) 1092 1093 (fontified t) 1093 1098 (fontified t face font-lock-variable-name-face) 1098 1100 (fontified t) 1100 1106 (fontified t face font-lock-type-face) 1106 1108 (fontified t) 1108 1113 (fontified t face font-lock-variable-name-face) 1113 1115 (fontified t) 1115 1120 (fontified t face font-lock-type-face) 1120 1123 (fontified t) 1123 1124 (fontified t syntax-table #1#) 1124 1125 (fontified t) 1125 1131 (fontified t face font-lock-type-face) 1131 1132 (fontified t) 1132 1136 (fontified t face font-lock-type-face) 1136 1138 (fontified t) 1138 1142 (fontified t face font-lock-constant-face) 1142 1144 (fontified t) 1144 1150 (fontified t face font-lock-constant-face) 1150 1152 (fontified t) 1152 1161 (fontified t face font-lock-type-face) 1161 1162 (fontified t) 1162 1165 (fontified t) 1165 1173 (fontified t) 1173 1176 (fontified t face font-lock-keyword-face) 1176 1177 (fontified t) 1177 1181 (fontified t face font-lock-variable-name-face) 1181 1201 (fontified t) 1201 1207 (fontified t) 1207 1215 (fontified t) 1215 1218 (fontified t face font-lock-keyword-face) 1218 1219 (fontified t) 1219 1225 (fontified t face font-lock-variable-name-face) 1225 1270 (fontified t) 1270 1271 (fontified t face font-lock-string-face) 1271 1272 (fontified t face font-lock-string-face) 1272 1278 (fontified t face font-lock-string-face) 1278 1343 (fontified t face font-lock-string-face) 1343 1359 (fontified t face font-lock-string-face) 1359 1363 (fontified t face font-lock-string-face) 1363 1384 (fontified t face font-lock-string-face) 1384 1389 (fontified t face font-lock-string-face) 1389 1390 (fontified t face font-lock-string-face) 1390 1394 (fontified t face font-lock-string-face) 1394 1401 (fontified t face font-lock-string-face) 1401 1403 (fontified t face font-lock-string-face) 1403 1414 (fontified t face font-lock-string-face) 1414 1453 (face font-lock-string-face fontified t) 1453 1458 (fontified t face font-lock-string-face) 1458 1463 (fontified t face font-lock-string-face) 1463 1477 (fontified t face font-lock-string-face) 1477 1490 (fontified t face font-lock-string-face) 1490 1493 (fontified t face font-lock-string-face) 1493 1525 (fontified t face font-lock-string-face) 1525 1527 (fontified t face font-lock-string-face) 1527 1528 (fontified t face font-lock-string-face) 1528 1532 (fontified t face font-lock-string-face) 1532 1533 (fontified t face font-lock-string-face) 1533 1538 (fontified t face font-lock-string-face) 1538 1540 (fontified t face font-lock-string-face) 1540 1541 (fontified t face font-lock-string-face) 1541 1564 (fontified t) 1564 1570 (fontified t) 1570 1604 (fontified t) 1604 1657 (fontified t face font-lock-string-face) 1657 1665 (fontified t) 1665 1668 (fontified t) 1668 1670 (fontified t face font-lock-keyword-face) 1670 1692 (fontified t) 1692 1704 (fontified t) 1704 1707 (fontified t face font-lock-keyword-face) 1707 1708 (fontified t) 1708 1716 (fontified t face font-lock-variable-name-face) 1716 1734 (fontified t) 1734 1746 (fontified t) 1746 1749 (fontified t face font-lock-keyword-face) 1749 1750 (fontified t) 1750 1752 (fontified t face font-lock-variable-name-face) 1752 1754 (fontified t) 1754 1757 (fontified t face font-lock-type-face) 1757 1789 (fontified t) 1789 1792 (fontified t face font-lock-keyword-face) 1792 1793 (fontified t) 1793 1798 (fontified t face font-lock-variable-name-face) 1798 1800 (fontified t) 1800 1806 (fontified t face font-lock-type-face) 1806 1807 (fontified t) 1807 1810 (fontified t face font-lock-type-face) 1810 1811 (fontified t) 1811 1817 (fontified t face font-lock-type-face) 1817 1818 (fontified t) 1818 1819 (fontified t) 1819 1851 (fontified t) 1851 1856 (fontified t face font-lock-preprocessor-face) 1856 1857 (fontified t) 1857 1859 (fontified t face font-lock-string-face) 1859 1884 (fontified t face font-lock-string-face) 1884 1887 (fontified t) 1887 1899 (fontified t) 1899 1901 (fontified t face font-lock-type-face) 1901 1902 (fontified t) 1902 1906 (fontified t face font-lock-type-face) 1906 1953 (fontified t) 1953 1968 (fontified t) 1968 1977 (face font-lock-variable-name-face fontified t) 1977 1979 (fontified t) 1979 1983 (face font-lock-keyword-face fontified t) 1983 1985 (fontified t) 2001 2007 (face font-lock-variable-name-face) 2009 2015 (face font-lock-type-face) 2017 2021 (face font-lock-type-face) 2048 2052 (face font-lock-keyword-face) 2053 2055 (face font-lock-keyword-face) 2056 2059 (face font-lock-keyword-face) 2060 2065 (face font-lock-type-face) 2067 2070 (face font-lock-type-face) 2070 2073 (face font-lock-type-face) 2096 2100 (face font-lock-preprocessor-face) 2100 2101 (face font-lock-preprocessor-face) 2102 2154 (face font-lock-string-face) 2169 2171 (face font-lock-type-face) 2172 2176 (face font-lock-type-face) 2195 2197 (face font-lock-variable-name-face) 2219 2224 (face font-lock-variable-name-face) 2226 2230 (face font-lock-type-face) 2248 2257 (face font-lock-variable-name-face) 2259 2264 (face font-lock-keyword-face) 2282 2288 (face font-lock-variable-name-face) 2290 2296 (face font-lock-type-face) 2298 2302 (face font-lock-type-face) 2329 2333 (face font-lock-keyword-face) 2348 2351 (face font-lock-type-face) 2352 2356 (face font-lock-constant-face) 2358 2364 (face font-lock-constant-face) 2373 2402 (face font-lock-string-face) 2425 2455 (face font-lock-doc-face) 2459 2462 (face font-lock-keyword-face) 2463 2465 (face font-lock-keyword-face) 2466 2490 (face font-lock-function-name-face) 2491 2495 (face font-lock-keyword-face) 2498 2499 (syntax-table #1#) 2500 2504 (face font-lock-type-face) 2515 2519 (face font-lock-type-face) 2534 2540 (face font-lock-variable-name-face) 2542 2548 (face font-lock-type-face) 2550 2562 (face font-lock-type-face) 2578 2582 (face font-lock-keyword-face) 2603 2629 (face font-lock-doc-face) 2633 2636 (face font-lock-keyword-face) 2637 2639 (face font-lock-keyword-face) 2640 2657 (face font-lock-function-name-face) 2657 2660 (face font-lock-function-name-face) 2661 2665 (face font-lock-keyword-face) 2668 2669 (syntax-table #1#) 2670 2674 (face font-lock-type-face) 2685 2689 (face font-lock-type-face) 2704 2710 (face font-lock-variable-name-face) 2712 2718 (face font-lock-type-face) 2720 2728 (face font-lock-type-face) 2744 2748 (face font-lock-keyword-face) 2769 2792 (face font-lock-doc-face) 2796 2799 (face font-lock-keyword-face) 2800 2802 (face font-lock-keyword-face) 2803 2817 (face font-lock-function-name-face) 2818 2822 (face font-lock-keyword-face) 2825 2826 (syntax-table #1#) 2827 2831 (face font-lock-type-face) 2842 2846 (face font-lock-type-face) 2861 2867 (face font-lock-variable-name-face) 2869 2875 (face font-lock-type-face) 2877 2881 (face font-lock-type-face) 2897 2901 (face font-lock-keyword-face) 2922 2988 (face font-lock-doc-face) 2992 2995 (face font-lock-keyword-face) 2996 2998 (face font-lock-keyword-face) 2999 3018 (face font-lock-function-name-face) 3020 3024 (face font-lock-keyword-face) 3026 3030 (face font-lock-variable-name-face) 3032 3035 (face font-lock-type-face) 3038 3039 (syntax-table #1#) 3040 3046 (face font-lock-type-face) 3046 3047 (syntax-table #1#) 3047 3050 (face font-lock-type-face) 3052 3056 (face font-lock-constant-face) 3058 3064 (face font-lock-constant-face) 3066 3075 (face font-lock-type-face) 3075 3076 (syntax-table #1#) 3087 3090 (face font-lock-keyword-face) 3091 3095 (face font-lock-variable-name-face) 3129 3132 (face font-lock-comment-delimiter-face) 3132 3177 (face font-lock-comment-face) 3177 3199 (face font-lock-comment-face) 3207 3210 (face font-lock-keyword-face) 3211 3215 (face font-lock-variable-name-face) 3260 3317 (face font-lock-string-face) 3669 3672 (face font-lock-type-face) 3673 3677 (face font-lock-constant-face) 3679 3685 (face font-lock-constant-face) 3694 3723 (face font-lock-string-face) 3736 3774 (face font-lock-doc-face) 3778 3781 (face font-lock-keyword-face) 3782 3784 (face font-lock-keyword-face) 3785 3791 (face font-lock-function-name-face) 3795 3796 (syntax-table #1#) 3797 3801 (face font-lock-type-face) 3812 3816 (face font-lock-type-face) 3831 3833 (face font-lock-variable-name-face) 3851 3856 (face font-lock-variable-name-face) 3858 3862 (face font-lock-type-face) 3876 3885 (face font-lock-variable-name-face) 3887 3892 (face font-lock-keyword-face) 3906 3912 (face font-lock-variable-name-face) 3914 3920 (face font-lock-type-face) 3922 3926 (face font-lock-type-face) 3947 4003 (face font-lock-doc-face) 4003 4006 (face font-lock-keyword-face) 4007 4011 (face font-lock-keyword-face) 4012 4017 (face font-lock-type-face) 4024 4030 (face font-lock-type-face) 4036 4043 (face font-lock-type-face) 4047 4051 (face font-lock-keyword-face) 4052 4057 (face font-lock-type-face) 4064 4067 (face font-lock-keyword-face) 4068 4070 (face font-lock-keyword-face) 4071 4087 (face font-lock-function-name-face) 4088 4092 (face font-lock-keyword-face) 4095 4096 (syntax-table #1#) 4097 4101 (face font-lock-constant-face) 4103 4110 (face font-lock-constant-face) 4112 4123 (face font-lock-type-face) 4123 4124 (syntax-table #1#) 4125 4131 (face font-lock-type-face) 4133 4134 (syntax-table #1#) 4145 4148 (face font-lock-keyword-face) 4149 4160 (face font-lock-variable-name-face) 4160 4166 (face font-lock-variable-name-face) 4169 4173 (face font-lock-constant-face) 4175 4181 (face font-lock-constant-face) 4191 4192 (syntax-table #1#) 4192 4198 (face font-lock-type-face) 4198 4199 (syntax-table #1#) 4200 4215 (face font-lock-string-face) 4235 4239 (face font-lock-variable-name-face) 4241 4247 (face font-lock-type-face) 4260 4261 (face font-lock-string-face syntax-table #2=(7)) 4261 4262 (face font-lock-string-face) 4262 4263 (face font-lock-string-face syntax-table #2#) 4282 4291 (face font-lock-string-face) 4315 4318 (face font-lock-keyword-face) 4319 4335 (face font-lock-variable-name-face) 4338 4342 (face font-lock-constant-face) 4357 4358 (face font-lock-variable-name-face) 4360 4365 (face font-lock-constant-face) 4367 4371 (face font-lock-type-face) 4398 4401 (face font-lock-keyword-face) 4402 4408 (face font-lock-variable-name-face) 4411 4415 (face font-lock-constant-face) 4430 4447 (face font-lock-string-face) 4471 4476 (face font-lock-keyword-face) 4477 4481 (face font-lock-keyword-face) 4496 4499 (face font-lock-comment-delimiter-face) 4499 4587 (face font-lock-comment-face) 4599 4604 (face font-lock-type-face) 4606 4613 (face font-lock-type-face) 4615 4616 (syntax-table #1#) 4617 4624 (face font-lock-preprocessor-face) 4683 4686 (face font-lock-comment-delimiter-face) 4686 4762 (face font-lock-comment-face) 4774 4779 (face font-lock-type-face) 4781 4787 (face font-lock-type-face) 4789 4790 (syntax-table #1#) 4791 4798 (face font-lock-preprocessor-face)) . 1) (undo-tree-id166 . -392) (undo-tree-id167 . 3467) (undo-tree-id168 . -1409) (undo-tree-id169 . 4480) (undo-tree-id170 . -1272) (undo-tree-id171 . -2152) (undo-tree-id172 . -591) (undo-tree-id173 . -4270) (undo-tree-id174 . -1404) (undo-tree-id175 . -184) (undo-tree-id176 . -854) (undo-tree-id177 . -185) (undo-tree-id178 . -109) (undo-tree-id179 . -185) (undo-tree-id180 . -854) (undo-tree-id181 . -854) (undo-tree-id182 . -109) (undo-tree-id183 . -854) (undo-tree-id184 . -854) (undo-tree-id185 . -2152) (undo-tree-id186 . -2152) (undo-tree-id187 . -1272) (undo-tree-id188 . -727) (undo-tree-id189 . -2152) (undo-tree-id190 . -1045) (undo-tree-id191 . -1045) (undo-tree-id192 . -1045) (undo-tree-id193 . -279) (undo-tree-id194 . -389) (undo-tree-id195 . -461) (undo-tree-id196 . -461) (undo-tree-id197 . -461) (undo-tree-id198 . -389) (undo-tree-id199 . -389) (undo-tree-id200 . -389) (undo-tree-id201 . -389) (undo-tree-id202 . -389) (undo-tree-id203 . -389) (undo-tree-id204 . -389) (undo-tree-id205 . -389) (undo-tree-id206 . -389) (undo-tree-id207 . -390) (undo-tree-id208 . -389) (undo-tree-id209 . -174) (undo-tree-id210 . -177) (undo-tree-id211 . -453) (undo-tree-id212 . -461) (undo-tree-id213 . -390) (undo-tree-id214 . -392) (undo-tree-id215 . -390) (undo-tree-id216 . -390) (undo-tree-id217 . -389) (undo-tree-id218 . -390) (undo-tree-id219 . -453) (undo-tree-id220 . -461) (undo-tree-id221 . -174) (undo-tree-id222 . -182) (undo-tree-id223 . -391) (undo-tree-id224 . -390) (undo-tree-id225 . -391) (undo-tree-id226 . -391) (undo-tree-id227 . -390) (undo-tree-id228 . -391) (undo-tree-id229 . -391) (undo-tree-id230 . -390) (undo-tree-id231 . -391) (undo-tree-id232 . -390) (undo-tree-id233 . -391) (undo-tree-id234 . -390) (undo-tree-id235 . -391) (undo-tree-id236 . -390) (undo-tree-id237 . -390) (undo-tree-id238 . -390) (undo-tree-id239 . -390) (undo-tree-id240 . -390) (undo-tree-id241 . -390) (undo-tree-id242 . -390) (undo-tree-id243 . -390) (undo-tree-id244 . -390) (undo-tree-id245 . -390) (undo-tree-id246 . -390) (undo-tree-id247 . -390) (undo-tree-id248 . -390) (undo-tree-id249 . -389) (undo-tree-id250 . -390) (undo-tree-id251 . -389) (undo-tree-id252 . -390) (undo-tree-id253 . -389) (undo-tree-id254 . -390) (undo-tree-id255 . -389) (undo-tree-id256 . -390) (undo-tree-id257 . -388) (undo-tree-id258 . -389) (undo-tree-id259 . -388) (undo-tree-id260 . -389) (undo-tree-id261 . -389) (undo-tree-id262 . -390) (undo-tree-id263 . -389) (undo-tree-id264 . -390) (undo-tree-id265 . -339) (undo-tree-id266 . -340) (undo-tree-id267 . -390) (undo-tree-id268 . -390) (undo-tree-id269 . -390) (undo-tree-id270 . -390) (undo-tree-id271 . -390) (undo-tree-id272 . -390) (undo-tree-id273 . -390) (undo-tree-id274 . -390) (undo-tree-id275 . -389) (undo-tree-id276 . -390) (undo-tree-id277 . -389) (undo-tree-id278 . -390) (undo-tree-id279 . -389) (undo-tree-id280 . -390) (undo-tree-id281 . -389) (undo-tree-id282 . -390) (undo-tree-id283 . -388) (undo-tree-id284 . -389) (undo-tree-id285 . -388) (undo-tree-id286 . -389) (undo-tree-id287 . -389) (undo-tree-id288 . -390) (undo-tree-id289 . -389) (undo-tree-id290 . -390) (undo-tree-id291 . -339) (undo-tree-id292 . -340) (undo-tree-id293 . 4532) (undo-tree-id294 . -340) (undo-tree-id295 . 4531) (undo-tree-id296 . -389) (undo-tree-id297 . 4482) (undo-tree-id298 . -390) 391) nil (23765 6350 395555 385000) 0 nil]) ((391 . 392)) nil (23765 6350 395568 856000) 0 nil]) ((390 . 391) (#("r" 0 1 (fontified t)) . 390) (undo-tree-id299 . -1) (undo-tree-id300 . -1) (undo-tree-id301 . -1) (undo-tree-id302 . -1) (undo-tree-id303 . -1) (undo-tree-id304 . -1) (undo-tree-id305 . -1) (undo-tree-id306 . -1) (undo-tree-id307 . -1) (undo-tree-id308 . -1)) nil (23765 6350 395582 793000) 0 nil]) ((390 . 391) (#(")" 0 1 (fontified nil)) . -390) (390 . 391) (#(" " 0 1 (fontified nil)) . -390) (390 . 391) (#(")" 0 1 (fontified nil face font-lock-string-face)) . -390) (390 . 391) (#(";" 0 1 (fontified t)) . -390) (undo-tree-id309 . -1) (undo-tree-id310 . -1) 391) nil (23765 6350 395590 454000) 0 nil]) ((#("r" 0 1 (fontified t face font-lock-constant-face)) . 461)) nil (23765 6350 395593 877000) 0 nil]) ((#("r" 0 1 (fontified t face font-lock-constant-face)) . 461) (undo-tree-id311 . -1) (undo-tree-id312 . -1) (undo-tree-id313 . -1)) nil (23765 6350 395597 554000) 0 nil]) ((462 . 463) (#(")" 0 1 (fontified t)) . 462) (undo-tree-id314 . 1) (undo-tree-id315 . -1)) nil (23765 6350 395601 606000) 0 nil]) ((461 . 462) (#("\"" 0 1 (fontified t face font-lock-string-face)) . 461) (undo-tree-id316 . 1) (undo-tree-id317 . -1)) nil (23765 6350 395605 234000) 0 nil]) ((461 . 462) (#("\"" 0 1 (fontified nil face font-lock-string-face)) . 350) (undo-tree-id158 . -1) (undo-tree-id159 . -1) (393 . 454) (#("    " 0 4 (fontified nil)) . 393) (405 . 406) (#(")" 0 1 (fontified nil)) . 351) (350 . 351) (#("\"" 0 1 (fontified nil face font-lock-string-face)) . 342) (#("    " 0 3 (fontified nil) 3 4 (fontified nil rear-nonsticky t)) . 284) (355 . 356) (#(")" 0 1 (fontified nil)) . 347) (345 . 347) (#("\"" 0 1 (fontified nil)) . 345) (345 . 346) (344 . 346) (#("(" 0 1 (fontified nil face font-lock-variable-name-face)) . 344) (334 . 345) (#(")" 0 1 (fontified nil)) . 334) (333 . 334) (#("\"" 0 1 (fontified nil face font-lock-string-face)) . 333) (318 . 333) (317 . 319) (#("\"" 0 1 (fontified nil)) . 317) (317 . 318) (316 . 318) (#("(" 0 1 (fontified nil face font-lock-variable-name-face)) . 316) (undo-tree-id160 . 1) (316 . 317) (#("\"\"" 0 1 (fontified nil face font-lock-string-face) 1 2 (fontified nil face font-lock-string-face)) . 316) (undo-tree-id161 . -1) (undo-tree-id162 . -1) (undo-tree-id163 . -1) (undo-tree-id164 . 1) (undo-tree-id165 . -2) (316 . 317) (#(" " 0 1 (fontified nil face nil)) . 316) (nil face font-lock-string-face 316 . 317) (316 . 317) (#("\"" 0 1 (fontified nil face font-lock-string-face)) . 316) (308 . 317)) ((#("env::var\"" 0 3 (fontified nil face font-lock-constant-face) 3 5 (fontified nil) 5 7 (fontified nil) 7 8 (fontified nil) 8 9 (fontified nil face font-lock-string-face)) . 308) (undo-tree-id122 . -8) (undo-tree-id123 . -8) (undo-tree-id124 . -8) (undo-tree-id125 . -8) (undo-tree-id126 . -8) (undo-tree-id127 . -8) (undo-tree-id128 . -8) (undo-tree-id129 . -8) (undo-tree-id130 . -8) (316 . 317) (#(" " 0 1 (fontified nil face font-lock-string-face)) . 316) (nil face nil 316 . 317) (316 . 317) (#("\"" 0 1 (fontified nil face font-lock-string-face)) . 316) (undo-tree-id131 . -1) (undo-tree-id132 . -1) (undo-tree-id133 . -1) (316 . 318) (#("(" 0 1 (fontified nil face font-lock-variable-name-face)) . 316) (316 . 317) (#("()" 0 1 (fontified nil) 1 2 (fontified nil)) . 316) (undo-tree-id134 . -1) (undo-tree-id135 . -1) (undo-tree-id136 . -1) (#("\"" 0 1 (fontified nil)) . 317) (317 . 318) (#("\"\"" 0 1 (fontified nil face font-lock-string-face) 1 2 (fontified nil face font-lock-string-face)) . 317) (undo-tree-id137 . -1) (undo-tree-id138 . -1) (undo-tree-id139 . -1) (#("POSTGRESS_ADDR\"" 0 9 (fontified nil face font-lock-string-face) 9 13 (fontified nil face font-lock-string-face) 13 14 (fontified nil syntax-table (15) face font-lock-string-face) 14 15 (fontified nil face font-lock-string-face)) . 318) (undo-tree-id140 . -15) (undo-tree-id141 . -15) (undo-tree-id142 . -15) (333 . 334) (#(")" 0 1 (fontified nil)) . 333) (undo-tree-id143 . -1) (undo-tree-id144 . -1) (undo-tree-id145 . -1) (334 . 335) (#(".unwrap_or(" 0 1 (fontified nil) 1 10 (fontified nil) 10 11 (fontified nil face font-lock-variable-name-face)) . 334) (undo-tree-id146 . -10) (undo-tree-id147 . -10) (undo-tree-id148 . -10) (344 . 345) (#("()" 0 1 (fontified nil) 1 2 (fontified nil)) . 344) (undo-tree-id149 . -1) (undo-tree-id150 . -1) (undo-tree-id151 . -1) (#("\"" 0 1 (fontified nil)) . 345) (345 . 346) (#("\"\"" 0 1 (fontified nil face font-lock-string-face) 1 2 (fontified nil face font-lock-string-face)) . 345) (347 . 348) (#(")" 0 1 (fontified nil)) . 355) (284 . 288) (342 . 343) (#("\"" 0 1 (fontified nil face font-lock-string-face)) . 350) (undo-tree-id152 . -1) (undo-tree-id153 . -1) (351 . 352) (#(")" 0 1 (fontified nil face font-lock-string-face)) . 405) (undo-tree-id154 . 1) (undo-tree-id155 . 1) (393 . 397) (#("                                                             " 0 61 (fontified nil)) . 393) (350 . 351) (#("\"" 0 1 (fontified t face font-lock-string-face)) . 461) (undo-tree-id156 . 1) (undo-tree-id157 . -1)) (23765 6331 664002 132000) 0 nil]) ((415 . 416)) nil (23765 6327 438473 666000) 0 nil]) ((402 . 415) (#("post" 0 4 (fontified t)) . -402) (undo-tree-id17 . -4) (undo-tree-id18 . -2) (undo-tree-id19 . -2) (undo-tree-id20 . -1) (undo-tree-id21 . -2) (undo-tree-id22 . -2) (undo-tree-id23 . -4) (undo-tree-id24 . -4) (undo-tree-id25 . -4) (undo-tree-id26 . -4) 406 (402 . 406) (393 . 402) 392) nil (23765 6323 566477 341000) 0 nil]) ((357 . 358) (#("," 0 1 (fontified t)) . -357) (undo-tree-id27 . -1) (undo-tree-id28 . -1) (undo-tree-id29 . -1) (undo-tree-id30 . -1) (undo-tree-id31 . -1) 358) nil (23765 6323 566500 168000) 0 nil]) ((305 . 308) (#("a" 0 1 (fontified t face font-lock-variable-name-face)) . -305) (undo-tree-id32 . -1) (undo-tree-id33 . -1) (undo-tree-id34 . -1) 306 (305 . 306) (#(" " 0 1 (fontified t)) . -305) (undo-tree-id35 . -1) 306 (305 . 306) (#("a" 0 1 (fontified t face font-lock-variable-name-face)) . -305) (undo-tree-id36 . -1) (undo-tree-id37 . -1) 306 (305 . 306) (#(" " 0 1 (fontified t)) . -305) (undo-tree-id38 . -1) (undo-tree-id39 . -1) 306 (298 . 306) (#("e" 0 1 (fontified t face font-lock-variable-name-face)) . -298) (undo-tree-id40 . -1) 299 (295 . 299) (288 . 295)) nil (23765 6323 566543 604000) 0 nil]) ((nil rear-nonsticky nil 287 . 288) (280 . 339)) nil (23765 6323 566555 490000) 0 nil]) ((#("        \"postgres://dsock@localhost/mastodon_development\",
+" 0 8 (fontified t) 8 57 (fontified t face font-lock-string-face) 57 59 (fontified t)) . 315) (undo-tree-id41 . -8) 323) nil (23765 6323 566562 995000) 0 nil]) ((171 . 184) (170 . 171) (t 23765 5224 523504 294000) 148) nil (23765 6323 566570 354000) 0 nil]) ((1985 . 2006) (#("0" 0 1 (fontified t face font-lock-string-face)) . -1985) (undo-tree-id3 . -1) (undo-tree-id4 . -1) 1986 (1978 . 1986)) nil (23764 63943 398631 615000) 0 nil]) ((1949 . 1953) (#("println" 0 7 (fontified t face rust-builtin-formatting-macro-face)) . 1949) (undo-tree-id5 . -4) (undo-tree-id6 . -4) 1953 (t 23764 11700 320208 386000)) nil (23764 63943 398640 794000) 0 nil]) ((440 . 441) (436 . 440) (429 . 436) (#("a" 0 1 (fontified t face font-lock-string-face)) . -429) (undo-tree-id0 . -1) (undo-tree-id1 . -1) 430 (424 . 430) (416 . 424) (413 . 416) (412 . 413) (411 . 413) (#("\"" 0 1 (fontified nil)) . -411) (411 . 412) (410 . 412) (#("(" 0 1 (fontified nil)) . -410) (405 . 411) (#("s" 0 1 (fontified t)) . -405) (undo-tree-id2 . -1) 406 (404 . 406) (#("unwrap()" 0 8 (fontified t)) . 404) (t 23764 8854 204213 932000)) nil (23764 11700 311267 105000) 0 nil]) nil nil (23764 11700 311275 300000) 0 nil] #3# 13672 25 nil)

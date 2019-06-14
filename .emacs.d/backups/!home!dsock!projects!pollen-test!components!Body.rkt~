@@ -1,0 +1,13 @@
+#lang racket
+(require txexpr pollen/setup)
+
+(define (Body . children)
+  (case (current-poly-target)
+    [(html)
+     `(body ((style 
+                 "font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Oxygen-Sans, Ubuntu,Roboto,Cantarell,"Helvetica Neue",sans-serif;
+font-size: 17px;
+color: #223;")) ,@children)]
+    [else `(body ,@children)]))
+
+(provide Body)

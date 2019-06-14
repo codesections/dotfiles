@@ -1,0 +1,15 @@
+#lang racket
+(require txexpr pollen/setup)
+
+(define (MainContent . children)
+  (case (current-poly-target)
+    [(html)
+     `(section ((style 
+                 "min-height: calc(100vh - 100px - 1.5em);
+max-width: 700px;
+margin: 3em auto auto auto;
+padding: .1em;
+font-size: 1.15em;
+line-height: 1.6em;
+color: #444;")) ,@children)]
+    [else `(section ,@children)]))

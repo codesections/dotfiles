@@ -1,0 +1,31 @@
+import webmacs.main
+
+
+
+
+keymap = webmacs.keymaps.keymap('webbuffer')
+keymap.define_key("Tab", "minibuffer-abort")
+keymap.define_key("C-w v", "split-view-right")
+keymap.define_key("C-w s", "split-view-bottom")
+# NOTE: this is a hack to deal with the fact that webmacs doesn't support targeting
+#       a specific view.  It works fine if there's only two views
+keymap.define_key("C-w h", "other-view")
+keymap.define_key("C-w j", "other-view")
+keymap.define_key("C-w k", "other-view")
+keymap.define_key("C-w l", "other-view")
+keymap.define_key("C-x k", "close-buffer")
+keymap.define_key("h", "send-key-left")
+keymap.define_key("j", "send-key-down")
+keymap.define_key("k", "send-key-up")
+keymap.define_key("l", "send-key-right")
+keymap.define_key("[ b", "previous-buffer")
+keymap.define_key("] b", "next-buffer")
+keymap.define_key("C-x C-m", "M-x")
+
+
+keymap.define_key("i", "buffer-set-mode")
+
+
+
+keymap = webmacs.keymaps.keymap('global')
+keymap.define_key("C-[", "buffer-set-mode")

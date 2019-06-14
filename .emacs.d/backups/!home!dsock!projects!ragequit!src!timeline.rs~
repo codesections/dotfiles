@@ -1,0 +1,144 @@
+use crate::query;
+use crate::user;
+use crate::user::{Scope, User};
+use warp::filters::BoxedFilter;
+use warp::{path, Filter};
+
+#[allow(dead_code)]
+type TimelineUser = ((String, User),);
+
+// GET /api/v1/streaming/user                                  [private; language filter]
+pub fn user() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "user")
+        .and(path::end())
+        .and(user::get_access_token(Scope::Private))
+        .and_then(|token| user::get_account(token, Scope::Private))
+        .map(|user: User| (user.id.to_string(), user))
+        .boxed()
+}
+
+// GET /api/v1/streaming/user/notification                     [private; notification filter]
+pub fn user_notifications() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "user" / "notification")
+        .and(path::end())
+        .and(user::get_access_token(Scope::Private))
+        .and_then(|token| user::get_account(token, Scope::Private))
+        .map(|user: User| (user.id.to_string(), user.with_notification_filter()))
+        .boxed()
+}
+
+// GET /api/v1/streaming/public                                [public; language filter]
+pub fn public() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "public")
+        .and(path::end())
+        .and(user::get_access_token(user::Scope::Public))
+        .and_then(|token| user::get_account(token, Scope::Public))
+        .map(|user: User| ("public".to_owned(), user.with_language_filter()))
+        .boxed()
+}
+
+// GET /api/v1/streaming/public?only_media=true                [public; language filter]
+pub fn public_media() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "public")
+        .and(path::end())
+        .and(user::get_access_token(user::Scope::Public))
+        .and_then(|token| user::get_account(token, Scope::Public))
+        .and(warp::query())
+        .map(|user: User, q: query::Media| match q.only_media.as_ref() {
+            "1" | "true" => ("public:media".to_owned(), user.with_language_filter()),
+            _ => ("public".to_owned(), user.with_language_filter()),
+        })
+        .boxed()
+}
+
+// GET /api/v1/streaming/public/local                          [public; language filter]
+pub fn public_local() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "public" / "local")
+        .and(path::end())
+        .and(user::get_access_token(user::Scope::Public))
+        .and_then(|token| user::get_account(token, Scope::Public))
+        .map(|user: User| ("public:local".to_owned(), user.with_language_filter()))
+        .boxed()
+}
+
+// GET /api/v1/streaming/public/local?only_media=true          [public; language filter]
+pub fn public_local_media() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "public" / "local")
+        .and(user::get_access_token(user::Scope::Public))
+        .and_then(|token| user::get_account(token, Scope::Public))
+        .and(warp::query())
+        .and(path::end())
+        .map(|user: User, q: query::Media| match q.only_media.as_ref() {
+            "1" | "true" => ("public:local:media".to_owned(), user.with_language_filter()),
+            _ => ("public:local".to_owned(), user.with_language_filter()),
+        })
+        .boxed()
+}
+
+// GET /api/v1/streaming/direct                                [private; *no* filter]
+pub fn direct() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "direct")
+        .and(path::end())
+        .and(user::get_access_token(Scope::Private))
+        .and_then(|token| user::get_account(token, Scope::Private))
+        .map(|user: User| (format!("direct:{}", user.id), user.with_no_filter()))
+        .boxed()
+}
+
+// GET /api/v1/streaming/hashtag?tag=:hashtag                  [public; no filter]
+pub fn hashtag() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "hashtag")
+        .and(warp::query())
+        .and(path::end())
+        .map(|q: query::Hashtag| (format!("hashtag:{}", q.tag), User::public()))
+        .boxed()
+}
+
+// GET /api/v1/streaming/hashtag/local?tag=:hashtag            [public; no filter]
+pub fn hashtag_local() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "hashtag" / "local")
+        .and(warp::query())
+        .and(path::end())
+        .map(|q: query::Hashtag| (format!("hashtag:{}:local", q.tag), User::public()))
+        .boxed()
+}
+
+// GET /api/v1/streaming/list?list=:list_id                    [private; no filter]
+pub fn list() -> BoxedFilter<TimelineUser> {
+    path!("api" / "v1" / "streaming" / "list")
+        .and(user::get_access_token(Scope::Private))
+        .and_then(|token| user::get_account(token, Scope::Private))
+        .and(warp::query())
+        .and_then(|user: User, q: query::List| (user.is_authorized_for_list(q.list), Ok(user)))
+        .untuple_one()
+        .and(path::end())
+        .map(|list: i64, user: User| (format!("list:{}", list), user.with_no_filter()))
+        .boxed()
+}
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn public_timeline() {
+        let value = warp::test::request()
+            .path("/api/v1/streaming/public")
+            .filter(&public())
+            .unwrap();
+
+        assert_eq!(value.0, "public".to_string());
+        assert_eq!(value.1, User::public().with_language_filter());
+    }
+
+    #[test]
+    fn hashtag_timeline() {
+        let value = warp::test::request()
+            .path("/api/v1/streaming/hashtag?tag=a")
+            .filter(&hashtag())
+            .unwrap();
+
+        assert_eq!(value.0, "hashtag:a".to_string());
+        assert_eq!(value.1, User::public());
+    }
+
+}

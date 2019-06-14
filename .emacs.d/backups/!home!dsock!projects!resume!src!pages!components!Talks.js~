@@ -1,0 +1,19 @@
+import React from 'react';
+import styled from 'styled-components';
+import { SectionHeader, BaseTitle, BaseDetails } from './sharedStyle.js';
+
+const Title = styled(BaseTitle)``;
+const Details = styled(BaseDetails)``;
+const Talks = () => (
+  <span>
+    <SectionHeader>Education</SectionHeader>
+    <Title>Polyglot Programming</Title>
+    <Details>
+      Talk aimed at current JavaScript developers exploring the bennefits of learning
+      other languages, with a focus on the advantages of CommonLisp, Python, GoLang,
+      and Rust.
+    </Details>
+  </span>
+);
+
+export default Talks;

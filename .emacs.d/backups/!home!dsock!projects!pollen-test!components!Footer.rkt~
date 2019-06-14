@@ -1,0 +1,55 @@
+#lang racket
+(define (StyledFooter . props)
+  `(footer ((style "
+margin-top: 1.15em;
+text-align: center;"))
+           ,@props))
+
+(define (FooterRow . props)
+  `(ul ((style "margin: 0;")) ,@props))
+
+(define (Link
+         #:link-url  [link-url #f]
+         #:link-text [link-text #f]
+         #:link-type [link-type #f]
+         . props)
+  `(a ((href ,link-url)
+       ,(when link-type `(type ,link-type)))
+      ,link-text)
+  )
+
+(define
+  (FooterItem #:link-url  [link-url #f]
+              #:link-text [link-text #f]
+              #:link-type [link-type #f]
+              #:text [text #f]
+              . props)
+
+  `(li ((style "display: inline-block"))
+       ,(when (and link-url link-text)
+          (Link #:link-url  link-url
+                #:link-text link-text
+                #:link-type link-type))
+       ,(when text text)))
+
+(define (Footer)
+  (StyledFooter
+   (FooterRow
+    (FooterItem #:text "© 2018 |")
+    (FooterItem #:link-url "/about#contact"
+                #:link-text "Contact"
+                #:text " | ")
+    (FooterItem #:link-url "/license"
+                #:link-text " Few Rights Reserved"
+                #:text " | ")
+    (FooterItem #:link-url "/rss.xml"
+                #:link-type "application/rss+xml"
+                #:link-text " RSS"))
+   (FooterRow
+    (FooterItem #:link-url "/privacy"
+                #:link-text "Privacy Guarantees"
+                #:text " | ")
+    (FooterItem #:link-url "https://gitlab.com/codesections/codesections-website"
+                #:link-text "Source Code for codesections.com"))))
+
+(provide Footer)

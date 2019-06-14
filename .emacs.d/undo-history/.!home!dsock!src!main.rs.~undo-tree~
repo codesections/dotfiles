@@ -1,0 +1,7 @@
+"adc83b19e793491b1c6ea0fd8b46cd9f32e592fc"
+#s(undo-tree [nil ([nil ([nil (#1=[nil nil ((1 . 2) (#("   
+" 0 3 (fontified nil) 3 4 (fontified nil)) . 1) (undo-tree-id0 . -2) (undo-tree-id1 . -2) (4 . 5)) nil (23741 62601 599183 495000) 0 nil]) ((1 . 4)) nil (23741 62601 599189 516000) 0 nil]) ((#("
+" 0 1 (fontified t)) . -1) (undo-tree-id2 . -1) (#("
+" 0 1 (fontified t)) . -2) (undo-tree-id3 . -1) (#("
+" 0 1 (fontified t)) . -3) (undo-tree-id4 . -1) (#("
+" 0 1 (fontified t)) . -4) (undo-tree-id5 . -1) 5 (1 . 5) (t . -1)) nil (23741 62601 599200 681000) 0 nil]) nil nil (23741 62601 599204 499000) 0 nil] #1# 144 3 nil)

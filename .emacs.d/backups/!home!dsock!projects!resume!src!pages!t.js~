@@ -1,0 +1,33 @@
+import React from 'react';
+import styled from 'styled-components';
+import fonts from './fonts.css';
+import Header from './components/Header.js';
+import SideBar from './components/SideBar.js';
+import SoftwareEngSection from './components/SoftwareEngSection.js';
+import OpenSourceActivities from './components/OpenSourceActivities.js';
+import ProfessionalExpSection from './components/ProfessionalExpSection.js';
+import EducationSection from './components/EducationSection.js';
+import Talks from './components/Talks.js';
+
+const Main = styled.div`
+  margin-left: 1em;
+`;
+
+const Resume = styled.section`
+  max-width: 1000px;
+  margin: auto;
+`;
+
+export default () => (
+  <Resume>
+    <Header />
+    <Main>
+      <SideBar />
+      <SoftwareEngSection />
+      <OpenSourceActivities />
+      <ProfessionalExpSection />
+      <EducationSection />
+      <Talks />
+    </Main>
+  </Resume>
+);

@@ -1,0 +1,71 @@
+use std::collections::HashMap;
+use std::sync::{Arc, Mutex};
+use std::time::Instant;
+
+#[derive(Clone)]
+struct StreamManager {
+    recv: Arc<Mutex<HashMap<String, pubsub::Receiver>>>,
+    last_polled: Arc<Mutex<HashMap<String, Instant>>>,
+    current_stream: String,
+    id: uuid::Uuid,
+}
+impl StreamManager {
+    fn new() -> Self {
+        println!("Creating base RedisStream");
+        StreamManager {
+            recv: Arc::new(Mutex::new(HashMap::new())),
+            last_polled: Arc::new(Mutex::new(HashMap::new())),
+            current_stream: String::new(),
+            id: Uuid::new_v4(),
+        }
+    }
+
+    fn new_copy(&self) -> Self {
+        println!("Creating RedisStream copy #{}", &self.id);
+        let id = Uuid::new_v4();
+        StreamManager { id, ..self.clone() }
+    }
+
+    fn add(&mut self, timeline: &String, user: &User) -> &Self {
+        let mut streams = self.recv.lock().unwrap();
+        streams
+            .entry(timeline.clone())
+            .or_insert_with(|| PubSub::from(&timeline, &user));
+        let mut last_polled = self.last_polled.lock().unwrap();
+        last_polled.insert(timeline.clone(), Instant::now());
+
+        // Drop any streams that haven't been polled in the last 30 seconds
+        last_polled
+            .clone()
+            .iter()
+            .filter(|(_, time)| time.elapsed().as_secs() > 30)
+            .for_each(|(key, _)| {
+                last_polled.remove(key);
+                streams.remove(key);
+            });
+
+        self.current_stream = timeline.clone();
+        self
+    }
+}
+impl Stream for StreamManager {
+    type Item = Value;
+    type Error = Error;
+
+    fn poll(&mut self) -> Poll<Option<Self::Item>, Self::Error> {
+        let mut last_polled = self.last_polled.lock().unwrap();
+        let target_stream = self.current_stream.clone();
+        last_polled.insert(target_stream.clone(), Instant::now());
+
+        let mut streams = self.recv.lock().unwrap();
+        let shared_conn = streams.get_mut(&target_stream).unwrap();
+        shared_conn.set_polled_by(self.id);
+
+        match shared_conn.poll() {
+            Ok(Async::Ready(Some(value))) => Ok(Async::Ready(Some(value))),
+            Ok(Async::Ready(None)) => Ok(Async::Ready(None)),
+            Ok(Async::NotReady) => Ok(Async::NotReady),
+            Err(e) => Err(e),
+        }
+    }
+}

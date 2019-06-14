@@ -1,0 +1,6 @@
+#lang racket
+
+(define (meta . elements)
+  (case (current-poly-target)
+    [(html) `(txexpr 'head empty elements)]
+    [else ("")] ))

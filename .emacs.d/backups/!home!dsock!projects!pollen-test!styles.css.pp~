@@ -1,0 +1,3 @@
+#lang pollen
+
+.h2-css {◊(select 'h2-css metas)}

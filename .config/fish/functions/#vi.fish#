@@ -1,0 +1,15 @@
+function vi
+  if not pgrep -f emacs > /dev/null
+    command emacsclient -create-frame
+  else
+    command emacsclient
+  end
+
+
+if 
+    nvr $argv
+  else 
+    nvim $argv
+  end
+end
+

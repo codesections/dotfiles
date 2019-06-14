@@ -1,0 +1,101 @@
+% Created 2019-05-08 Wed 10:19
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Daniel Long Sockwell}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Daniel Long Sockwell},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\section{Itinerary}
+\label{sec:orge62240e}
+
+\subsection{Saturday, May 11}
+\label{sec:org7c3b54a}
+Flight to Cuba
+Leave Atlanta at 11:12am
+Arrive in Havana at 1:35pm
+Flight DL 5201 (operated by Endeavor Air DBA Delta Connection)
+
+\textbf{Accommodation}
+Address of Airbnb: 
+Calle A \#107, Apt. B2
+Entre 5ta y Calzada
+Vedado, Havana 10400
+Hosts:  Alberto y Elizabeth 
+
+\textbf{Explore Vedado in the afternoon/evening (self-guided)}
+
+\subsection{Sunday, May 12}
+\label{sec:org1f00eae}
+\textbf{Walking tour: Experiencing Havana, Understanding Cuba}
+9:00am-1:30pm
+Host:  Patricia
+Meeting spot:
+Locos por Cuba 
+San Lazaro \#1203 entre M y N
+Municipio Plaza
+Vedado, Havana 10400
+
+Description:  Walking tour of culturally significant locations in Havana; led by a Cuban economist
+
+\textbf{Bike tour: Uncover Havana by Bike, Food, and Culture}
+3:00pm-7:00pm
+Hosts:  Luis y Sonia
+	Meeting spot:
+Linea Street, House Number 869
+Between 4th and 6th Street
+Vedado, Havana 10400
+
+Description:  Bike tour of historically and architecturally significant locations in Havana, led by local programmer and art historian
+
+\subsection{Monday, May 13}
+\label{sec:org2389e17}
+\textbf{Tour of farm and countryside in Soroa: Get to know Cuban countryside}
+8:00am-5:00pm
+Host:  Jorge
+Meeting spot:
+Calle L, \#206
+Entre 15 y 17 
+Vedado, Havana
+
+Description:  Learn about life in the Cuban countryside and on a working farm
+
+\textbf{Dinner/cooking at colonial villa: Cook Cuban food at a colonial villa}
+6:00pm-8:30pm
+Host:  Orialis
+Meeting spot:
+Calle 27, entre Ave. Infanta y Calle 0
+Casa \#4
+Vedado, Havana 
+Note:  Near Las Vegas Cabaret, about 100 meters from Hotel Vedado; Google maps shows Vapor street instead of Calle 27
+
+Description:  Cool dinner in historical location and support traditional Cuban cuisine
+
+
+\subsection{Tuesday, May 14}
+\label{sec:org805260f}
+Flight to Miami
+Leave Havana at 11:20am
+Arrive Miami at 12:30pm
+Flight DL 650
+\end{document}

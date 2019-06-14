@@ -1,0 +1,3 @@
+"ca5d54eec078222958516cfa4e42f651b8f193eb"
+#s(undo-tree [nil (#1=[nil nil ((#("    println!(\"REJECTED!\");
+" 0 4 (fontified t) 4 12 (fontified t face rust-builtin-formatting-macro-face) 12 13 (fontified t) 13 24 (fontified t face font-lock-string-face) 24 27 (fontified t)) . 827) (t 23761 53708 541540 781000)) nil (23764 61626 656013 459000) 0 nil]) nil nil (23764 61626 656018 913000) 0 nil] #1# 43 1 nil)
