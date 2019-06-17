@@ -39,15 +39,15 @@
 (setq js2-basic-offset 2)
 (setq tab-width 2)
 
-(require 'package)
-(package-initialize)
-;; This is only needed once, near the top of the file
-(eval-when-compile
-(require 'use-package))
-(require 'general)
+ (require 'package)
+ (package-initialize)
+;; ;; This is only needed once, near the top of the file
+ (eval-when-compile
+ (require 'use-package))
+ (require 'general)
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(use-package company-lsp)
+ (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+ (use-package company-lsp)
 (push 'company-lsp company-backends)
 ;; Because we're using evil, we can navigate completions with C-n/C-p
 (with-eval-after-load 'company
@@ -281,62 +281,62 @@
           #b0000000000000000
           #b0000000000000000
           #b0000000000000000) 32 16)
-
 (require 'evil-tabs)
 (global-evil-tabs-mode t)
 (setq elscreen-display-tab nil)
 ;; TODO: figure out how to save global marks to disk.
+;;; tested above
+;;;; 
+;;;;  (column-number-mode 1)
+;;;;  
+;;;;  ;; set key for agenda
+;;;;  (global-set-key (kbd "C-c a") 'org-agenda)
+;;;;  
+;;;;  ;;file to save todo items
+;;;;  (setq org-agenda-files (quote ("~/org")))
+;;;;  
+;;;;  ;;open agenda in current window
+;;;;  (setq org-agenda-window-setup (quote current-window))
+;;;;  
+;;;;  ;;capture todo items using C-c c t
+;;;;  (define-key global-map (kbd "C-c c") 'org-capture)
+;;;;  (setq org-capture-templates
+;;;;        '(("t" "todo" entry (file+headline "~/org/main_todo.org" "Tasks")
+;;;;           "* TODO %?")))
+;;;;      
+;;;;  ;; More helpful help
+;;;;  
+;;;;  ;; Note that the built-in `describe-function' includes both functions
+;;;;  ;; and macros. `helpful-function' is functions only, so use `helpful-callable'.
+;;;;  (global-set-key (kbd "C-h f") #'helpful-callable)
+;;;;  (global-set-key (kbd "C-h v") #'helpful-variable)
+;;;;  (global-set-key (kbd "C-h k") #'helpful-key)
+;;;;  ;; Lookup the current symbol at point. C-c C-d is a common keybinding
+;;;;  ;; for this in lisp modes.
+;;;;  (global-set-key (kbd "C-c C-d") #'helpful-at-point)
+;;;;  ;; Look up Functions (excludes macros).
+;;;;  ;; By default, C-h F is bound to `Info-goto-emacs-command-node'. Helpful
+;;;;  ;; already links to the manual, if a function is referenced there.
+;;;;  (global-set-key (kbd "C-h F") #'helpful-function)
+;;;;  ;; Look up Commands.
+;;;;  ;; By default, C-h C is bound to describe `describe-coding-system'. I
+;;;;  ;; don't find this very useful, but it's frequently useful to only
+;;;;  ;; look at interactive functions.
+;;;;  (global-set-key (kbd "C-h C") #'helpful-command)
+;;;;  
+;;;;  
+;;;;  ;; Prettier
+;;;;  (require 'prettier-js)
+;;;;  ;(add-hook 'js2-mode-hook 'prettier-js-mode)
+;;;;  ;(add-hook 'web-mode-hook 'prettier-js-mode)
+;;;;  
+;;;;  ;; Projectile
+;;;;  (require 'projectile)
+;;;;  (setq projectile-completion-system 'ivy)
+;;;;  ;; (global-set-key "\C-c\p" 'projectile-find-file-dwim)
 
 
-(column-number-mode 1)
-
-;; set key for agenda
-(global-set-key (kbd "C-c a") 'org-agenda)
-
-;;file to save todo items
-(setq org-agenda-files (quote ("~/org")))
-
-;;open agenda in current window
-(setq org-agenda-window-setup (quote current-window))
-
-;;capture todo items using C-c c t
-(define-key global-map (kbd "C-c c") 'org-capture)
-(setq org-capture-templates
-      '(("t" "todo" entry (file+headline "~/org/main_todo.org" "Tasks")
-         "* TODO %?")))
-    
-;; More helpful help
-
-;; Note that the built-in `describe-function' includes both functions
-;; and macros. `helpful-function' is functions only, so use `helpful-callable'.
-(global-set-key (kbd "C-h f") #'helpful-callable)
-(global-set-key (kbd "C-h v") #'helpful-variable)
-(global-set-key (kbd "C-h k") #'helpful-key)
-;; Lookup the current symbol at point. C-c C-d is a common keybinding
-;; for this in lisp modes.
-(global-set-key (kbd "C-c C-d") #'helpful-at-point)
-;; Look up Functions (excludes macros).
-;; By default, C-h F is bound to `Info-goto-emacs-command-node'. Helpful
-;; already links to the manual, if a function is referenced there.
-(global-set-key (kbd "C-h F") #'helpful-function)
-;; Look up Commands.
-;; By default, C-h C is bound to describe `describe-coding-system'. I
-;; don't find this very useful, but it's frequently useful to only
-;; look at interactive functions.
-(global-set-key (kbd "C-h C") #'helpful-command)
-
-
-;; Prettier
-(require 'prettier-js)
-(add-hook 'js2-mode-hook 'prettier-js-mode)
-(add-hook 'web-mode-hook 'prettier-js-mode)
-
-;; Projectile
-(require 'projectile)
-(setq projectile-completion-system 'ivy)
-(global-set-key "\C-c\p" 'projectile-find-file-dwim)
-
-
+;;; tested below
 ;; eshell
 (require 'esh-help)
 (setup-esh-help-eldoc)  ;; To use eldoc in Eshell
@@ -344,6 +344,11 @@
 (require 'em-smart)
 (require 'eshell-up)
 (require 'eshell-z)
+(require 'em-tramp) ; to load eshell’s sudo
+(add-to-list 'eshell-modules-list 'eshell-tramp)
+(setq tramp-default-method "ssh")
+(setq password-cache t) ; enable password caching
+(setq password-cache-expiry (* 5 60))
 (setq eshell-where-to-jump 'begin)
 (setq eshell-destroy-buffer-when-process-dies t)
 (setq eshell-review-quick-commands t)
@@ -356,15 +361,13 @@
 (when (and (executable-find "fish")
            (require 'fish-completion nil t))
   (global-fish-completion-mode))
-
-(add-hook 'eshell-mode-hook
+ (add-hook 'eshell-mode-hook
           (lambda ()
             (add-to-list 'eshell-visual-commands "htop")
             (add-to-list 'eshell-visual-subcommands '("cdt" "stats"))
             (add-to-list 'eshell-visual-commands "wifi-on")
             (add-to-list 'eshell-needs-pipe "xclip")))
-
-(add-hook 'eshell-mode-hook
+ (add-hook 'eshell-mode-hook
           (lambda ()
             (setenv "TERM" "eterm")
             (setenv "PAGER" "")
@@ -376,14 +379,12 @@
 (add-to-list 'eshell-preoutput-filter-functions 'xterm-color-filter)
 (setq eshell-output-filter-functions
       (remove 'eshell-handle-ansi-color eshell-output-filter-functions))
-;; (setq xterm-color-debug t)
-
-(defun esh ()
+; (setq xterm-color-debug t)
+ (defun esh ()
   "Open a new eshell instance."
   (interactive)
   (eshell 'N))
-
-(defun setup-eshell-ivy-completion ()
+ (defun setup-eshell-ivy-completion ()
   "Use ivy for eshell completion rather than a separate buffer."
   (define-key eshell-mode-map [remap eshell-pcomplete] 'completion-at-point)
   ;; only if you want to use the minibuffer for completions instead of the
@@ -391,8 +392,7 @@
   (setq-local ivy-display-functions-alist
      (remq (assoc 'ivy-completion-in-region ivy-display-functions-alist)
            ivy-display-functions-alist)))
-
-(add-hook 'eshell-mode-hook #'setup-eshell-ivy-completion)
+ (add-hook 'eshell-mode-hook #'setup-eshell-ivy-completion)
 (defun mu-ivy-eshell-history ()
   "Browse Eshell history with Ivy."
   (interactive)
@@ -400,13 +400,11 @@
     (ivy-read "Eshell history: "
               (delete-dups
               (ring-elements eshell-history-ring)))))
-
-(defun edit-prev-cmd ()
+ (defun edit-prev-cmd ()
   "Prevent the cursor from jumping down to the next line once the user has entered command mode."
   (interactive)
   (remove-hook 'pre-command-hook 'eshell-smart-display-move t))
-
-(add-hook 'eshell-mode-hook
+ (add-hook 'eshell-mode-hook
           (lambda ()
           (general-define-key
             :states 'insert
@@ -450,40 +448,33 @@
            "G" 'goto-line-after-prompt)
           (bind-key (kbd "<C-return>") 'evil-ret eshell-mode-map)
           (add-hook 'evil-normal-state-entry-hook 'edit-prev-cmd eshell-mode-map)))
-
-(defun first-non-blank-after-prompt ()
+ (defun first-non-blank-after-prompt ()
   "Places cursor at the beginning of the line, right after the prompt."
   (interactive)
   (eshell-bol))
-
-(defun insert-after-prompt ()
+ (defun insert-after-prompt ()
   "Enters insert state immediately after the eshell prompt."
   (interactive)
   (eshell-bol)
   (evil-insert 1))
-
-(defun delete-line-after-prompt ()
+ (defun delete-line-after-prompt ()
   "Deletes the line after the prompt."
   (interactive)
   (eshell-bol)
   (evil-delete-line nil nil))
-
-(defun goto-line-after-prompt (&optional count)
+ (defun goto-line-after-prompt (&optional count)
   "Go to immediately after the eshell prompt of line COUNT.
 By default, the last line."
   (interactive)
   (evil-goto-line count)
   (eshell-bol))
-  
 
 ;;; Shared history.
 (defvar eshell-history-global-ring nil
   "The history ring shared across Eshell sessions.")
-
-(setq eshell-history-size 8192)
+ (setq eshell-history-size 8192)
 (setq eshell-hist-ignoredups t)
-
-(defun eshell-hist-use-global-history ()
+ (defun eshell-hist-use-global-history ()
   "Make Eshell history shared across different sessions."
   (unless eshell-history-global-ring
     (let (eshell-history-ring)
@@ -493,9 +484,7 @@ By default, the last line."
     (unless eshell-history-ring
       (setq eshell-history-global-ring (make-ring eshell-history-size))))
   (setq eshell-history-ring eshell-history-global-ring))
-
-(add-hook 'eshell-mode-hook 'eshell-hist-use-global-history)
-
+ (add-hook 'eshell-mode-hook 'eshell-hist-use-global-history)
 ;; Add syntax highlighting to cat
 ;; https://github.com/manateelazycat/aweshell
 (defun aweshell-cat-with-syntax-highlight (filename)
@@ -512,10 +501,8 @@ By default, the last line."
     (unless existing-buffer
       (kill-buffer buffer))
     nil))
-
-(advice-add 'eshell/cat :override #'aweshell-cat-with-syntax-highlight)
-
-(run-with-idle-timer
+ (advice-add 'eshell/cat :override #'aweshell-cat-with-syntax-highlight)
+ (run-with-idle-timer
  5 nil
  (lambda ()
    (setq gc-cons-threshold gc-cons-threshold-original)
@@ -524,19 +511,16 @@ By default, the last line."
    (makunbound 'file-name-handler-alist-original)
    (message "gc-cons-threshold and file-name-handler-alist restored")))
 ;;; Scripts
-
-(setq mouse-enabled
+ (setq mouse-enabled
         (if (=
               (shell-command "xinput list 'SynPS/2 Synaptics TouchPad' | grep -c 'disabled'")
               ;; This is checking the *exit code*, not the count (so 0 = "found"; 1 = "not found"
              1)
         t
         nil))
-
-(defun toggle-mouse ()
+ (defun toggle-mouse ()
   "Toggle the mouse on or off.
-
-If toggling it on, report how long the user successfully kept it off."
+ If toggling it on, report how long the user successfully kept it off."
   (interactive)
   (if mouse-enabled
       (progn
@@ -558,30 +542,25 @@ If toggling it on, report how long the user successfully kept it off."
       (message (concat
        "mouse enabled. You kept it off for "
        (seconds-to-string mouse-was-off-for-duration))))))
-
-(defun get-string-from-file (filePath)
+ (defun get-string-from-file (filePath)
   "Return FILEPATH's file content."
   (with-temp-buffer
     (insert-file-contents filePath)
     (buffer-string)))
-
-;; Use pipes to communicate with spawned processes rather than TTYs
+ ;; Use pipes to communicate with spawned processes rather than TTYs
 ;; This solves a number of issues and makes things a lot faster to boot:
 ;;
 ;; + eshell pipes work without issue
 ;; + eshell runs a lot faster
 ;; + shell runs a lot faster but we lose job control
-
-;; (setq process-connection-type nil)
-
-;; ;; shell advice so that it executes inside a let-binding that
+ ;; (setq process-connection-type nil)
+ ;; ;; shell advice so that it executes inside a let-binding that
 ;; ;; sets process-connection-type to t since running shells without
 ;; ;; ttys is not very useful.
 ;; (defun xristos/advice-shell (f &rest args)
 ;;   (let ((process-connection-type t))
 ;;     (apply f args)))
-
-;; (advice-add 'eshell :around #'xristos/advice-shell)
+ ;; (advice-add 'eshell :around #'xristos/advice-shell)
 ;; (advice-add 'shell :around #'xristos/advice-shell)
 ;;; init ends here
 (custom-set-variables

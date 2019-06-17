@@ -3,10 +3,14 @@
 # with '#' will be ignored, and an empty message aborts the commit.
 #
 # On branch master
-#
-# Initial commit
+# Your branch is up to date with 'origin/master'.
 #
 # Changes to be committed:
-#	new file:   .emacs.d/init.el
+#	typechange: .config/qutebrowser/config.py
+#
+# Changes not staged for commit:
+#	modified:   .emacs.d/backups/!home!dsock!.yadm!repo.git!COMMIT_EDITMSG~
+#	modified:   .emacs.d/undo-history/.!home!dsock!.yadm!repo.git!COMMIT_EDITMSG.~undo-tree~
+#	modified:   .stumpwm.d/modules (modified content)
 #
 # Untracked files not listed
